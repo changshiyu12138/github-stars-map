@@ -1,0 +1,9 @@
+# 原始 API 响应（约 1.1 MB，可随时用 gh 重新拉取）
+stars_raw.json
+all_list.txt
+
+# 系统文件
+.DS_Store
+Thumbs.db
+__pycache__/
+*.pyc
