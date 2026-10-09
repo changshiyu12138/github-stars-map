@@ -29,7 +29,12 @@ CAT_META = {
 }
 
 groups = collections.defaultdict(list)
+pending = []
 for r in rows:
+    if r.get('pending'):
+        # 新增但尚未在 map.py 登记的项目，单独收集，不丢数据
+        pending.append(r)
+        continue
     cat, note = M.NOTES[r['full']]
     r['cat'], r['note'] = cat, note
     groups[cat].append(r)
@@ -38,8 +43,9 @@ for r in rows:
 langs = collections.Counter(r['lang'] for r in rows if r['lang'] != '未标注')
 # 年份分布
 years = collections.Counter(r['at'][:4] for r in rows)
-# 高星项目（>= 30k）
-hot = sorted((r for r in rows if r['stars'] >= 30000), key=lambda x: -x['stars'])
+# 高星项目（>= 30k），排除待归类
+hot = sorted((r for r in rows if r['stars'] >= 30000 and not r.get('pending')),
+             key=lambda x: -x['stars'])
 
 out = []
 w = out.append
@@ -47,7 +53,8 @@ w = out.append
 w("# 🗂️ 我的 GitHub Star 地图")
 w("")
 w(f"> 收录 **{len(rows)}** 个 Star 过的项目，按主题分类并逐个补上中文说明。  ")
-w(f"> 数据来源：GitHub API（`changshiyu12138` 的公开 Star 列表）· 最后更新 {today}")
+w(f"> 数据来源：GitHub API（`changshiyu12138` 的公开 Star 列表）· 最后更新 {today}  ")
+w("> 🤖 由 GitHub Actions 每 6 小时自动刷新，新项目会出现在文末「🆕 待归类」。")
 w("")
 w("这个仓库的用途只有一个：**过三个月再想起来某个项目是干嘛的时候，这里能查到。**")
 w("")
@@ -61,6 +68,8 @@ top_years = sorted(years.items(), key=lambda x: -x[1])[:2]
 w(f"- **收藏高峰**：{ '、'.join(f'{y} 年 {c} 个' for y, c in top_years)}（占总量 {sum(c for _, c in top_years)*100//len(rows)}%）")
 w(f"- **主力语言**：{ '、'.join(f'{k} {v}' for k, v in langs.most_common(5))}")
 w(f"- **分类数量**：{len([c for c in M.CATS if groups[c]])} 个主题")
+if pending:
+    w(f"- **🆕 待归类**：{len(pending)} 个新项目尚未补写说明（见文末）")
 w("")
 
 # 年份柱状图
@@ -87,12 +96,28 @@ for c in M.CATS:
     w(f"| {emo} | [{name}](#cat-{c}) | {len(groups[c])} | {CAT_META.get(c,'')} |")
 w("")
 
+# ---- 待归类区块 ----
+if pending:
+    w("---")
+    w("")
+    w(f"## 🆕 待归类 · {len(pending)}")
+    w("")
+    w("> 自动监控发现的新Star 项目，还缺人工撰写的中文说明与分类。")
+    w("> 补写方式：编辑 `map.py`，加一行 `\"owner/repo\": (\"分类\", \"中文说明\"),` 后重跑 `gen_readme.py`。")
+    w("")
+    w("| 项目 | 官方简介 | 语言 | ⭐ | 收藏于 |")
+    w("|---|---|---|---:|---|")
+    for r in sorted(pending, key=lambda x: x['at'], reverse=True):
+        desc = (r['desc'] or '（官方无简介）').replace('|', '｜')
+        w(f"| [`{r['full']}`]({r['url']}) | {desc} | {r['lang']} | {r['stars']:,} | {r['at']} |")
+    w("")
+
 # ---- 各分类详情 ----
 w("---")
 w("")
 w("## 📚 项目清单")
 w("")
-w(">排序：各分类内按 Star 时间倒序，最新的在最前面。⭐ 为该项目当前的总Star 数。")
+w("> 排序：各分类内按 Star 时间倒序，最新的在最前面。⭐ 为该项目当前的总 Star 数。")
 w("")
 
 for c in M.CATS:
@@ -162,7 +187,8 @@ w("")
 w("- 数据来自 GitHub 官方 REST API 的 `/user/starred` 接口，`starred_at` 为真实收藏时间。")
 w("- 所有中文说明为人工撰写，非机器翻译；少数仓库官方无简介，已按项目内容补写并标注。")
 w("- 分类依据项目实际功能而非仓库作者，个别归类带主观判断。")
-w("- 这不是一个会自动更新的仓库。想让它保持新鲜，可以重新跑生成脚本（见下）。")
+w("- **每 6 小时自动刷新**：GitHub Actions 定时拉取 Star 列表，重新生成 README 并提交。")
+w("  新项目会先落进「🆕 待归类」，等补写中文说明后归入对应分类。")
 w("")
 w("### 本地重新生成")
 w("")
@@ -170,7 +196,7 @@ w("```bash")
 w("# 1. 拉取全部 Star（需要 gh 已登录）")
 w("gh api -H \"Accept: application/vnd.github.star+json\" --paginate \"user/starred?per_page=100\" > stars_raw.json")
 w("")
-w("# 2. 生成 stars.json")
+w("# 2. 生成 stars.json（退出码 2 表示有新项目待归类）")
 w("python build_stars.py")
 w("")
 w("# 3. 重新渲染 README（分类与说明维护在 map.py）")
