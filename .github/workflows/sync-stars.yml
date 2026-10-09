@@ -1,0 +1,129 @@
+name: Sync Star 地图
+
+# 每 6 小时整点执行一次；也支持手动触发
+on:
+  schedule:
+    - cron: '17 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: star-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出仓库
+        uses: actions/checkout@v4
+
+      - name: 配置 Git 身份
+        run: |
+          git config user.name  'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+
+      - name: 安装 Python 依赖
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+
+      - name: 拉取 Star 列表
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python <<'PY'
+          import os, json, time, urllib.request
+
+          token = os.environ['GH_TOKEN']
+          headers = {
+              'Authorization': f'Bearer {token}',
+              'Accept': 'application/vnd.github.star+json',
+              'User-Agent': 'github-actions-star-sync',
+          }
+          items, page = [], 1
+          while True:
+              req = urllib.request.Request(
+                  f'https://api.github.com/user/starred?per_page=100&page={page}',
+                  headers=headers)
+              with urllib.request.urlopen(req, timeout=60) as r:
+                  batch = json.load(r)
+              if not batch:
+                  break
+              items.extend(batch)
+              page += 1
+              if len(batch) < 100:
+                  break
+              time.sleep(1)
+
+          with open('stars_raw.json', 'w', encoding='utf-8') as f:
+              json.dump(items, f, ensure_ascii=False)
+          print(f'拉取到 {len(items)} 个 Star')
+          PY
+
+      - name: 构建 stars.json 并检测新增
+        id: build
+        continue-on-error: true
+        run: python build_stars.py
+
+      - name: 生成 README
+        run: python gen_readme.py
+
+      - name: 汇总变更摘要
+        id: summary
+        run: |
+          if [ -f stars_pending.json ]; then
+            COUNT=$(python -c "import json;print(len(json.load(open('stars_pending.json',encoding='utf-8'))))")
+          else
+            COUNT=0
+          fi
+          NAMES=$(python -c "
+          import json
+          try:
+              p=json.load(open('stars_pending.json',encoding='utf-8'))
+              print('\n'.join('- \`'+x['full']+'\` — '+ (x['desc'][:60] or '（官方无简介）') for x in p))
+          except Exception:
+              print('')
+          ")
+          {
+            echo "count=$COUNT"
+            echo "names<<EOF"
+            echo "$NAMES"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+          echo "待归类数量: $COUNT"
+
+      - name: 提交变更
+        id: commit
+        run: |
+          git add README.md stars.json stars_pending.json 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "无变化，跳过提交"
+            exit 0
+          fi
+          CNT=$(python -c "import json;print(len(json.load(open('stars.json',encoding='utf-8'))))")
+          git commit -m "chore: 自动同步 Star 地图（${CNT} 个项目）"
+          git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: 写入运行摘要
+        if: always()
+        run: |
+          {
+            echo "## ⭐ Star 地图同步"
+            echo ""
+            echo "- 当前收藏总数：**$(python -c "import json;print(len(json.load(open('stars.json',encoding='utf-8'))))")** 个"
+            echo "- 待归类：**${{ steps.summary.outputs.count }}** 个"
+            echo "- 是否提交：${{ steps.commit.outputs.changed == 'true' && '是' || '否' }}"
+            if [ "${{ steps.summary.outputs.count }}" != "0" ]; then
+              echo ""
+              echo "### 🆕 新发现的项目"
+              echo ""
+              echo '${{ steps.summary.outputs.names }}'
+              echo ""
+              echo "> 补写说明：编辑 \`map.py\` 加入 \`\"owner/repo\": (\"分类\", \"说明\"),\` 后重跑即可。"
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
