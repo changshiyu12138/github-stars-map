@@ -175,6 +175,7 @@ NOTES = {
     "Forairaaaaa/Monica": ("system", "DIY AMOLED 屏智能手表，硬件加固件全自制"),
     "thunder439/QNASMINI": ("system", "6 盘位 2.5 寸 NAS 硬件项目"),
     "CentyLab/PocketPD": ("system", "PocketPD 开源固件项目"),
+    "mx3353672833-debug/moto-gps-waveshare": ("system", "装在车把上的圆屏导航终端：ESP32-S3 1.75C AMOLED + iPhone App，手机算路线、圆屏显示路口与速度"),
     "Sunbelife/Snowboard-IconPack-for-Smartisan-OS": ("system", "Smartisan OS 的雪地主题图标包"),
     "Sunbelife/get_smartisan_icon_pack": ("system", "从 Smartisan OS 提取 1400+ 图标的脚本"),
     "SmartisanTech/android": ("system", "Smartisan OS 完整源码与构建清单"),
