@@ -994,7 +994,7 @@
   "url": "https://github.com/readest/readest",
   "desc": "Readest is a modern, feature-rich ebook reader designed for avid readers offering seamless cross-platform access, powerful tools, and an intuitive interface to elevate your reading experience.",
   "lang": "TypeScript",
-  "stars": 25046,
+  "stars": 25047,
   "topics": [
    "calibre",
    "calibre-plugin",
@@ -1375,7 +1375,7 @@
   "url": "https://github.com/sindresorhus/awesome",
   "desc": "😎 Awesome lists about all kinds of interesting topics [NOTE: Pull requests are temporarily disabled until I have a chance to catch up with the existing ones]",
   "lang": "未标注",
-  "stars": 517307,
+  "stars": 517308,
   "topics": [
    "awesome",
    "awesome-list",
@@ -1558,7 +1558,7 @@
   "url": "https://github.com/Usagi-org/ai-goofish-monitor",
   "desc": "基于 Playwright 和AI实现的闲鱼多任务实时/定时监控与智能分析系统，配备了功能完善的后台管理UI。帮助用户从闲鱼海量商品中，找到心仪产品。",
   "lang": "Python",
-  "stars": 14746,
+  "stars": 14747,
   "topics": [
    "ai",
    "ai-assistant",
@@ -1897,7 +1897,7 @@
   "url": "https://github.com/ImranR98/Obtainium",
   "desc": "Get Android app updates straight from the source.",
   "lang": "Dart",
-  "stars": 20328,
+  "stars": 20329,
   "topics": [
    "android",
    "apk",
@@ -2351,7 +2351,7 @@
   "url": "https://github.com/666ghj/MiroFish",
   "desc": "A Simple and Universal Swarm Intelligence Engine, Predicting Anything. 简洁通用的群体智能引擎，预测万物",
   "lang": "Python",
-  "stars": 77890,
+  "stars": 77893,
   "topics": [
    "agent-memory",
    "financial-forecasting",
@@ -3060,7 +3060,7 @@
   "url": "https://github.com/farion1231/cc-switch",
   "desc": "A cross-platform desktop All-in-One assistant for Claude Code, Codex, OpenCode, OpenClaw, Grok Build & Hermes Agent. Only official website: ccswitch.io",
   "lang": "Rust",
-  "stars": 142528,
+  "stars": 142530,
   "topics": [
    "ai-tools",
    "claude-code",
@@ -3404,7 +3404,7 @@
   "url": "https://github.com/pythonstock/stock",
   "desc": "stock，股票系统。使用python进行开发。",
   "lang": "Python",
-  "stars": 7879,
+  "stars": 7880,
   "topics": [],
   "at": "2026-07-19",
   "created": "2017-07-17",
@@ -3651,7 +3651,7 @@
   "url": "https://github.com/deepseek-ai/deepseek-harness",
   "desc": "DeepSeek Harness: Everything is a Plugin.",
   "lang": "TypeScript",
-  "stars": 247099,
+  "stars": 247100,
   "topics": [
    "ai-agents",
    "cordis",
@@ -3838,7 +3838,7 @@
   "url": "https://github.com/eternity4719/HowToLiveBetter",
   "desc": "高性价比人生指南: 长寿防病、急救、省钱理财、法律红线、失业与工伤、医保社保、恋爱婚育、怀孕育儿、创业与做平台合规、出国与技能。每条写明成本、收益、证据等级和原始出处，只引期刊论文与官方文件。",
   "lang": "HTML",
-  "stars": 59001,
+  "stars": 59002,
   "topics": [],
   "at": "2026-09-16",
   "created": "2026-09-07",
