@@ -8,12 +8,13 @@
        "user/starred?per_page=100" > stars_raw.json
 
 设计要点（配合每6 小时的自动监控）：
-  - 新出现的 Star 不会导致脚本崩溃。未在 map.py 中登记的项目会被归入
-    PENDING_CAT 占位分类，并在 stars_pending.json 中单独列出，
-    等人工补写中文说明后再归位。
+  - 新出现的 Star 不会导致脚本崩溃。未在 map.py 中登记的项目会被标记
+    pending=True，并在 stars_pending.json 中单独列出，等人工补写中文说明后再归位。
+  - 活跃度：使用 API 自带的 pushed_at（最后一次代码推送）判断项目死活，
+    无需额外请求。分档为 active / recent / stale / dormant / archived。
   - 退出码：0 = 映射完整；2 = 存在待补充项目（供 CI 判断是否需要通知）。
 """
-import json, os, sys, collections
+import json, os, sys, collections, datetime
 
 BASE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, BASE)
@@ -23,14 +24,44 @@ RAW = os.path.join(BASE, 'stars_raw.json')
 OUT = os.path.join(BASE, 'stars.json')
 PENDING = os.path.join(BASE, 'stars_pending.json')
 
-# 未登记项目的占位分类
-PENDING_CAT = 'pending'
+TODAY = datetime.date.today()
+
+
+def activity_level(pushed_at, archived):
+    """按最后推送时间判断项目活跃度。归档项目仍返回距今天数，便于展示。"""
+    days = None
+    if pushed_at:
+        days = (TODAY - datetime.date.fromisoformat(pushed_at[:10])).days
+    if archived:
+        return 'archived', days
+    if days is None:
+        return 'unknown', None
+    if days <= 90:
+        return 'active', days
+    if days <= 365:
+        return 'recent', days
+    if days <= 730:
+        return 'stale', days
+    return 'dormant', days
+
+
+LEVEL_CN = {
+    'active':   '活跃',
+    'recent':   '近期',
+    'stale':    '半休眠',
+    'dormant':  '长期停更',
+    'archived': '已归档',
+    'unknown':  '未知',
+}
 
 raw = json.load(open(RAW, encoding='utf-8'))
 
 rows = []
 for item in raw:
     r = item['repo']
+    archived = bool(r.get('archived'))
+    pushed = r.get('pushed_at')
+    level, days = activity_level(pushed, archived)
     rows.append({
         'full': r['full_name'],
         'url': r['html_url'],
@@ -39,8 +70,12 @@ for item in raw:
         'stars': r.get('stargazers_count', 0),
         'topics': r.get('topics', []),
         'at': item['starred_at'][:10],
+        'created': (r.get('created_at') or '')[:10],
+        'pushed': (pushed or '')[:10],
+        'idle_days': days,
+        'level': level,
+        'archived': archived,
         'fork': r.get('fork', False),
-        'archived': r.get('archived', False),
     })
 rows.sort(key=lambda x: x['at'])
 
@@ -96,6 +131,12 @@ if extra:
 
 no_desc = [r['full'] for r in rows if not r['desc']]
 print(f'\n官方无简介：{len(no_desc)} 个')
+
+print('\n活跃度分布（按最后一次代码推送）：')
+lev = collections.Counter(r['level'] for r in rows)
+for k in ['active', 'recent', 'stale', 'dormant', 'archived', 'unknown']:
+    if lev[k]:
+        print(f'  {lev[k]:3d}  {LEVEL_CN[k]}')
 
 c = collections.Counter(v[0] for v in M.NOTES.values() if v[0] in real)
 print('\n分类分布：')
