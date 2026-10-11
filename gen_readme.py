@@ -9,6 +9,27 @@ import map as M
 rows = json.load(open(os.path.join(BASE, 'stars.json'), encoding='utf-8'))
 today = datetime.date.today().isoformat()
 
+# 活跃度徽章：以「最后一次代码推送」为准
+LEVEL = {
+    'active':   ('🟢', '活跃',     '90 天内有提交'),
+    'recent':   ('🔵', '近期',     '半年到一年内'),
+    'stale':    ('🟡', '半休眠',   '1–2 年未更新'),
+    'dormant':  ('🔴', '长期停更', '超过 2 年没动'),
+    'archived': ('⚫', '已归档',   '作者已停止维护'),
+    'unknown':  ('⚪', '未知',     '无推送记录'),
+}
+LEVEL_ORDER = ['active', 'recent', 'stale', 'dormant', 'archived', 'unknown']
+
+def badge(r):
+    return LEVEL.get(r.get('level', 'unknown'), LEVEL['unknown'])[0]
+
+def last_push(r):
+    """把最后推送日期渲染成紧凑形式。"""
+    p = r.get('pushed')
+    if not p:
+        return '—'
+    return p
+
 # 分类顺序与元信息（可加副标题）
 CAT_META = {
     "ai-agent":      "真正在做事的东西 —— 工作流、Agent 循环、Skills 生态",
@@ -46,6 +67,10 @@ years = collections.Counter(r['at'][:4] for r in rows)
 # 高星项目（>= 30k），排除待归类
 hot = sorted((r for r in rows if r['stars'] >= 30000 and not r.get('pending')),
              key=lambda x: -x['stars'])
+# 活跃度分布
+levels = collections.Counter(r.get('level', 'unknown') for r in rows)
+live = levels['active'] + levels['recent']
+dead = levels['dormant'] + levels['archived']
 
 out = []
 w = out.append
@@ -68,6 +93,7 @@ top_years = sorted(years.items(), key=lambda x: -x[1])[:2]
 w(f"- **收藏高峰**：{ '、'.join(f'{y} 年 {c} 个' for y, c in top_years)}（占总量 {sum(c for _, c in top_years)*100//len(rows)}%）")
 w(f"- **主力语言**：{ '、'.join(f'{k} {v}' for k, v in langs.most_common(5))}")
 w(f"- **分类数量**：{len([c for c in M.CATS if groups[c]])} 个主题")
+w(f"- **项目存活**：{live} 个半年内仍有提交（{live*100//len(rows)}%），{dead} 个已停更或归档")
 if pending:
     w(f"- **🆕 待归类**：{len(pending)} 个新项目尚未补写说明（见文末）")
 w("")
@@ -84,16 +110,41 @@ for y in sorted(years):
 w("```")
 w("")
 
+# 活跃度总览
+w("### 项目存活情况")
+w("")
+w("以仓库**最后一次代码推送**（`pushed_at`）为准，不是 Star 数——星多不代表还在维护。")
+w("")
+w("| | 状态 | 判定 | 数量 | 占比 |")
+w("|---|---|---|---:|---:|")
+for k in LEVEL_ORDER:
+    if not levels[k]:
+        continue
+    emo, cn, desc = LEVEL[k]
+    w(f"| {emo} | {cn} | {desc} | {levels[k]} | {levels[k]*100//len(rows)}% |")
+w("")
+bar_parts = []
+for k in LEVEL_ORDER:
+    if not levels[k]:
+        continue
+    bar_parts.append(f"{LEVEL[k][0]} {levels[k]}")
+w("```")
+w(" ".join(bar_parts))
+w("```")
+w("")
+
 # 主题目录
 w("### 主题目录")
 w("")
-w("| | 主题 | 数量 | 一句话概括 |")
-w("|---|---|---:|---|")
+w("| | 主题 | 数量 | 存活 | 一句话概括 |")
+w("|---|---|---:|---:|---|")
 for c in M.CATS:
     if not groups.get(c):
         continue
     name, emo = M.CATS[c]
-    w(f"| {emo} | [{name}](#cat-{c}) | {len(groups[c])} | {CAT_META.get(c,'')} |")
+    g = groups[c]
+    alive = sum(1 for r in g if r.get('level') in ('active', 'recent'))
+    w(f"| {emo} | [{name}](#cat-{c}) | {len(g)} | {alive}/{len(g)} | {CAT_META.get(c,'')} |")
 w("")
 
 # ---- 待归类区块 ----
@@ -105,11 +156,11 @@ if pending:
     w("> 自动监控发现的新Star 项目，还缺人工撰写的中文说明与分类。")
     w("> 补写方式：编辑 `map.py`，加一行 `\"owner/repo\": (\"分类\", \"中文说明\"),` 后重跑 `gen_readme.py`。")
     w("")
-    w("| 项目 | 官方简介 | 语言 | ⭐ | 收藏于 |")
-    w("|---|---|---|---:|---|")
+    w("| 项目 | 官方简介 | 状态 | 最后提交 | 语言 | ⭐ | 收藏于 |")
+    w("|---|---|---|---|---|---:|---|")
     for r in sorted(pending, key=lambda x: x['at'], reverse=True):
         desc = (r['desc'] or '（官方无简介）').replace('|', '｜')
-        w(f"| [`{r['full']}`]({r['url']}) | {desc} | {r['lang']} | {r['stars']:,} | {r['at']} |")
+        w(f"| [`{r['full']}`]({r['url']}) | {desc} | {badge(r)} | {last_push(r)} | {r['lang']} | {r['stars']:,} | {r['at']} |")
     w("")
 
 # ---- 各分类详情 ----
@@ -131,11 +182,11 @@ for c in M.CATS:
     w("")
     w(f"> {CAT_META.get(c,'')}")
     w("")
-    w("| 项目 | 说明 | 语言 | ⭐ | 收藏于 |")
-    w("|---|---|---|---:|---|")
+    w("| 项目 | 说明 | 状态 | 最后提交 | 语言 | ⭐ | 收藏于 |")
+    w("|---|---|---|---|---|---:|---|")
     for r in items:
         note = r['note'].replace('|', '｜')
-        w(f"| [`{r['full']}`]({r['url']}) | {note} | {r['lang']} | {r['stars']:,} | {r['at']} |")
+        w(f"| [`{r['full']}`]({r['url']}) | {note} | {badge(r)} | {last_push(r)} | {r['lang']} | {r['stars']:,} | {r['at']} |")
     w("")
 
 # ---- 高星项目 ----
@@ -145,11 +196,34 @@ w("## ⭐ 万星以上的项目")
 w("")
 w("这些是Star 列表里体量最大的 10 个，Star 数远高于其他项目。")
 w("")
-w("| 项目 | 说明 | ⭐ |")
-w("|---|---|---:|")
+w("| 项目 | 说明 | 状态 | ⭐ |")
+w("|---|---|---|---:|")
 for r in hot[:10]:
-    w(f"| [`{r['full']}`]({r['url']}) | {r['note']} | {r['stars']:,} |")
+    w(f"| [`{r['full']}`]({r['url']}) | {r['note']} | {badge(r)} | {r['stars']:,} |")
 w("")
+
+# ---- 停更项目提醒 ----
+dying = sorted((r for r in rows if r.get('level') in ('dormant', 'archived')),
+               key=lambda x: (x.get('pushed') or ''))
+if dying:
+    w("---")
+    w("")
+    w(f"## 🪦 停更与归档 · {len(dying)}")
+    w("")
+    w("这些项目超过两年没有提交，或已被作者正式归档。**方案类项目要留意**：")
+    w("上游一旦停更，你迟早得自己接手修 bug。")
+    w("")
+    w("| 项目 | 说明 | 最后提交 | 距今 | 语言 | ⭐ |")
+    w("|---|---|---|---|---|---:|")
+    for r in dying:
+        if r.get('level') == 'archived':
+            gap = '⚫ 已归档'
+        elif r.get('idle_days'):
+            gap = f"{r['idle_days']//365} 年 {r['idle_days']%365} 天"
+        else:
+            gap = '—'
+        w(f"| [`{r['full']}`]({r['url']}) | {r['note']} | {last_push(r)} | {gap} | {r['lang']} | {r['stars']:,} |")
+    w("")
 
 # ---- 标签索引 ----
 w("---")
@@ -184,11 +258,21 @@ w("---")
 w("")
 w("## 📌 关于这个仓库")
 w("")
-w("- 数据来自 GitHub 官方 REST API 的 `/user/starred` 接口，`starred_at` 为真实收藏时间。")
+w("- 数据来自 GitHub 官方 REST API 的 `/users/changshiyu12138/starred`，`starred_at` 为真实收藏时间。")
+w("- **状态判定**基于仓库的 `pushed_at`（最后一次代码推送），由 API 随Star 列表一并返回，无额外请求。")
+w("  注意 `updated_at` 含义不同——它包含改描述、改设置等任何改动，会让已停更项目看起来还活着。")
 w("- 所有中文说明为人工撰写，非机器翻译；少数仓库官方无简介，已按项目内容补写并标注。")
 w("- 分类依据项目实际功能而非仓库作者，个别归类带主观判断。")
 w("- **每 6 小时自动刷新**：GitHub Actions 定时拉取 Star 列表，重新生成 README 并提交。")
 w("  新项目会先落进「🆕 待归类」，等补写中文说明后归入对应分类。")
+w("")
+w("### 状态图例")
+w("")
+w("| | 状态 | 含义 |")
+w("|---|---|---|")
+for k in LEVEL_ORDER:
+    emo, cn, desc = LEVEL[k]
+    w(f"| {emo} | {cn} | 最后一次提交在{desc}内 |")
 w("")
 w("### 本地重新生成")
 w("")
