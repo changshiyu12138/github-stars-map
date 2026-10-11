@@ -205,7 +205,7 @@ NOTES = {
     "ruanyf/free-books": ("learning", "互联网上的免费书籍索引"),
     "sindresorhus/awesome": ("learning", "覆盖各行各业的 Awesome Lists 总目录"),
     "xiaolai/bitcoin-whitepaper-chinese-translation": ("learning", "比特币白皮书中文全译（仓库暂无官方简介）"),
-    "fireinthehole2019/awesome-reverse-engineering": ("learning", "全平台逆向工程资源：3500+ 开源工具与2300 篇文章"),
+    "fireinthehole2019/awesome-reverse-engineering": ("learning", "全平台逆向工程资源：3500+ 开源工具与2300 篇文章（已停更，工具清单仍可参考）"),
     "beihaili/Get-Started-with-Web3": ("learning", "双语 AI-native Web3 课程：钱包、比特币、以太坊、DeFi、DAO、llms.txt 与 MCP"),
     "ProbiusOfficial/Hello-CTF": ("learning", "面向零基础新手的 CTF 入门开源教程，同时补信息差"),
     "luongnv89/claude-howto": ("learning", "图解式 Claude Code 指南，从基础概念到高级 Agent，附可直接复制的模板"),
