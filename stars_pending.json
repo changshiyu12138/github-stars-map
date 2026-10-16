@@ -1,5 +1,21 @@
 [
  {
+  "full": "Arekejoker/qwen21-nsfw-pose-skill",
+  "url": "https://github.com/Arekejoker/qwen21-nsfw-pose-skill",
+  "lang": "Python",
+  "stars": 2135,
+  "topics": [
+   "agent-skill",
+   "comfyui",
+   "image-generation",
+   "openclaw",
+   "pose-control",
+   "qwen-image"
+  ],
+  "at": "2026-10-16",
+  "desc": "Qwen-Image 2.1 NSFW/姿势出图 skill：作者级提示词配方 + NSFW LoRA + 136 姿势 VNCCS 人偶控制；适用 Claude Code / Codex / Cursor / OpenClaw"
+ },
+ {
   "full": "DL-Community/DancingLine-CommunityEdition",
   "url": "https://github.com/DL-Community/DancingLine-CommunityEdition",
   "lang": "未标注",
@@ -11,10 +27,24 @@
   "desc": "DL社区版公开仓库。DLCE public download repository"
  },
  {
+  "full": "abcwyc/pi-agent-desktop",
+  "url": "https://github.com/abcwyc/pi-agent-desktop",
+  "lang": "TypeScript",
+  "stars": 717,
+  "topics": [
+   "ai",
+   "ai-agent",
+   "desktop-app",
+   "pi"
+  ],
+  "at": "2026-10-15",
+  "desc": "Pi — A cross-platform AI coding agent, bringing the Claude Code experience to your desktop. No environment setup, no terminal commands. Download and start coding right away."
+ },
+ {
   "full": "jhaizhou-ops/d2r-mobile",
   "url": "https://github.com/jhaizhou-ops/d2r-mobile",
   "lang": "C",
-  "stars": 3048,
+  "stars": 3261,
   "topics": [
    "compatibility-layer",
    "diablo-2-resurrected",
