@@ -3,7 +3,7 @@
   "full": "Arekejoker/qwen21-nsfw-pose-skill",
   "url": "https://github.com/Arekejoker/qwen21-nsfw-pose-skill",
   "lang": "Python",
-  "stars": 3576,
+  "stars": 3581,
   "topics": [
    "agent-skill",
    "comfyui",
@@ -30,7 +30,7 @@
   "full": "SantiBros/NFSMostWanted2012-Android-Switch",
   "url": "https://github.com/SantiBros/NFSMostWanted2012-Android-Switch",
   "lang": "C++",
-  "stars": 9,
+  "stars": 10,
   "topics": [],
   "at": "2026-10-20",
   "desc": "🏁 NFS Most Wanted 2012 (Android) for Nintendo Switch: unofficial homebrew port. Easy install, full controller support, 720p/1080p, fully offline. Bring your own APK + OBB. | Port homebrew no oficial para Switch: trae tu propio APK + OBB."
@@ -39,7 +39,7 @@
   "full": "abcwyc/pi-agent-desktop",
   "url": "https://github.com/abcwyc/pi-agent-desktop",
   "lang": "TypeScript",
-  "stars": 826,
+  "stars": 828,
   "topics": [
    "ai",
    "ai-agent",
@@ -62,7 +62,7 @@
   "full": "jhaizhou-ops/d2r-mobile",
   "url": "https://github.com/jhaizhou-ops/d2r-mobile",
   "lang": "C",
-  "stars": 4301,
+  "stars": 4307,
   "topics": [
    "compatibility-layer",
    "diablo-2-resurrected",
