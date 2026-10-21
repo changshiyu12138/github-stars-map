@@ -3,7 +3,7 @@
   "full": "Arekejoker/qwen21-nsfw-pose-skill",
   "url": "https://github.com/Arekejoker/qwen21-nsfw-pose-skill",
   "lang": "Python",
-  "stars": 3493,
+  "stars": 3518,
   "topics": [
    "agent-skill",
    "comfyui",
@@ -19,7 +19,7 @@
   "full": "DL-Community/DancingLine-CommunityEdition",
   "url": "https://github.com/DL-Community/DancingLine-CommunityEdition",
   "lang": "未标注",
-  "stars": 111,
+  "stars": 112,
   "topics": [
    "game"
   ],
@@ -39,7 +39,7 @@
   "full": "abcwyc/pi-agent-desktop",
   "url": "https://github.com/abcwyc/pi-agent-desktop",
   "lang": "TypeScript",
-  "stars": 819,
+  "stars": 822,
   "topics": [
    "ai",
    "ai-agent",
@@ -50,10 +50,19 @@
   "desc": "Pi — A cross-platform AI coding agent, bringing the Claude Code experience to your desktop. No environment setup, no terminal commands. Download and start coding right away."
  },
  {
+  "full": "deusyu/harness-engineering",
+  "url": "https://github.com/deusyu/harness-engineering",
+  "lang": "JavaScript",
+  "stars": 6161,
+  "topics": [],
+  "at": "2026-10-21",
+  "desc": "Harness Engineering 学习指南 — 从概念理解到独立实践的深度学习档案"
+ },
+ {
   "full": "jhaizhou-ops/d2r-mobile",
   "url": "https://github.com/jhaizhou-ops/d2r-mobile",
   "lang": "C",
-  "stars": 4154,
+  "stars": 4206,
   "topics": [
    "compatibility-layer",
    "diablo-2-resurrected",
