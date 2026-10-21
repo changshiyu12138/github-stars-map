@@ -3,7 +3,7 @@
   "full": "Arekejoker/qwen21-nsfw-pose-skill",
   "url": "https://github.com/Arekejoker/qwen21-nsfw-pose-skill",
   "lang": "Python",
-  "stars": 3518,
+  "stars": 3551,
   "topics": [
    "agent-skill",
    "comfyui",
@@ -39,7 +39,7 @@
   "full": "abcwyc/pi-agent-desktop",
   "url": "https://github.com/abcwyc/pi-agent-desktop",
   "lang": "TypeScript",
-  "stars": 822,
+  "stars": 825,
   "topics": [
    "ai",
    "ai-agent",
@@ -53,7 +53,7 @@
   "full": "deusyu/harness-engineering",
   "url": "https://github.com/deusyu/harness-engineering",
   "lang": "JavaScript",
-  "stars": 6161,
+  "stars": 6164,
   "topics": [],
   "at": "2026-10-21",
   "desc": "Harness Engineering 学习指南 — 从概念理解到独立实践的深度学习档案"
@@ -62,7 +62,7 @@
   "full": "jhaizhou-ops/d2r-mobile",
   "url": "https://github.com/jhaizhou-ops/d2r-mobile",
   "lang": "C",
-  "stars": 4206,
+  "stars": 4275,
   "topics": [
    "compatibility-layer",
    "diablo-2-resurrected",
