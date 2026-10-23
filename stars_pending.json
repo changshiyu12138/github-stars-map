@@ -3,7 +3,7 @@
   "full": "Arekejoker/qwen21-nsfw-pose-skill",
   "url": "https://github.com/Arekejoker/qwen21-nsfw-pose-skill",
   "lang": "Python",
-  "stars": 3629,
+  "stars": 3637,
   "topics": [
    "agent-skill",
    "comfyui",
@@ -53,7 +53,7 @@
   "full": "deusyu/harness-engineering",
   "url": "https://github.com/deusyu/harness-engineering",
   "lang": "JavaScript",
-  "stars": 6171,
+  "stars": 6172,
   "topics": [],
   "at": "2026-10-21",
   "desc": "Harness Engineering 学习指南 — 从概念理解到独立实践的深度学习档案"
@@ -62,21 +62,24 @@
   "full": "jhaizhou-ops/d2r-mobile",
   "url": "https://github.com/jhaizhou-ops/d2r-mobile",
   "lang": "C",
-  "stars": 4398,
+  "stars": 4425,
   "topics": [
+   "android",
    "compatibility-layer",
    "diablo-2-resurrected",
    "diablo2",
    "game-port",
+   "harmonyos",
    "ios",
    "ipad",
    "iphone",
    "mac",
    "macos",
    "metal",
-   "reign-of-the-warlock"
+   "reign-of-the-warlock",
+   "vulkan"
   ],
   "at": "2026-10-13",
-  "desc": "Open-source iOS / macOS compatibility layer for Diablo II: Resurrected with the Reign of the Warlock expansion. Runs your own Switch copy natively on iPhone, iPad and Mac — full touch controls, 60 fps, new endgame modes. Bring your own game files. 开源的《暗黑破坏神 II：狱火重生》术士君临 iOS / macOS 兼容层"
+  "desc": "Open-source compatibility layer for Diablo II: Resurrected with the Reign of the Warlock expansion. Runs your own Switch copy natively on iPhone, iPad, Mac, Android and HarmonyOS — full touch controls, 60 fps, new endgame modes. Bring your own game files. 开源的《暗黑破坏神 II：狱火重生》术士君临 iOS / macOS / 安卓 / 鸿蒙兼容层"
  }
 ]
