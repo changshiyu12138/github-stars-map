@@ -3,7 +3,7 @@
   "full": "Arekejoker/qwen21-nsfw-pose-skill",
   "url": "https://github.com/Arekejoker/qwen21-nsfw-pose-skill",
   "lang": "Python",
-  "stars": 3670,
+  "stars": 3685,
   "topics": [
    "agent-skill",
    "comfyui",
@@ -39,7 +39,7 @@
   "full": "abcwyc/pi-agent-desktop",
   "url": "https://github.com/abcwyc/pi-agent-desktop",
   "lang": "TypeScript",
-  "stars": 840,
+  "stars": 842,
   "topics": [
    "ai",
    "ai-agent",
@@ -53,7 +53,7 @@
   "full": "deusyu/harness-engineering",
   "url": "https://github.com/deusyu/harness-engineering",
   "lang": "JavaScript",
-  "stars": 6178,
+  "stars": 6180,
   "topics": [],
   "at": "2026-10-21",
   "desc": "Harness Engineering 学习指南 — 从概念理解到独立实践的深度学习档案"
@@ -62,7 +62,7 @@
   "full": "jbiaojerry/ebook-treasure-chest",
   "url": "https://github.com/jbiaojerry/ebook-treasure-chest",
   "lang": "Python",
-  "stars": 22183,
+  "stars": 22220,
   "topics": [],
   "at": "2026-10-23",
   "desc": "欢迎来到电子书下载宝库，一个汇聚了各类电子书下载链接的地方。无论你是喜欢阅读经典文学、经管励志、终身学习、职场创业、技术手册还是其他类型的书籍，这里都能满足你的需求。 该库涵盖了帆书app(原樊登读书)、微信读书、京东读书、喜马拉雅等读书app的大部分电子书。"
@@ -71,7 +71,7 @@
   "full": "jhaizhou-ops/d2r-mobile",
   "url": "https://github.com/jhaizhou-ops/d2r-mobile",
   "lang": "C",
-  "stars": 4475,
+  "stars": 4496,
   "topics": [
    "android",
    "compatibility-layer",
