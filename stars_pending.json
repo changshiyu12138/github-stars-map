@@ -3,7 +3,7 @@
   "full": "Arekejoker/qwen21-nsfw-pose-skill",
   "url": "https://github.com/Arekejoker/qwen21-nsfw-pose-skill",
   "lang": "Python",
-  "stars": 3702,
+  "stars": 3709,
   "topics": [
    "agent-skill",
    "comfyui",
@@ -14,6 +14,34 @@
   ],
   "at": "2026-10-16",
   "desc": "Qwen-Image 2.1 NSFW/姿势出图 skill：作者级提示词配方 + NSFW LoRA + 136 姿势 VNCCS 人偶控制；适用 Claude Code / Codex / Cursor / OpenClaw"
+ },
+ {
+  "full": "BeckyGlobal/PaidToStudyAbroad",
+  "url": "https://github.com/BeckyGlobal/PaidToStudyAbroad",
+  "lang": "HTML",
+  "stars": 1077,
+  "topics": [
+   "australia",
+   "canada",
+   "chinese",
+   "csc",
+   "css-profile",
+   "free-tuition",
+   "germany",
+   "guide",
+   "howtolivebetter",
+   "international-students",
+   "japan",
+   "phd",
+   "phd-funding",
+   "scholarship",
+   "scholarships",
+   "study-abroad",
+   "usa",
+   "vocational-training"
+  ],
+  "at": "2026-10-25",
+  "desc": "高性价比人生指南·海外版：高性价比留学。出国留学奖学金、免学费、政府全奖、带薪读博，德国日本学手艺有人发钱，美加澳奖学金单独成节。不是你花钱去留学，是你拿钱去留学。71 条，只引官方来源。关注作者：微信视频号 Becky在地球村"
  },
  {
   "full": "DL-Community/DancingLine-CommunityEdition",
@@ -39,7 +67,7 @@
   "full": "abcwyc/pi-agent-desktop",
   "url": "https://github.com/abcwyc/pi-agent-desktop",
   "lang": "TypeScript",
-  "stars": 846,
+  "stars": 848,
   "topics": [
    "ai",
    "ai-agent",
@@ -62,7 +90,7 @@
   "full": "jbiaojerry/ebook-treasure-chest",
   "url": "https://github.com/jbiaojerry/ebook-treasure-chest",
   "lang": "Python",
-  "stars": 22536,
+  "stars": 22770,
   "topics": [],
   "at": "2026-10-23",
   "desc": "欢迎来到电子书下载宝库，一个汇聚了各类电子书下载链接的地方。无论你是喜欢阅读经典文学、经管励志、终身学习、职场创业、技术手册还是其他类型的书籍，这里都能满足你的需求。 该库涵盖了帆书app(原樊登读书)、微信读书、京东读书、喜马拉雅等读书app的大部分电子书。"
@@ -71,7 +99,7 @@
   "full": "jhaizhou-ops/d2r-mobile",
   "url": "https://github.com/jhaizhou-ops/d2r-mobile",
   "lang": "C",
-  "stars": 4543,
+  "stars": 4570,
   "topics": [
    "android",
    "compatibility-layer",
@@ -95,7 +123,7 @@
   "full": "peach-mitao/peach",
   "url": "https://github.com/peach-mitao/peach",
   "lang": "Python",
-  "stars": 10807,
+  "stars": 11176,
   "topics": [
    "jav",
    "local-first",
