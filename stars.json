@@ -4,7 +4,7 @@
   "url": "https://github.com/jackfrued/Python-100-Days",
   "desc": "Python - 100天从新手到大师",
   "lang": "Jupyter Notebook",
-  "stars": 187435,
+  "stars": 187433,
   "topics": [],
   "at": "2019-05-03",
   "created": "2018-03-01",
@@ -91,7 +91,7 @@
   "url": "https://github.com/CyC2018/CS-Notes",
   "desc": ":books: 技术面试必备基础知识、Leetcode、计算机操作系统、计算机网络、系统设计",
   "lang": "Python",
-  "stars": 186338,
+  "stars": 186339,
   "topics": [
    "algorithm",
    "computer-science",
@@ -303,7 +303,7 @@
   "url": "https://github.com/Snailclimb/JavaGuide",
   "desc": "Java 面试 & 后端通用面试指南，覆盖计算机基础、数据库、分布式、高并发、系统设计与 AI 应用开发",
   "lang": "JavaScript",
-  "stars": 159248,
+  "stars": 159249,
   "topics": [
    "agent",
    "ai",
@@ -463,7 +463,7 @@
   "url": "https://github.com/barry-ran/QtScrcpy",
   "desc": "Android real-time display control software",
   "lang": "C++",
-  "stars": 32561,
+  "stars": 32558,
   "topics": [
    "android",
    "qt"
@@ -572,7 +572,7 @@
   "url": "https://github.com/justjavac/free-programming-books-zh_CN",
   "desc": ":books: 免费的计算机编程类中文书籍，欢迎投稿",
   "lang": "未标注",
-  "stars": 119359,
+  "stars": 119360,
   "topics": [
    "android",
    "angular",
@@ -707,7 +707,7 @@
   "url": "https://github.com/awesome-jellyfin/awesome-jellyfin",
   "desc": "A Collection of Awesome Jellyfin Plugins, Themes, Guides and More!",
   "lang": "未标注",
-  "stars": 9706,
+  "stars": 9708,
   "topics": [
    "awesome",
    "awesome-list",
@@ -909,7 +909,7 @@
   "url": "https://github.com/Anxcye/anx-reader",
   "desc": "Featuring powerful AI capabilities and supporting various e-book formats, it makes reading smarter and more focused.",
   "lang": "Dart",
-  "stars": 9066,
+  "stars": 9068,
   "topics": [
    "dart",
    "ebook-reader",
@@ -994,7 +994,7 @@
   "url": "https://github.com/readest/readest",
   "desc": "Readest is a modern, feature-rich ebook reader designed for avid readers offering seamless cross-platform access, powerful tools, and an intuitive interface to elevate your reading experience.",
   "lang": "TypeScript",
-  "stars": 25606,
+  "stars": 25613,
   "topics": [
    "calibre",
    "calibre-plugin",
@@ -1031,7 +1031,7 @@
   "url": "https://github.com/wanglin2/mind-map",
   "desc": "SimpleMindMap（思绪思维导图）：一个强大的思维导图。A powerful mind map.",
   "lang": "JavaScript",
-  "stars": 12869,
+  "stars": 12870,
   "topics": [
    "graph",
    "jsmind",
@@ -1056,7 +1056,7 @@
   "url": "https://github.com/n8n-io/n8n",
   "desc": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",
   "lang": "TypeScript",
-  "stars": 208557,
+  "stars": 208578,
   "topics": [
    "ai",
    "apis",
@@ -1109,7 +1109,7 @@
   "url": "https://github.com/shadps4-emu/shadPS4",
   "desc": "PlayStation 4 emulator for Windows, Linux, macOS and FreeBSD written in C++",
   "lang": "C++",
-  "stars": 33913,
+  "stars": 33917,
   "topics": [
    "cpp",
    "cpp23",
@@ -1138,7 +1138,7 @@
   "url": "https://github.com/oomol-lab/pdf-craft",
   "desc": "PDF craft can convert PDF files into various other formats. This project will focus on processing PDF files of scanned books.",
   "lang": "Python",
-  "stars": 6438,
+  "stars": 6436,
   "topics": [
    "book-digitization",
    "deepseek-ocr",
@@ -1191,7 +1191,7 @@
   "url": "https://github.com/koodo-reader/koodo-reader",
   "desc": "A modern ebook manager and reader with sync and backup capacities for Windows, macOS, Linux, Android, iOS and Web",
   "lang": "JavaScript",
-  "stars": 28622,
+  "stars": 28625,
   "topics": [
    "book",
    "cb7",
@@ -1226,7 +1226,7 @@
   "url": "https://github.com/xiaolai/bitcoin-whitepaper-chinese-translation",
   "desc": "",
   "lang": "HTML",
-  "stars": 1225,
+  "stars": 1224,
   "topics": [],
   "at": "2025-05-28",
   "created": "2018-10-28",
@@ -1345,7 +1345,7 @@
   "url": "https://github.com/datawhalechina/self-llm",
   "desc": "《开源大模型食用指南》针对中国宝宝量身打造的基于Linux环境快速微调（全参数/Lora）、部署国内外开源大模型（LLM）/多模态大模型（MLLM）教程",
   "lang": "Jupyter Notebook",
-  "stars": 32576,
+  "stars": 32577,
   "topics": [
    "chatglm",
    "chatglm3",
@@ -1375,7 +1375,7 @@
   "url": "https://github.com/sindresorhus/awesome",
   "desc": "😎 Awesome lists about all kinds of interesting topics [NOTE: Pull requests are temporarily disabled until I have a chance to catch up with the existing ones]",
   "lang": "未标注",
-  "stars": 524584,
+  "stars": 524595,
   "topics": [
    "awesome",
    "awesome-list",
@@ -1397,7 +1397,7 @@
   "url": "https://github.com/LibreSpark/LibreTV",
   "desc": "一分钟搭建影视站，支持Docker等部署方式",
   "lang": "TypeScript",
-  "stars": 21799,
+  "stars": 21814,
   "topics": [
    "css",
    "film",
@@ -1421,7 +1421,7 @@
   "url": "https://github.com/blinkospace/blinko",
   "desc": "An open-source, self-hosted personal AI note tool prioritizing privacy, built using TypeScript .",
   "lang": "TypeScript",
-  "stars": 11111,
+  "stars": 11116,
   "topics": [
    "markdown",
    "memos",
@@ -1505,7 +1505,7 @@
   "url": "https://github.com/Kareadita/Kavita",
   "desc": "Kavita is a fast, feature rich, cross platform reading server. Built with the goal of being a full solution for all your reading needs. Setup your own server and share your reading collection with your friends and family.",
   "lang": "C#",
-  "stars": 11933,
+  "stars": 11934,
   "topics": [
    "annotations",
    "cbz",
@@ -1558,7 +1558,7 @@
   "url": "https://github.com/Usagi-org/ai-goofish-monitor",
   "desc": "基于 Playwright 和AI实现的闲鱼多任务实时/定时监控与智能分析系统，配备了功能完善的后台管理UI。帮助用户从闲鱼海量商品中，找到心仪产品。",
   "lang": "Python",
-  "stars": 15146,
+  "stars": 15147,
   "topics": [
    "ai",
    "ai-assistant",
@@ -1588,7 +1588,7 @@
   "url": "https://github.com/wassupjay/n8n-free-templates",
   "desc": "A curated set of 200+ plug-and-play n8n workflows that fuse classic automation with today’s AI stack—vector DBs, embeddings, and LLMs. Import any JSON, add your creds, hit Activate, and you’re live. Built to demo, prototype, or drop straight into production.",
   "lang": "未标注",
-  "stars": 6233,
+  "stars": 6234,
   "topics": [
    "automation",
    "automation-templates",
@@ -1681,7 +1681,7 @@
   "url": "https://github.com/sansan0/TrendRadar",
   "desc": "⭐AI-driven public opinion & trend monitor with multi-platform aggregation, RSS, and smart alerts.🎯 告别信息过载，你的 AI 舆情监控助手与热点筛选工具！聚合多平台热点 +  RSS 订阅，支持关键词精准筛选。AI 智能筛选新闻 + AI 翻译 +  AI 分析简报直推手机，也支持接入 MCP 架构，赋能 AI 自然语言对话分析、情感洞察与趋势预测等。支持 Docker ，数据本地/云端自持。集成微信/飞书/钉钉/Telegram/邮件/ntfy/bark/slack 等渠道智能推送。",
   "lang": "Python",
-  "stars": 63166,
+  "stars": 63169,
   "topics": [
    "ai",
    "bark",
@@ -1714,7 +1714,7 @@
   "url": "https://github.com/beihaili/Get-Started-with-Web3",
   "desc": "Open-source bilingual AI-native Web3 curriculum: wallets, Bitcoin, Ethereum, DeFi, L2, DAO, smart accounts, llms.txt and MCP",
   "lang": "JavaScript",
-  "stars": 614,
+  "stars": 613,
   "topics": [
    "ai-native",
    "bitcoin",
@@ -1768,7 +1768,7 @@
   "url": "https://github.com/mementum/backtrader",
   "desc": "Python Backtesting library for trading strategies",
   "lang": "Python",
-  "stars": 23571,
+  "stars": 23573,
   "topics": [
    "backtesting",
    "metaclass",
@@ -1789,7 +1789,7 @@
   "url": "https://github.com/chen08209/FlClash",
   "desc": "A multi-platform proxy client based on ClashMeta,simple and easy to use, open-source and ad-free.",
   "lang": "Dart",
-  "stars": 58009,
+  "stars": 58020,
   "topics": [
    "clash",
    "clash-meta",
@@ -1815,7 +1815,7 @@
   "url": "https://github.com/gkd-kit/gkd",
   "desc": "基于无障碍，高级选择器，订阅规则的自定义屏幕点击安卓应用 | An Android APP with custom screen tapping based on Accessibility, Advanced Selectors, and Subscription Rules",
   "lang": "Kotlin",
-  "stars": 43339,
+  "stars": 43352,
   "topics": [
    "accessibility",
    "android",
@@ -1865,7 +1865,7 @@
   "url": "https://github.com/ZuodaoTech/everyone-can-use-english",
   "desc": "人人都能用英语",
   "lang": "TypeScript",
-  "stars": 39251,
+  "stars": 39255,
   "topics": [],
   "at": "2025-09-13",
   "created": "2019-03-15",
@@ -1881,7 +1881,7 @@
   "url": "https://github.com/zhongyang219/TrafficMonitor",
   "desc": "这是一个用于显示当前网速、CPU及内存利用率的桌面悬浮窗软件，并支持任务栏显示，支持更换皮肤。",
   "lang": "C++",
-  "stars": 46666,
+  "stars": 46665,
   "topics": [],
   "at": "2025-09-17",
   "created": "2017-07-30",
@@ -1897,7 +1897,7 @@
   "url": "https://github.com/ImranR98/Obtainium",
   "desc": "Get Android app updates straight from the source.",
   "lang": "Dart",
-  "stars": 20859,
+  "stars": 20872,
   "topics": [
    "android",
    "apk",
@@ -1930,7 +1930,7 @@
   "url": "https://github.com/DIYgod/RSSHub",
   "desc": "🧡 Everything is RSSible",
   "lang": "TypeScript",
-  "stars": 46655,
+  "stars": 46656,
   "topics": [
    "bilibili",
    "douban",
@@ -2109,7 +2109,7 @@
   "url": "https://github.com/lobehub/lobehub",
   "desc": "🤯 LobeHub is your Chief Agent Operator, organizing your agents into 7×24 operations by hiring, scheduling, and reporting on your entire AI team.",
   "lang": "TypeScript",
-  "stars": 83483,
+  "stars": 83487,
   "topics": [
    "agent",
    "agent-collaboration",
@@ -2229,7 +2229,7 @@
   "url": "https://github.com/microsoft/markitdown",
   "desc": "Python tool for converting files and office documents to Markdown.",
   "lang": "Python",
-  "stars": 192110,
+  "stars": 192153,
   "topics": [
    "autogen",
    "autogen-extension",
@@ -2285,7 +2285,7 @@
   "url": "https://github.com/apify/crawlee",
   "desc": "Crawlee—A web scraping and browser automation library for Node.js to build reliable crawlers. In JavaScript and TypeScript. Extract data for AI, LLMs, RAG, or GPTs. Download HTML, PDF, JPG, PNG, and other files from websites. Works with Puppeteer, Playwright, Cheerio, JSDOM, and raw HTTP. Both headful and headless mode. With proxy rotation.",
   "lang": "TypeScript",
-  "stars": 26266,
+  "stars": 26264,
   "topics": [
    "apify",
    "automation",
@@ -2307,8 +2307,8 @@
   ],
   "at": "2025-11-30",
   "created": "2016-08-26",
-  "pushed": "2026-10-23",
-  "idle_days": 2,
+  "pushed": "2026-10-25",
+  "idle_days": 0,
   "level": "active",
   "archived": false,
   "fork": false,
@@ -2319,7 +2319,7 @@
   "url": "https://github.com/unclecode/crawl4ai",
   "desc": "Open-source web crawler and scraper for LLMs and AI agents: any website into clean, LLM-ready Markdown. Run it yourself, or use Crawl4AI Cloud with one key. Join our Discord https://discord.gg/VuxzM8mtf",
   "lang": "Python",
-  "stars": 86246,
+  "stars": 86256,
   "topics": [
    "ai",
    "ai-agents",
@@ -2351,7 +2351,7 @@
   "url": "https://github.com/666ghj/MiroFish",
   "desc": "A Simple and Universal Swarm Intelligence Engine, Predicting Anything. 简洁通用的群体智能引擎，预测万物",
   "lang": "Python",
-  "stars": 81805,
+  "stars": 81873,
   "topics": [
    "agent-memory",
    "financial-forecasting",
@@ -2378,7 +2378,7 @@
   "url": "https://github.com/ChaoMixian/vFlow",
   "desc": "vFlow 是一款为 Android 平台设计的、强大且高度可扩展的自动化工具。它允许你通过图形化界面，将一系列“动作模块”自由组合成强大的“工作流”，从而自动完成各种日常的、重复性的屏幕操作任务。",
   "lang": "Kotlin",
-  "stars": 1299,
+  "stars": 1300,
   "topics": [
    "android",
    "automation",
@@ -2400,7 +2400,7 @@
   "url": "https://github.com/DrKLO/Telegram",
   "desc": "Telegram for Android source",
   "lang": "Java",
-  "stars": 30160,
+  "stars": 30161,
   "topics": [
    "telegram"
   ],
@@ -2455,7 +2455,7 @@
   "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
   "desc": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。  LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
   "lang": "Python",
-  "stars": 67052,
+  "stars": 67055,
   "topics": [
    "a-stock",
    "ai-agent",
@@ -2479,7 +2479,7 @@
   "url": "https://github.com/openclaw/openclaw",
   "desc": "The AI that really does things. Any OS. Any Platform. The lobster way. 🦞",
   "lang": "TypeScript",
-  "stars": 393020,
+  "stars": 393041,
   "topics": [
    "ai",
    "assistant",
@@ -2503,7 +2503,7 @@
   "url": "https://github.com/snarktank/ralph",
   "desc": "Ralph is an autonomous AI agent loop that runs repeatedly until all PRD items are complete.",
   "lang": "TypeScript",
-  "stars": 22062,
+  "stars": 22063,
   "topics": [],
   "at": "2026-01-28",
   "created": "2026-01-07",
@@ -2519,7 +2519,7 @@
   "url": "https://github.com/youhunwl/TVAPP",
   "desc": "收集全网 Android TV电视盒子应用，涵盖影视、直播、K歌、工具、游戏等类型，整理优质APK资源，支持便捷下载与自动更新。提供安全验证、分类索引与兼容性标注，助力用户打造家庭影音娱乐中心！              ✅ TVBox/影视仓等影音壳接口配置源。",
   "lang": "JavaScript",
-  "stars": 26283,
+  "stars": 26296,
   "topics": [
    "android",
    "android-tv",
@@ -2542,7 +2542,7 @@
   "url": "https://github.com/bggRGjQaUbCoE/PiliPlus",
   "desc": "PiliPlus",
   "lang": "Dart",
-  "stars": 19828,
+  "stars": 19829,
   "topics": [
    "android",
    "flutter",
@@ -2588,7 +2588,7 @@
   "url": "https://github.com/Gar-b-age/CookLikeHOC",
   "desc": "🥢像老乡鸡🐔那样做饭。已添加2026年发布的《老乡鸡菜品溯源报告 2.0中新出现的菜品。主要部分于2024年完工，非老乡鸡官方仓库。文字来自《老乡鸡菜品溯源报告》，并做归纳、编辑与整理。CookLikeHOC.",
   "lang": "JavaScript",
-  "stars": 24822,
+  "stars": 24821,
   "topics": [],
   "at": "2026-02-03",
   "created": "2024-04-10",
@@ -2604,7 +2604,7 @@
   "url": "https://github.com/eythaann/Seelen-UI",
   "desc": "The Fully Customizable Desktop Environment for Windows 10/11.",
   "lang": "Rust",
-  "stars": 18192,
+  "stars": 18196,
   "topics": [
    "app-launcher",
    "desktop-application",
@@ -2640,7 +2640,7 @@
   "url": "https://github.com/QuantumNous/new-api",
   "desc": "A unified AI model hub for aggregation & distribution. It supports cross-converting various LLMs into OpenAI-compatible, Claude-compatible, or Gemini-compatible formats. A centralized gateway for personal and enterprise model management.",
   "lang": "Go",
-  "stars": 50664,
+  "stars": 50674,
   "topics": [
    "ai-gateway",
    "claude",
@@ -2724,7 +2724,7 @@
   "url": "https://github.com/Devolutions/UniGetUI",
   "desc": "UniGetUI: The Graphical Interface for your package managers. Could be terribly described as a package manager manager to manage your package managers",
   "lang": "C#",
-  "stars": 26749,
+  "stars": 26755,
   "topics": [
    "chocolatey",
    "cli",
@@ -2753,7 +2753,7 @@
   "url": "https://github.com/HKUDS/ClawWork",
   "desc": "\"ClawWork: OpenClaw as Your AI Coworker - 💰 $15K earned in 11 Hours\"",
   "lang": "Python",
-  "stars": 8562,
+  "stars": 8560,
   "topics": [],
   "at": "2026-02-25",
   "created": "2026-02-15",
@@ -2785,7 +2785,7 @@
   "url": "https://github.com/hesamsheikh/awesome-openclaw-usecases",
   "desc": "A community collection of OpenClaw use cases for making life easier.",
   "lang": "未标注",
-  "stars": 31645,
+  "stars": 31644,
   "topics": [
    "awesome-list",
    "clawdbot",
@@ -2829,7 +2829,7 @@
   "url": "https://github.com/LadybirdBrowser/ladybird",
   "desc": "Truly independent web browser",
   "lang": "C++",
-  "stars": 66670,
+  "stars": 66676,
   "topics": [
    "browser",
    "browser-engine"
@@ -2848,7 +2848,7 @@
   "url": "https://github.com/bytedance/deer-flow",
   "desc": "An open-source long-horizon SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skill, subagents and message gateway, it handles different levels of tasks that could take minutes to hours.",
   "lang": "Python",
-  "stars": 84410,
+  "stars": 84413,
   "topics": [
    "agent",
    "agentic",
@@ -2908,7 +2908,7 @@
   "url": "https://github.com/waditu/czsc",
   "desc": "缠中说禅技术分析工具；缠论；股票；期货；Quant；量化交易",
   "lang": "Rust",
-  "stars": 6453,
+  "stars": 6454,
   "topics": [
    "czsc",
    "quant",
@@ -2944,7 +2944,7 @@
   "url": "https://github.com/6551Team/opennews-mcp",
   "desc": "News Aggregation · AI Ratings · Trading Signals · Real-time Updates",
   "lang": "Python",
-  "stars": 2419,
+  "stars": 2420,
   "topics": [],
   "at": "2026-03-19",
   "created": "2026-02-26",
@@ -2960,7 +2960,7 @@
   "url": "https://github.com/zarazhangrui/follow-builders",
   "desc": "AI builders digest — monitors top AI builders on X and YouTube podcasts, remixes their content into digestible summaries. Follow builders, not influencers.",
   "lang": "JavaScript",
-  "stars": 6962,
+  "stars": 6963,
   "topics": [],
   "at": "2026-03-22",
   "created": "2026-03-14",
@@ -3008,7 +3008,7 @@
   "url": "https://github.com/luongnv89/claude-howto",
   "desc": "A visual, example-driven guide to Claude Code — from basic concepts to advanced agents, with copy-paste templates that bring immediate value.",
   "lang": "Python",
-  "stars": 44940,
+  "stars": 44994,
   "topics": [
    "claude-code",
    "guide",
@@ -3028,7 +3028,7 @@
   "url": "https://github.com/drona23/claude-token-efficient",
   "desc": "One CLAUDE.md file. Keeps Claude responses terse. Reduces output verbosity on heavy workflows. Drop-in, no code changes.",
   "lang": "Python",
-  "stars": 6115,
+  "stars": 6118,
   "topics": [],
   "at": "2026-03-31",
   "created": "2026-03-30",
@@ -3044,7 +3044,7 @@
   "url": "https://github.com/AnInsomniacy/rayburst",
   "desc": "Redefining the open-source download manager",
   "lang": "TypeScript",
-  "stars": 11215,
+  "stars": 11218,
   "topics": [],
   "at": "2026-04-16",
   "created": "2026-03-04",
@@ -3060,7 +3060,7 @@
   "url": "https://github.com/farion1231/cc-switch",
   "desc": "A cross-platform desktop All-in-One assistant for Claude Code, Codex, OpenCode, OpenClaw, Grok Build & Hermes Agent. Only official website: ccswitch.io",
   "lang": "Rust",
-  "stars": 148555,
+  "stars": 148572,
   "topics": [
    "ai-tools",
    "claude-code",
@@ -3097,7 +3097,7 @@
   "url": "https://github.com/h4ckf0r0day/obscura",
   "desc": "The headless browser for AI agents and web scraping",
   "lang": "Rust",
-  "stars": 29353,
+  "stars": 29364,
   "topics": [
    "antidetect",
    "antidetect-browser",
@@ -3111,8 +3111,8 @@
   ],
   "at": "2026-05-16",
   "created": "2026-04-13",
-  "pushed": "2026-10-24",
-  "idle_days": 1,
+  "pushed": "2026-10-25",
+  "idle_days": 0,
   "level": "active",
   "archived": false,
   "fork": false,
@@ -3123,7 +3123,7 @@
   "url": "https://github.com/msitarzewski/agency-agents",
   "desc": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
   "lang": "Shell",
-  "stars": 163916,
+  "stars": 163971,
   "topics": [],
   "at": "2026-05-16",
   "created": "2025-10-13",
@@ -3158,7 +3158,7 @@
   "url": "https://github.com/fathah/hermes-desktop",
   "desc": "Desktop Companion for Hermes Agent",
   "lang": "TypeScript",
-  "stars": 14453,
+  "stars": 14454,
   "topics": [
    "ai",
    "ai-agent",
@@ -3197,7 +3197,7 @@
   "url": "https://github.com/virattt/ai-hedge-fund",
   "desc": "An AI Hedge Fund Team",
   "lang": "Python",
-  "stars": 64249,
+  "stars": 64256,
   "topics": [],
   "at": "2026-05-28",
   "created": "2024-11-29",
@@ -3229,7 +3229,7 @@
   "url": "https://github.com/wbh604/UZI-Skill",
   "desc": "冰冷的钱就这样流进我温暖的口袋-游资（UZI）Skills — 让我们欢迎，股海贼王！66位投资大佬帮你看盘 · 22维数据 × 180条量化规则 × 17种机构分析方法 · A股/港股/美股",
   "lang": "Python",
-  "stars": 7409,
+  "stars": 7408,
   "topics": [],
   "at": "2026-06-12",
   "created": "2026-04-16",
@@ -3245,7 +3245,7 @@
   "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
   "desc": "An AI skill that provides design intelligence for building professional UI/UX across multiple platforms.",
   "lang": "Python",
-  "stars": 140255,
+  "stars": 140330,
   "topics": [
    "ai-skills",
    "antigravity",
@@ -3281,7 +3281,7 @@
   "url": "https://github.com/xbtlin/ai-berkshire",
   "desc": "AI 时代的伯克希尔：基于 Claude Code / Codex 的价值投资研究框架。巴菲特·芒格·段永平·李录四大师方法论 + 多Agent并行研究。| AI-era Berkshire: a value investing research framework built for Claude Code / Codex. 4 masters' methodologies + multi-agent adversarial analysis.",
   "lang": "HTML",
-  "stars": 16878,
+  "stars": 16879,
   "topics": [
    "ai",
    "ai-agent",
@@ -3318,7 +3318,7 @@
   "url": "https://github.com/Fincept-Corporation/FinceptTerminal",
   "desc": "FinceptTerminal is a modern finance application offering advanced market analytics, investment research, and economic data tools, designed for interactive exploration and data-driven decision-making in a user-friendly environment.",
   "lang": "C++",
-  "stars": 33093,
+  "stars": 33105,
   "topics": [
    "ai-agents",
    "algorithmic-trading",
@@ -3404,7 +3404,7 @@
   "url": "https://github.com/pythonstock/stock",
   "desc": "stock，股票系统。使用python进行开发。",
   "lang": "Python",
-  "stars": 7884,
+  "stars": 7885,
   "topics": [],
   "at": "2026-07-19",
   "created": "2017-07-17",
@@ -3436,7 +3436,7 @@
   "url": "https://github.com/simonlin1212/a-stock-data",
   "desc": "A股全栈数据工具包：行情K线·当日逐笔·研报·信号·资金面·新闻·财务·公告·打板·ETF期权·舆情·宏观利率·期货大宗(含大商所日K)·事件驱动·可转债 | 15层·87端点·34数据源·除iwencai外免Key | A-share data for AI agents: K-lines, ticks, reports, fund flow, news, financials, filings, options, macro, futures, events, convertibles | 15 layers·87 endpoints·34 sources",
   "lang": "Python",
-  "stars": 11121,
+  "stars": 11128,
   "topics": [
    "a-share",
    "ai-agent",
@@ -3467,7 +3467,7 @@
   "url": "https://github.com/SangLuoCN/OneStep4",
   "desc": "Designed By SangLuo",
   "lang": "Java",
-  "stars": 398,
+  "stars": 399,
   "topics": [],
   "at": "2026-07-28",
   "created": "2026-07-27",
@@ -3505,7 +3505,7 @@
   "url": "https://github.com/esengine/DeepSeek-Reasonix",
   "desc": "A reliable coding agent for complex software engineering tasks.",
   "lang": "Go",
-  "stars": 35959,
+  "stars": 35961,
   "topics": [
    "agent",
    "agent-framework",
@@ -3540,7 +3540,7 @@
   "url": "https://github.com/ccxt/ccxt",
   "desc": "A unified trading API with more than 100 crypto exchanges and prediction markets in JavaScript / TypeScript / Python / C# / PHP / Go / Java / Rust",
   "lang": "Python",
-  "stars": 44573,
+  "stars": 44577,
   "topics": [
    "altcoin",
    "api",
@@ -3576,7 +3576,7 @@
   "url": "https://github.com/ranaroussi/yfinance",
   "desc": "Download market data from Yahoo! Finance's API",
   "lang": "Python",
-  "stars": 25606,
+  "stars": 25607,
   "topics": [
    "financial-data",
    "fix-yahoo-finance",
@@ -3624,7 +3624,7 @@
   "url": "https://github.com/reactive-resume/reactive-resume",
   "desc": "A one-of-a-kind resume builder that keeps your privacy in mind. Completely secure, customizable, portable, open-source and free forever. Try it out today!",
   "lang": "TypeScript",
-  "stars": 44844,
+  "stars": 44850,
   "topics": [
    "agent-skills",
    "ai",
@@ -3651,7 +3651,7 @@
   "url": "https://github.com/deepseek-ai/deepseek-harness",
   "desc": "DeepSeek Harness: Everything is a Plugin.",
   "lang": "TypeScript",
-  "stars": 261251,
+  "stars": 261314,
   "topics": [
    "ai-agents",
    "cordis",
@@ -3704,7 +3704,7 @@
   "url": "https://github.com/mcncarl/yichen-skills",
   "desc": "",
   "lang": "Python",
-  "stars": 4816,
+  "stars": 4817,
   "topics": [],
   "at": "2026-08-31",
   "created": "2026-02-11",
@@ -3720,7 +3720,7 @@
   "url": "https://github.com/sngyai/Sequoia-X",
   "desc": "A股自动选股系统 — 多种技术形态自动扫描，收盘后自动运行并推送飞书",
   "lang": "Python",
-  "stars": 8285,
+  "stars": 8286,
   "topics": [
    "a-shares",
    "akshare",
@@ -3746,7 +3746,7 @@
   "url": "https://github.com/jingyaogong/minimind",
   "desc": "🧠 Train a 64M-parameter LLM from scratch in just 2h!",
   "lang": "Python",
-  "stars": 64409,
+  "stars": 64408,
   "topics": [
    "artificial-intelligence",
    "large-language-model"
@@ -3765,7 +3765,7 @@
   "url": "https://github.com/galaxy-s10/billd-desk",
   "desc": "基于Vue3 + WebRTC + Nodejs + Flutter搭建的远程桌面控制、游戏串流",
   "lang": "TypeScript",
-  "stars": 8793,
+  "stars": 8799,
   "topics": [
    "coturn",
    "electron",
@@ -3794,7 +3794,7 @@
   "url": "https://github.com/assafdori/bypass-mdm",
   "desc": "Bypass MDM Setup for MacOS, up to MacOS Golden Gate.",
   "lang": "Shell",
-  "stars": 2488,
+  "stars": 2490,
   "topics": [
    "bypass",
    "mdm"
@@ -3813,7 +3813,7 @@
   "url": "https://github.com/sumimakito/Mac-Duo",
   "desc": "Wish you could bring the iPhone Duo effect to your MacBook?",
   "lang": "Swift",
-  "stars": 1212,
+  "stars": 1213,
   "topics": [
    "flip",
    "iphone",
@@ -3838,7 +3838,7 @@
   "url": "https://github.com/eternity4719/HowToLiveBetter",
   "desc": "高性价比人生指南: 长寿防病、急救、省钱理财、法律红线、失业与工伤、医保社保、恋爱婚育、怀孕育儿、创业与做平台合规、出国与技能。每条写明成本、收益、证据等级和原始出处，只引期刊论文与官方文件。",
   "lang": "HTML",
-  "stars": 68934,
+  "stars": 68968,
   "topics": [],
   "at": "2026-09-16",
   "created": "2026-09-07",
@@ -3854,7 +3854,7 @@
   "url": "https://github.com/bobeff/open-source-games",
   "desc": "A list of open source games.",
   "lang": "Python",
-  "stars": 17043,
+  "stars": 17049,
   "topics": [
    "awesome-list",
    "games",
@@ -3874,7 +3874,7 @@
   "url": "https://github.com/KingKongRobotics/jumper",
   "desc": "🦀 Jumper — an crab robot.",
   "lang": "Python",
-  "stars": 2885,
+  "stars": 2886,
   "topics": [
    "crab-robot",
    "robot",
@@ -3916,7 +3916,7 @@
   "url": "https://github.com/iawia002/lux",
   "desc": "👾 Fast and simple video download library and CLI tool written in Go",
   "lang": "Go",
-  "stars": 31803,
+  "stars": 31804,
   "topics": [
    "bilibili",
    "crawler",
@@ -3988,7 +3988,7 @@
   "url": "https://github.com/jhaizhou-ops/d2r-mobile",
   "desc": "Open-source compatibility layer for Diablo II: Resurrected with the Reign of the Warlock expansion. Runs your own Switch copy natively on iPhone, iPad, Mac, Android and HarmonyOS — full touch controls, 60 fps, new endgame modes. Bring your own game files. 开源的《暗黑破坏神 II：狱火重生》术士君临 iOS / macOS / 安卓 / 鸿蒙兼容层",
   "lang": "C",
-  "stars": 4617,
+  "stars": 4624,
   "topics": [
    "android",
    "compatibility-layer",
@@ -4019,7 +4019,7 @@
   "url": "https://github.com/abcwyc/pi-agent-desktop",
   "desc": "Pi — A cross-platform AI coding agent, bringing the Claude Code experience to your desktop. No environment setup, no terminal commands. Download and start coding right away.",
   "lang": "TypeScript",
-  "stars": 850,
+  "stars": 849,
   "topics": [
    "ai",
    "ai-agent",
@@ -4040,7 +4040,7 @@
   "url": "https://github.com/Arekejoker/qwen21-nsfw-pose-skill",
   "desc": "Qwen-Image 2.1 NSFW/姿势出图 skill：作者级提示词配方 + NSFW LoRA + 136 姿势 VNCCS 人偶控制；适用 Claude Code / Codex / Cursor / OpenClaw",
   "lang": "Python",
-  "stars": 3720,
+  "stars": 3723,
   "topics": [
    "agent-skill",
    "comfyui",
@@ -4095,7 +4095,7 @@
   "url": "https://github.com/jbiaojerry/ebook-treasure-chest",
   "desc": "欢迎来到电子书下载宝库，一个汇聚了各类电子书下载链接的地方。无论你是喜欢阅读经典文学、经管励志、终身学习、职场创业、技术手册还是其他类型的书籍，这里都能满足你的需求。 该库涵盖了帆书app(原樊登读书)、微信读书、京东读书、喜马拉雅等读书app的大部分电子书。",
   "lang": "Python",
-  "stars": 23045,
+  "stars": 23055,
   "topics": [],
   "at": "2026-10-23",
   "created": "2023-09-13",
@@ -4111,7 +4111,7 @@
   "url": "https://github.com/peach-mitao/peach",
   "desc": "Peach 蜜桃：单用户、本地优先的个人媒体系统 · Single-user, local-first personal media system",
   "lang": "Python",
-  "stars": 11600,
+  "stars": 11640,
   "topics": [
    "jav",
    "local-first",
@@ -4136,7 +4136,7 @@
   "url": "https://github.com/BeckyGlobal/PaidToStudyAbroad",
   "desc": "高性价比人生指南·海外版：高性价比留学。出国留学奖学金、免学费、政府全奖、带薪读博，德国日本学手艺有人发钱，美加澳奖学金单独成节。不是你花钱去留学，是你拿钱去留学。71 条，只引官方来源。关注作者：微信视频号 Becky在地球村",
   "lang": "HTML",
-  "stars": 1139,
+  "stars": 1144,
   "topics": [
    "australia",
    "canada",
@@ -4159,8 +4159,8 @@
   ],
   "at": "2026-10-25",
   "created": "2026-10-15",
-  "pushed": "2026-10-24",
-  "idle_days": 1,
+  "pushed": "2026-10-25",
+  "idle_days": 0,
   "level": "active",
   "archived": false,
   "fork": false,
