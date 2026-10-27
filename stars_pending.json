@@ -3,7 +3,7 @@
   "full": "Arekejoker/qwen21-nsfw-pose-skill",
   "url": "https://github.com/Arekejoker/qwen21-nsfw-pose-skill",
   "lang": "Python",
-  "stars": 3749,
+  "stars": 3750,
   "topics": [
    "agent-skill",
    "comfyui",
@@ -19,7 +19,7 @@
   "full": "BeckyGlobal/PaidToStudyAbroad",
   "url": "https://github.com/BeckyGlobal/PaidToStudyAbroad",
   "lang": "HTML",
-  "stars": 1188,
+  "stars": 1193,
   "topics": [
    "australia",
    "canada",
@@ -67,7 +67,7 @@
   "full": "abcwyc/pi-agent-desktop",
   "url": "https://github.com/abcwyc/pi-agent-desktop",
   "lang": "TypeScript",
-  "stars": 858,
+  "stars": 860,
   "topics": [
    "ai",
    "ai-agent",
@@ -81,7 +81,7 @@
   "full": "deusyu/harness-engineering",
   "url": "https://github.com/deusyu/harness-engineering",
   "lang": "JavaScript",
-  "stars": 6191,
+  "stars": 6192,
   "topics": [],
   "at": "2026-10-21",
   "desc": "Harness Engineering 学习指南 — 从概念理解到独立实践的深度学习档案"
@@ -90,7 +90,7 @@
   "full": "jbiaojerry/ebook-treasure-chest",
   "url": "https://github.com/jbiaojerry/ebook-treasure-chest",
   "lang": "Python",
-  "stars": 23177,
+  "stars": 23205,
   "topics": [],
   "at": "2026-10-23",
   "desc": "欢迎来到电子书下载宝库，一个汇聚了各类电子书下载链接的地方。无论你是喜欢阅读经典文学、经管励志、终身学习、职场创业、技术手册还是其他类型的书籍，这里都能满足你的需求。 该库涵盖了帆书app(原樊登读书)、微信读书、京东读书、喜马拉雅等读书app的大部分电子书。"
@@ -99,7 +99,7 @@
   "full": "jhaizhou-ops/d2r-mobile",
   "url": "https://github.com/jhaizhou-ops/d2r-mobile",
   "lang": "C",
-  "stars": 4698,
+  "stars": 4716,
   "topics": [
    "android",
    "compatibility-layer",
@@ -123,9 +123,8 @@
   "full": "peach-mitao/peach",
   "url": "https://github.com/peach-mitao/peach",
   "lang": "Python",
-  "stars": 12157,
+  "stars": 12430,
   "topics": [
-   "jav",
    "local-first",
    "media-library",
    "media-manager",
@@ -135,6 +134,6 @@
    "video-player"
   ],
   "at": "2026-10-24",
-  "desc": "Peach 蜜桃：单用户、本地优先的个人媒体系统 · Single-user, local-first personal media system"
+  "desc": "Peach 蜜桃：本地优先的影片刮削与媒体管理工具 · Local-first video metadata scraper and media manager"
  }
 ]
