@@ -3,7 +3,7 @@
   "full": "Arekejoker/qwen21-nsfw-pose-skill",
   "url": "https://github.com/Arekejoker/qwen21-nsfw-pose-skill",
   "lang": "Python",
-  "stars": 3750,
+  "stars": 3761,
   "topics": [
    "agent-skill",
    "comfyui",
@@ -19,7 +19,7 @@
   "full": "BeckyGlobal/PaidToStudyAbroad",
   "url": "https://github.com/BeckyGlobal/PaidToStudyAbroad",
   "lang": "HTML",
-  "stars": 1193,
+  "stars": 1201,
   "topics": [
    "australia",
    "canada",
@@ -58,7 +58,7 @@
   "full": "SantiBros/NFSMostWanted2012-Android-Switch",
   "url": "https://github.com/SantiBros/NFSMostWanted2012-Android-Switch",
   "lang": "C++",
-  "stars": 11,
+  "stars": 12,
   "topics": [],
   "at": "2026-10-20",
   "desc": "🏁 NFS Most Wanted 2012 (Android) for Nintendo Switch: unofficial homebrew port. Easy install, full controller support, 720p/1080p, fully offline. Bring your own APK + OBB. | Port homebrew no oficial para Switch: trae tu propio APK + OBB."
@@ -67,7 +67,7 @@
   "full": "abcwyc/pi-agent-desktop",
   "url": "https://github.com/abcwyc/pi-agent-desktop",
   "lang": "TypeScript",
-  "stars": 860,
+  "stars": 859,
   "topics": [
    "ai",
    "ai-agent",
@@ -81,16 +81,25 @@
   "full": "deusyu/harness-engineering",
   "url": "https://github.com/deusyu/harness-engineering",
   "lang": "JavaScript",
-  "stars": 6192,
+  "stars": 6194,
   "topics": [],
   "at": "2026-10-21",
   "desc": "Harness Engineering 学习指南 — 从概念理解到独立实践的深度学习档案"
  },
  {
+  "full": "farouqaldori/vibe-notch",
+  "url": "https://github.com/farouqaldori/vibe-notch",
+  "lang": "Swift",
+  "stars": 2526,
+  "topics": [],
+  "at": "2026-10-27",
+  "desc": "Claude Code notifications without the context switch. A minimal, always-present session manager for macOS."
+ },
+ {
   "full": "jbiaojerry/ebook-treasure-chest",
   "url": "https://github.com/jbiaojerry/ebook-treasure-chest",
   "lang": "Python",
-  "stars": 23205,
+  "stars": 23239,
   "topics": [],
   "at": "2026-10-23",
   "desc": "欢迎来到电子书下载宝库，一个汇聚了各类电子书下载链接的地方。无论你是喜欢阅读经典文学、经管励志、终身学习、职场创业、技术手册还是其他类型的书籍，这里都能满足你的需求。 该库涵盖了帆书app(原樊登读书)、微信读书、京东读书、喜马拉雅等读书app的大部分电子书。"
@@ -99,7 +108,7 @@
   "full": "jhaizhou-ops/d2r-mobile",
   "url": "https://github.com/jhaizhou-ops/d2r-mobile",
   "lang": "C",
-  "stars": 4716,
+  "stars": 4743,
   "topics": [
    "android",
    "compatibility-layer",
@@ -123,7 +132,7 @@
   "full": "peach-mitao/peach",
   "url": "https://github.com/peach-mitao/peach",
   "lang": "Python",
-  "stars": 12430,
+  "stars": 12791,
   "topics": [
    "local-first",
    "media-library",
@@ -134,6 +143,6 @@
    "video-player"
   ],
   "at": "2026-10-24",
-  "desc": "Peach 蜜桃：本地优先的影片刮削与媒体管理工具 · Local-first video metadata scraper and media manager"
+  "desc": "Peach: Local-first video metadata scraper and media manager."
  }
 ]
