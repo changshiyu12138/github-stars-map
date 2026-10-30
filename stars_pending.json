@@ -3,7 +3,7 @@
   "full": "Arekejoker/qwen21-nsfw-pose-skill",
   "url": "https://github.com/Arekejoker/qwen21-nsfw-pose-skill",
   "lang": "Python",
-  "stars": 3826,
+  "stars": 3831,
   "topics": [
    "agent-skill",
    "comfyui",
@@ -19,7 +19,7 @@
   "full": "BeckyGlobal/PaidToStudyAbroad",
   "url": "https://github.com/BeckyGlobal/PaidToStudyAbroad",
   "lang": "HTML",
-  "stars": 1262,
+  "stars": 1264,
   "topics": [
    "australia",
    "canada",
@@ -55,10 +55,30 @@
   "desc": "DL社区版公开仓库。DLCE public download repository"
  },
  {
+  "full": "HRuiCcc/RuiC-PoseAtlas",
+  "url": "https://github.com/HRuiCcc/RuiC-PoseAtlas",
+  "lang": "JavaScript",
+  "stars": 379,
+  "topics": [
+   "3d-modeling",
+   "ai-art",
+   "art-reference",
+   "gallery",
+   "photography",
+   "pose-reference",
+   "ruic",
+   "static-site",
+   "trilingual",
+   "vanilla-javascript"
+  ],
+  "at": "2026-10-30",
+  "desc": "RuiC-PoseAtlas｜姿态 + 衣装双图鉴：288 组人体姿态 × 5 视角 × 1,439 张人台线稿，加 1,407 套无人物衣装 × 8 分类 × 86 个三语标签。中/英/日切换、搜索筛选、键盘浏览、原图下载，纯静态零依赖。"
+ },
+ {
   "full": "MiniMax-AI/mcode-stack",
   "url": "https://github.com/MiniMax-AI/mcode-stack",
   "lang": "Python",
-  "stars": 408,
+  "stars": 433,
   "topics": [
    "agent-skills",
    "ai-coding",
@@ -97,7 +117,7 @@
   "full": "deusyu/harness-engineering",
   "url": "https://github.com/deusyu/harness-engineering",
   "lang": "JavaScript",
-  "stars": 6216,
+  "stars": 6219,
   "topics": [],
   "at": "2026-10-21",
   "desc": "Harness Engineering 学习指南 — 从概念理解到独立实践的深度学习档案"
@@ -106,7 +126,7 @@
   "full": "farouqaldori/vibe-notch",
   "url": "https://github.com/farouqaldori/vibe-notch",
   "lang": "Swift",
-  "stars": 2526,
+  "stars": 2524,
   "topics": [],
   "at": "2026-10-27",
   "desc": "Claude Code notifications without the context switch. A minimal, always-present session manager for macOS."
@@ -115,7 +135,7 @@
   "full": "jbiaojerry/ebook-treasure-chest",
   "url": "https://github.com/jbiaojerry/ebook-treasure-chest",
   "lang": "Python",
-  "stars": 23383,
+  "stars": 23402,
   "topics": [],
   "at": "2026-10-23",
   "desc": "欢迎来到电子书下载宝库，一个汇聚了各类电子书下载链接的地方。无论你是喜欢阅读经典文学、经管励志、终身学习、职场创业、技术手册还是其他类型的书籍，这里都能满足你的需求。 该库涵盖了帆书app(原樊登读书)、微信读书、京东读书、喜马拉雅等读书app的大部分电子书。"
@@ -124,7 +144,7 @@
   "full": "jhaizhou-ops/d2r-mobile",
   "url": "https://github.com/jhaizhou-ops/d2r-mobile",
   "lang": "C",
-  "stars": 4869,
+  "stars": 4882,
   "topics": [
    "android",
    "compatibility-layer",
@@ -148,7 +168,7 @@
   "full": "peach-mitao/peach",
   "url": "https://github.com/peach-mitao/peach",
   "lang": "Python",
-  "stars": 13322,
+  "stars": 13353,
   "topics": [
    "local-first",
    "media-library",
