@@ -3,7 +3,7 @@
   "full": "Arekejoker/qwen21-nsfw-pose-skill",
   "url": "https://github.com/Arekejoker/qwen21-nsfw-pose-skill",
   "lang": "Python",
-  "stars": 3842,
+  "stars": 3850,
   "topics": [
    "agent-skill",
    "comfyui",
@@ -19,7 +19,7 @@
   "full": "BeckyGlobal/PaidToStudyAbroad",
   "url": "https://github.com/BeckyGlobal/PaidToStudyAbroad",
   "lang": "HTML",
-  "stars": 1272,
+  "stars": 1290,
   "topics": [
    "australia",
    "canada",
@@ -58,7 +58,7 @@
   "full": "HRuiCcc/RuiC-PoseAtlas",
   "url": "https://github.com/HRuiCcc/RuiC-PoseAtlas",
   "lang": "JavaScript",
-  "stars": 517,
+  "stars": 605,
   "topics": [
    "3d-modeling",
    "ai-art",
@@ -78,7 +78,7 @@
   "full": "MiniMax-AI/mcode-stack",
   "url": "https://github.com/MiniMax-AI/mcode-stack",
   "lang": "Python",
-  "stars": 447,
+  "stars": 459,
   "topics": [
    "agent-skills",
    "ai-coding",
@@ -94,7 +94,7 @@
   "full": "Oldcircle/geo-sleuth",
   "url": "https://github.com/Oldcircle/geo-sleuth",
   "lang": "Python",
-  "stars": 4589,
+  "stars": 4607,
   "topics": [
    "agent-skills",
    "ai-agents",
@@ -131,7 +131,7 @@
   "full": "abcwyc/pi-agent-desktop",
   "url": "https://github.com/abcwyc/pi-agent-desktop",
   "lang": "TypeScript",
-  "stars": 870,
+  "stars": 872,
   "topics": [
    "ai",
    "ai-agent",
@@ -142,10 +142,39 @@
   "desc": "Pi — A cross-platform AI coding agent, bringing the Claude Code experience to your desktop. No environment setup, no terminal commands. Download and start coding right away."
  },
  {
+  "full": "calesthio/OpenMontage",
+  "url": "https://github.com/calesthio/OpenMontage",
+  "lang": "Python",
+  "stars": 73360,
+  "topics": [
+   "agent",
+   "agentic-ai",
+   "ai",
+   "claude",
+   "copilot",
+   "cursor",
+   "elevenlabs",
+   "ffmpeg",
+   "flux",
+   "image-generation",
+   "open-source",
+   "openai",
+   "python",
+   "remotion",
+   "stable-diffusion",
+   "text-to-speech",
+   "text-to-video",
+   "video-generation",
+   "video-production"
+  ],
+  "at": "2026-10-30",
+  "desc": "World's first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent skill and production-knowledge files. Turn your AI coding assistant into a full video production studio."
+ },
+ {
   "full": "deusyu/harness-engineering",
   "url": "https://github.com/deusyu/harness-engineering",
   "lang": "JavaScript",
-  "stars": 6221,
+  "stars": 6223,
   "topics": [],
   "at": "2026-10-21",
   "desc": "Harness Engineering 学习指南 — 从概念理解到独立实践的深度学习档案"
@@ -154,7 +183,7 @@
   "full": "farouqaldori/vibe-notch",
   "url": "https://github.com/farouqaldori/vibe-notch",
   "lang": "Swift",
-  "stars": 2523,
+  "stars": 2524,
   "topics": [],
   "at": "2026-10-27",
   "desc": "Claude Code notifications without the context switch. A minimal, always-present session manager for macOS."
@@ -163,7 +192,7 @@
   "full": "jbiaojerry/ebook-treasure-chest",
   "url": "https://github.com/jbiaojerry/ebook-treasure-chest",
   "lang": "Python",
-  "stars": 23416,
+  "stars": 23437,
   "topics": [],
   "at": "2026-10-23",
   "desc": "欢迎来到电子书下载宝库，一个汇聚了各类电子书下载链接的地方。无论你是喜欢阅读经典文学、经管励志、终身学习、职场创业、技术手册还是其他类型的书籍，这里都能满足你的需求。 该库涵盖了帆书app(原樊登读书)、微信读书、京东读书、喜马拉雅等读书app的大部分电子书。"
@@ -172,7 +201,7 @@
   "full": "jhaizhou-ops/d2r-mobile",
   "url": "https://github.com/jhaizhou-ops/d2r-mobile",
   "lang": "C",
-  "stars": 4893,
+  "stars": 4908,
   "topics": [
    "android",
    "compatibility-layer",
@@ -196,7 +225,7 @@
   "full": "peach-mitao/peach",
   "url": "https://github.com/peach-mitao/peach",
   "lang": "Python",
-  "stars": 13383,
+  "stars": 13402,
   "topics": [
    "local-first",
    "media-library",
