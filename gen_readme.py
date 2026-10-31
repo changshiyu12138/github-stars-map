@@ -54,26 +54,42 @@ pending = []
 auto_count = 0
 
 # 合并人工分类与自动分类
+# 注意：自动分类结果在 llm_classify.py 里产生，晚于 build_stars.py，
+# 所以这里直接读文件算归属，不依赖 stars.json 里的标记（那会过期）。
 ALL_NOTES = dict(M.NOTES)
+auto_set = set()
+PENDING_PATH = os.path.join(BASE, 'stars_pending.json')
+AUTO_PATH = os.path.join(BASE, 'map_auto.py')
 try:
-    import map_auto
-    ALL_NOTES.update(map_auto.AUTO_NOTES)
+    import importlib.util
+    if os.path.exists(AUTO_PATH):
+        spec = importlib.util.spec_from_file_location('map_auto_read', AUTO_PATH)
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+        ALL_NOTES.update(mod.AUTO_NOTES)
+        auto_set = set(mod.AUTO_NOTES)
+except Exception:
+    pass
+
+# 真正仍未归类的项目（llm_classify.py 处理后剩下的）
+pending_full = set()
+try:
+    if os.path.exists(PENDING_PATH):
+        pending_full = {p['full'] for p in json.load(open(PENDING_PATH, encoding='utf-8'))}
 except Exception:
     pass
 
 for r in rows:
-    if r.get('pending'):
-        # 置信度不足，仍需人工确认
+    if r['full'] in pending_full:
         pending.append(r)
         continue
     if r['full'] not in ALL_NOTES:
         # 理论上不会发生（build 已保证），兜底放进 pending
-        r['pending'] = True
         pending.append(r)
         continue
     cat, note = ALL_NOTES[r['full']]
     r['cat'], r['note'] = cat, note
-    if r.get('auto'):
+    if r['full'] in auto_set:
         auto_count += 1
     groups[cat].append(r)
 
