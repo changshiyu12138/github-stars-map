@@ -79,9 +79,13 @@ jobs:
         id: llm
         continue-on-error: true
         env:
-          # GitHub Models：零配置，免费额度。需要仓库开启 models: read 权限。
+          # GitHub Copilot —— 优先。用 Copilot Free 自带的额度，不花钱。
+          # 必须是「用户 OAuth 令牌」，Actions 的 GITHUB_TOKEN 是 App 安装令牌，
+          # Copilot API 会拒绝（integration id 不匹配）。
+          COPILOT_TOKEN: ${{ secrets.COPILOT_TOKEN }}
+          # GitHub Models —— 官方零配置方案（内置令牌 + models: read）
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # 备选：自备 key 的国内模型服务（DeepSeek / Kimi / 智谱 / 通义）
+          # 备选：自备 key 的国内模型服务（按量计费）
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           MOONSHOT_API_KEY: ${{ secrets.MOONSHOT_API_KEY }}
           ZHIPU_API_KEY: ${{ secrets.ZHIPU_API_KEY }}
