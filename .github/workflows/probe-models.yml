@@ -1,57 +1,32 @@
 name: 探针-模型访问通路
-
 on:
   workflow_dispatch:
-
 permissions:
   contents: read
   models: read
-
 jobs:
   probe:
     runs-on: ubuntu-latest
     steps:
-      - name: 检出仓库
-        uses: actions/checkout@v4
-
-      - name: 探测各通路
+      - uses: actions/checkout@v4
+      - name: 测各种 integration id（GITHUB_TOKEN 能否零配置用 Copilot）
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          COPILOT_TOKEN: ${{ secrets.COPILOT_TOKEN }}
         run: |
           python <<'PY'
           import os, json, urllib.request, urllib.error
-
-          def probe(tag, url, tok, method='GET', data=None, extra=None):
-              if not tok:
-                  print(f'[{tag}] 无 token，跳过')
-                  return
-              h = {'Accept':'application/vnd.github+json', 'Authorization': f'Bearer {tok}'}
-              if extra: h.update(extra)
-              req = urllib.request.Request(url, data=data, headers=h, method=method)
+          tok = os.environ['GITHUB_TOKEN']
+          data = json.dumps({'model':'gpt-4.1','messages':[{'role':'user','content':'hi'}],'max_tokens':5}).encode()
+          for iid in [None,'github-copilot','copilot','github-actions','copilot-cli','github-copilot-cli','vscode-chat']:
+              h={'Authorization':f'Bearer {tok}','Content-Type':'application/json'}
+              if iid: h['Copilot-Integration-Id']=iid
+              req=urllib.request.Request('https://api.githubcopilot.com/chat/completions',data=data,headers=h)
               try:
-                  with urllib.request.urlopen(req, timeout=30) as r:
-                      raw = r.read().decode('utf-8','replace')
-                      print(f'[{tag}] HTTP {r.status} ct={r.headers.get("Content-Type","")}')
-                      print('   ', raw[:200].replace('\n',' '))
+                  with urllib.request.urlopen(req,timeout=25) as r:
+                      print(f'  iid={str(iid):22s} -> HTTP {r.status} 真实响应')
               except urllib.error.HTTPError as e:
-                  print(f'[{tag}] HTTP {e.code}')
-                  print('   ', e.read().decode('utf-8','replace')[:200].replace('\n',' '))
+                  b=e.read().decode()[:110].replace('\n',' ')
+                  print(f'  iid={str(iid):22s} -> HTTP {e.code}  {b}')
               except Exception as e:
-                  print(f'[{tag}] {type(e).__name__}: {e}')
-
-          gh_tok = os.environ.get('GITHUB_TOKEN','')
-          cp_tok = os.environ.get('COPILOT_TOKEN','')
-          chat_data = json.dumps({'model':'gpt-4.1',
-              'messages':[{'role':'user','content':'reply OK'}],'max_tokens':10}).encode()
-          cp_hdr = {'Content-Type':'application/json',
-                    'Copilot-Integration-Id':'vscode-chat'}
-
-          probe('A gh/copilot/models', 'https://api.githubcopilot.com/models', gh_tok)
-          probe('B gh/copilot/chat', 'https://api.githubcopilot.com/chat/completions',
-                gh_tok, 'POST', chat_data, cp_hdr)
-          probe('C cp/models', 'https://api.githubcopilot.com/models', cp_tok)
-          probe('D cp/chat', 'https://api.githubcopilot.com/chat/completions',
-                cp_tok, 'POST', chat_data, cp_hdr)
-          probe('E cp/copilot_internal', 'https://api.github.com/copilot_internal/user', cp_tok)
+                  print(f'  iid={str(iid):22s} -> {type(e).__name__}')
           PY
