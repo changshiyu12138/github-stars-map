@@ -7,9 +7,16 @@
   LLM 能读懂描述语义，处理这些边界情况，并写出比「概念重组」自然得多的中文说明。
 
 架构：多provider 通用（都走 OpenAI 兼容协议）
-  1. GitHub Models   —— 零配置，用 Actions 内置 GITHUB_TOKEN + models: read 权限，不花钱
-  2. DeepSeek / Kimi / 智谱 / 通义 —— 需要自备 API key，但便宜甚至有免费额度
+  1. GitHub Copilot   —— 优先用。用 Copilot 账号自带的额度，Copilot Free 有
+     200 次 chat 额度/月，本场景（每天新 Star 1~5 个）完全够用且不花钱。
+     token 用 COPILOT_TOKEN，或直接复用 gh 登录拿到的 OAuth 令牌。
+  2. GitHub Models    —— 官方零配置方案（Actions 内置 GITHUB_TOKEN + models: read）
+  3. DeepSeek / Kimi / 智谱 / 通义 —— 自备 API key，按量计费
   按顺序尝试，第一个可用的就用；也可用 LLM_PROVIDER 环境变量指定。
+
+注意：DeepSeek 等自备 key 的服务是**按量计费、没有免费额度**，
+      只是单价极低（deepseek-flash 约 $0.15/百万输入 token）。
+      不想花钱就用 Copilot 或 GitHub Models。
 
 关键设计（都是踩过的坑换来的）：
   1. **输出必须受约束**：只允许模型从 15 个固定分类里选，并要求 JSON 输出。
@@ -41,15 +48,22 @@ AUTO_OUT = os.path.join(BASE, 'map_auto.py')
 
 # (名称, base_url, 模型, api_key 环境变量)
 PROVIDERS = [
-    ('github-models', 'https://models.github.ai/inference', 'openai/gpt-4o-mini', 'GITHUB_TOKEN'),
-    ('deepseek',      'https://api.deepseek.com/v1',              'deepseek-chat',     'DEEPSEEK_API_KEY'),
-    ('kimi',          'https://api.moonshot.cn/v1',                'moonshot-v1-8k',   'MOONSHOT_API_KEY'),
-    ('zhipu',         'https://open.bigmodel.cn/api/paas/v4',      'glm-4-flash',      'ZHIPU_API_KEY'),
+    # GitHub Copilot —— 最优先。用 Copilot 账号自带的免费额度，
+    # Copilot Free 有 200 次 chat 额度/月，本场景完全够用且不花钱。
+    ('copilot',       'https://api.githubcopilot.com',               'gpt-4.1',        'COPILOT_TOKEN'),
+    # GitHub Models —— 官方零配置方案（Actions 内置 GITHUB_TOKEN + models:read）
+    ('github-models', 'https://models.github.ai/inference',           'openai/gpt-4o-mini', 'GITHUB_TOKEN'),
+    # 自备 key 的国内服务
+    ('deepseek',      'https://api.deepseek.com/v1',                 'deepseek-chat', 'DEEPSEEK_API_KEY'),
+    ('kimi',          'https://api.moonshot.cn/v1',                   'moonshot-v1-8k', 'MOONSHOT_API_KEY'),
+    ('zhipu',         'https://open.bigmodel.cn/api/paas/v4',         'glm-4-flash',  'ZHIPU_API_KEY'),
     ('qwen',          'https://dashscope.aliyuncs.com/compatible-mode/v1', 'qwen-plus', 'DASHSCOPE_API_KEY'),
 ]
 
 # 备用模型：主模型不可用时依次尝试
 FALLBACK_MODELS = {
+    'copilot':       ['gpt-4.1', 'gpt-4o-2024-11-20', 'gpt-4o-mini-2024-07-18',
+                      'claude-haiku-4.5', 'gpt-5-mini'],
     'github-models': ['openai/gpt-4o-mini', 'microsoft/Phi-4-mini-instruct',
                       'meta/Llama-3.3-70B-Instruct'],
     'deepseek':      ['deepseek-chat'],
@@ -102,7 +116,7 @@ def build_user_prompt(repo):
     return f"仓库：{name}\n官方简介：{desc}\nTopics：{topics}"
 
 
-def call_model(repo, base_url, model, key):
+def call_model(repo, base_url, model, key, provider_name=''):
     """调用一次 OpenAI 兼容接口，返回解析后的 dict。
 
     失败抛异常。注意：必须确认响应真的是 JSON 且含 choices——
@@ -118,14 +132,19 @@ def call_model(repo, base_url, model, key):
         'temperature': 0,
         'max_tokens': 300,
     }
+    headers = {
+        'Authorization': f'Bearer {key}',
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+    }
+    # Copilot 端点要求带集成标识，否则会拒识别的客户端
+    if provider_name == 'copilot':
+        headers['Copilot-Integration-Id'] = 'vscode-chat'
+        headers['Editor-Version'] = 'WorkBuddy/1.0'
     req = urllib.request.Request(
         base_url.rstrip('/') + '/chat/completions',
         data=json.dumps(payload).encode('utf-8'),
-        headers={
-            'Authorization': f'Bearer {key}',
-            'Content-Type': 'application/json',
-            'Accept': 'application/json',
-        },
+        headers=headers,
     )
     with urllib.request.urlopen(req, timeout=90) as resp:
         ctype = resp.headers.get('Content-Type', '')
@@ -154,23 +173,30 @@ def parse_json(text):
 
 
 def validate(result):
-    """校验模型输出。不合法返回 None。"""
+    """校验模型输出。
+
+    返回 (status, value)：
+      ('ok', (cat, summary))  —— 可直接采用
+      ('low', None)           —— 模型明确表示判不了（confidence=low），是确定结论
+      ('invalid', None)       —— 输出不合规（分类不在列表里/缺字段），换个模型也许能行
+    """
     if not isinstance(result, dict):
-        return None
+        return 'invalid', None
     cat = (result.get('category') or '').strip()
     summary = (result.get('summary') or '').strip()
     conf = (result.get('confidence') or 'medium').strip().lower()
-    if cat not in CATEGORY_HINTS:
-        return None
     if not summary:
-        return None
+        return 'invalid', None
+    if conf == 'low':
+        # 模型自己都说看不出来了，换模型多半也一样，直接放弃（省额度）
+        return 'low', None
+    if cat not in CATEGORY_HINTS:
+        return 'invalid', None
     if len(summary) > 60:
         summary = summary[:58] + '…'
-    if conf not in ('high', 'medium', 'low'):
+    if conf not in ('high', 'medium'):
         conf = 'medium'
-    if conf == 'low':
-        return None          # low 置信度不采用，交给规则引擎
-    return cat, summary
+    return 'ok', (cat, summary)
 
 
 def load_cache():
@@ -202,9 +228,9 @@ def write_cache(cache):
 def pick_providers():
     """选出可用 provider：有 key 才算可用，按优先级排序。
 
-    LLM_BASE_URL 指定时视为「自定义端点」，只用这一个，
-    配合 LLM_API_KEY / LLM_MODEL 使用（测试或自建代理场景）。
-    否则按内置优先级列表，取第一个有 key 的 provider。
+    Copilot 的 token 来源：COPILOT_TOKEN 优先，其次复用 GITHUB_TOKEN
+    （gh 登录拿到的 OAuth 令牌本身就带 Copilot 权限）。
+    LLM_BASE_URL 指定时视为「自定义端点」，只用这一个。
     """
     base_override = os.environ.get('LLM_BASE_URL', '').strip()
     if base_override:
@@ -220,6 +246,9 @@ def pick_providers():
         if forced and name != forced:
             continue
         key = os.environ.get(env, '').strip()
+        if not key and name == 'copilot':
+            # gh 的 OAuth 令牌也能直接用于 Copilot 端点
+            key = os.environ.get('GITHUB_TOKEN', '').strip()
         if not key:
             continue
         out.append((name, base, os.environ.get('LLM_MODEL', '').strip() or model, env, key))
@@ -281,7 +310,7 @@ def main():
             transport_err = False
             for mdl in FALLBACK_MODELS.get(name, [model]):
                 try:
-                    raw = call_model(p, base, mdl, key)
+                    raw = call_model(p, base, mdl, key, name)
                 except urllib.error.HTTPError as e:
                     if e.code == 429:
                         print('  ⚠️ 触发限流 (429)，停止调用，剩余转规则引擎')
@@ -300,14 +329,17 @@ def main():
 
                 # 拿到响应后做校验——校验不通过说明「这个项目本身有歧义」，
                 # 不是 provider 的问题，不该触发熔断
-                v = validate(raw)
-                if v:
+                status, v = validate(raw)
+                if status == 'ok':
                     got = v
                     used_provider = used_provider or name
                     llm_ok += 1
                     fail_streak[name] = 0
                     break
                 llm_fail += 1
+                if status == 'low':
+                    # 模型明确表示判不了，换模型也没意义，直接放弃（省额度）
+                    break
 
             if got:
                 break
