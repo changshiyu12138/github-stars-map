@@ -40,25 +40,36 @@ jobs:
         run: |
           python <<'PY'
           import os, json, urllib.request, urllib.error
+
           tok = os.environ['GITHUB_TOKEN']
-          for model in ['openai/gpt-4o-mini','microsoft/Phi-4-mini-instruct']:
-              try:
-                  req = urllib.request.Request(
-                      'https://models.github.ai/inference/chat/completions',
-                      data=json.dumps({
-                          'model': model,
-                          'messages': [{'role':'user','content':'回复两个字：可用'}],
-                          'max_tokens': 20}).encode(),
-                      headers={'Authorization': f'Bearer {tok}',
-                               'Content-Type':'application/json'})
-                  with urllib.request.urlopen(req, timeout=60) as r:
-                      body = json.loads(r.read().decode())
-                  print(f'✅ {model} 可用 ->', body['choices'][0]['message']['content'][:60])
-                  break
-              except urllib.error.HTTPError as e:
-                  print(f'❌ {model} HTTP {e.code}: {e.read()[:200]}')
-              except Exception as e:
-                  print(f'❌ {model} {type(e).__name__}: {e}')
+          endpoints = [
+              'https://models.github.ai/inference/chat/completions',
+              'https://models.inference.ai.azure.com/chat/completions',
+          ]
+          models = ['openai/gpt-4o-mini', 'microsoft/Phi-4-mini-instruct']
+          for ep in endpoints:
+              for model in models:
+                  try:
+                      req = urllib.request.Request(
+                          ep,
+                          data=json.dumps({
+                              'model': model,
+                              'messages': [{'role':'user','content':'hi'}],
+                              'max_tokens': 20}).encode(),
+                          headers={'Authorization': f'Bearer {tok}',
+                                   'Content-Type':'application/json',
+                                   'Accept':'application/json'})
+                      with urllib.request.urlopen(req, timeout=60) as r:
+                          raw = r.read().decode()
+                          print(f'--- {ep} | {model} | HTTP {r.status}')
+                          print('RAW:', raw[:400])
+                          break
+                  except urllib.error.HTTPError as e:
+                      body = e.read().decode()[:300]
+                      print(f'--- {ep} | {model} | HTTP {e.code}')
+                      print('BODY:', body)
+                  except Exception as e:
+                      print(f'--- {ep} | {model} | {type(e).__name__}: {e}')
           PY
 
       - name: 运行 LLM 分类
