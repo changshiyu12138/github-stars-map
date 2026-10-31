@@ -14,6 +14,7 @@
 - **主力语言**：Python 53、TypeScript 28、JavaScript 16、C++ 11、HTML 9
 - **分类数量**：15 个主题
 - **项目存活**：150 个半年内仍有提交（77%），35 个已停更或归档
+- **🆕 待归类**：1 个新项目尚未补写说明（见文末）
 
 ### 收藏节奏
 
@@ -48,7 +49,7 @@
 
 | | 主题 | 数量 | 存活 | 一句话概括 |
 |---|---|---:|---:|---|
-| 🤖 | [AI Agent 与智能体应用](#cat-ai-agent) | 39 | 34/39 | 真正在做事的东西 —— 工作流、Agent 循环、Skills 生态 |
+| 🤖 | [AI Agent 与智能体应用](#cat-ai-agent) | 38 | 33/38 | 真正在做事的东西 —— 工作流、Agent 循环、Skills 生态 |
 | 🧠 | [大模型训练、推理与基础设施](#cat-ai-infra) | 10 | 6/10 | 模型本身的训练、推理与 API 接入层 |
 | 📈 | [金融量化与投资研究](#cat-finance) | 19 | 16/19 | A股、加密货币与量化投研的全部工具箱 |
 | 📖 | [电子书与阅读器](#cat-reading) | 11 | 8/11 | 电子书阅读器、书库管理与本地化 |
@@ -66,24 +67,34 @@
 
 ---
 
+## 🆕 待归类 · 1
+
+> 自动监控发现的新Star 项目，还缺人工撰写的中文说明与分类。
+> 补写方式：编辑 `map.py`，加一行 `"owner/repo": ("分类", "中文说明"),` 后重跑 `gen_readme.py`。
+
+| 项目 | 官方简介 | 状态 | 最后提交 | 语言 | ⭐ | 收藏于 |
+|---|---|---|---|---|---:|---|
+| [`calesthio/OpenMontage`](https://github.com/calesthio/OpenMontage) | World's first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent skill and production-knowledge files. Turn your AI coding assistant into a full video production studio. | 🟢 | 2026-10-28 | Python | 73,562 | 2026-10-30 |
+
+---
+
 ## 📚 项目清单
 
 > 排序：各分类内按 Star 时间倒序，最新的在最前面。⭐ 为该项目当前的总 Star 数。
 
 <a id="cat-ai-agent"></a>
 
-### 🤖 AI Agent 与智能体应用 · 39
+### 🤖 AI Agent 与智能体应用 · 38
 
 > 真正在做事的东西 —— 工作流、Agent 循环、Skills 生态
 
 | 项目 | 说明 | 状态 | 最后提交 | 语言 | ⭐ | 收藏于 |
 |---|---|---|---|---|---:|---|
-| [`calesthio/OpenMontage`](https://github.com/calesthio/OpenMontage) | 全球首个开源智能体视频生产系统：12 条生产流水线、100+ 工具、700+ Agent Skill | 🟢 | 2026-10-28 | Python | 73,561 | 2026-10-30 |
 | [`Oldcircle/geo-sleuth`](https://github.com/Oldcircle/geo-sleuth) | 照片定位 Skill：靠 OpenStreetMap 几何、高程天际线与卫星影像反推拍摄地 | 🟢 | 2026-10-29 | Python | 4,619 | 2026-10-30 |
 | [`MiniMax-AI/mcode-stack`](https://github.com/MiniMax-AI/mcode-stack) | MiniMax Code 团队自己用的工作流与 Skills，开源可直接安装复用 | 🟢 | 2026-10-29 | Python | 466 | 2026-10-29 |
 | [`farouqaldori/vibe-notch`](https://github.com/farouqaldori/vibe-notch) | macOS 常驻会话管理器，让 Claude Code 有通知但不抢焦点 | 🔵 | 2026-04-20 | Swift | 2,524 | 2026-10-27 |
 | [`deusyu/harness-engineering`](https://github.com/deusyu/harness-engineering) | Harness Engineering 学习指南：从概念理解到独立实践的深度档案 | 🟢 | 2026-10-29 | JavaScript | 6,223 | 2026-10-21 |
-| [`Arekejoker/qwen21-nsfw-pose-skill`](https://github.com/Arekejoker/qwen21-nsfw-pose-skill) | Qwen-Image 2.1 出图 Skill：作者级提示词配方 + NSFW LoRA + 136 组姿势人偶控制 | 🟢 | 2026-10-26 | Python | 3,853 | 2026-10-16 |
+| [`Arekejoker/qwen21-nsfw-pose-skill`](https://github.com/Arekejoker/qwen21-nsfw-pose-skill) | Qwen-Image 2.1 出图 Skill：作者级提示词配方 + NSFW LoRA + 136 组姿势人偶控制 | 🟢 | 2026-10-26 | Python | 3,854 | 2026-10-16 |
 | [`abcwyc/pi-agent-desktop`](https://github.com/abcwyc/pi-agent-desktop) | Pi —— 把 Claude Code 式编码 Agent 体验搬到桌面，无需配置环境 | 🟢 | 2026-10-29 | TypeScript | 872 | 2026-10-15 |
 | [`chengyi-ai/native-subtitle-quote-image`](https://github.com/chengyi-ai/native-subtitle-quote-image) | 保留视频内嵌字幕、精确取帧并生成 3:4 社交长图的 Agent Skill | 🟢 | 2026-10-21 | Python | 2,753 | 2026-10-07 |
 | [`mcncarl/yichen-skills`](https://github.com/mcncarl/yichen-skills) | 个人整理的 Skills 合集（仓库暂无官方简介） | 🟢 | 2026-10-28 | Python | 5,126 | 2026-08-31 |
@@ -91,7 +102,7 @@
 | [`nextlevelbuilder/ui-ux-pro-max-skill`](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | 给 Agent 用的 UI/UX 设计智能 Skill，跨平台产出专业级界面 | 🟢 | 2026-10-30 | Python | 143,106 | 2026-06-21 |
 | [`yan-labs/serenity-aleabitoreddit`](https://github.com/yan-labs/serenity-aleabitoreddit) | 可安装的推文归档 + AI 语义供应链 Skill，一条命令 npx 装到本地 | 🟢 | 2026-10-31 | Python | 485 | 2026-05-31 |
 | [`fathah/hermes-desktop`](https://github.com/fathah/hermes-desktop) | Hermes Agent 的桌面伴侣客户端 | 🟢 | 2026-10-13 | TypeScript | 14,500 | 2026-05-25 |
-| [`msitarzewski/agency-agents`](https://github.com/msitarzewski/agency-agents) | 一整套「AI 数字 Agency」角色库：前端专家、社区运营、创意注入、现实检验等 | 🟢 | 2026-10-25 | Shell | 165,547 | 2026-05-16 |
+| [`msitarzewski/agency-agents`](https://github.com/msitarzewski/agency-agents) | 一整套「AI 数字 Agency」角色库：前端专家、社区运营、创意注入、现实检验等 | 🟢 | 2026-10-25 | Shell | 165,546 | 2026-05-16 |
 | [`farion1231/cc-switch`](https://github.com/farion1231/cc-switch) | 跨平台桌面端 AI 助手，一键切换 Claude Code、Codex、OpenCode、OpenClaw 等 | 🟢 | 2026-10-31 | Rust | 150,468 | 2026-05-03 |
 | [`drona23/claude-token-efficient`](https://github.com/drona23/claude-token-efficient) | 单个 CLAUDE.md 配置，让 Claude 输出更简洁，显著降低 token 消耗 | 🔵 | 2026-06-16 | Python | 6,135 | 2026-03-31 |
 | [`linuxhsj/openclaw-zero-token`](https://github.com/linuxhsj/openclaw-zero-token) | 让 OpenClaw 复用主流模型而无需自备 API Token 的方案 | 🟢 | 2026-09-24 | TypeScript | 5,214 | 2026-03-30 |
@@ -127,7 +138,7 @@
 | 项目 | 说明 | 状态 | 最后提交 | 语言 | ⭐ | 收藏于 |
 |---|---|---|---|---|---:|---|
 | [`jingyaogong/minimind`](https://github.com/jingyaogong/minimind) | 2 小时从零训练一个 6400 万参数 LLM 的极简教学项目 | 🟢 | 2026-10-27 | Python | 64,667 | 2026-09-06 |
-| [`deepseek-ai/deepseek-harness`](https://github.com/deepseek-ai/deepseek-harness) | DeepSeek 官方 Agent Harness，核心设计是「一切皆插件」 | 🟢 | 2026-10-30 | TypeScript | 266,875 | 2026-08-19 |
+| [`deepseek-ai/deepseek-harness`](https://github.com/deepseek-ai/deepseek-harness) | DeepSeek 官方 Agent Harness，核心设计是「一切皆插件」 | 🟢 | 2026-10-30 | TypeScript | 266,876 | 2026-08-19 |
 | [`QuantumNous/new-api`](https://github.com/QuantumNous/new-api) | 统一大模型网关：把各家 LLM 转成 OpenAI / Claude / Gemini 兼容接口 | 🟢 | 2026-10-31 | Go | 51,073 | 2026-02-04 |
 | [`songquanpeng/one-api`](https://github.com/songquanpeng/one-api) | 老牌 LLM API 管理分发系统，支持十几家国内主流模型统一适配 | 🔵 | 2026-01-09 | JavaScript | 37,295 | 2026-02-04 |
 | [`knownsec/aipyapp`](https://github.com/knownsec/aipyapp) | Python 与 AI 双向互操作的应用合集，涵盖「AI 用 Python」与「Python 驱动 AI」 | 🔵 | 2026-02-15 | HTML | 4,031 | 2025-07-28 |
@@ -181,7 +192,7 @@
 | [`Dujltqzv/Some-Many-Books`](https://github.com/Dujltqzv/Some-Many-Books) | 个人收藏书单仓库（作者以大量空白字符排版，纯清单项目） | 🔵 | 2026-06-18 | 未标注 | 25,468 | 2025-07-05 |
 | [`koodo-reader/koodo-reader`](https://github.com/koodo-reader/koodo-reader) | 现代电子书管理与阅读器，支持 Win/Mac/Linux/Android/iOS/Web 多端同步备份 | 🟢 | 2026-10-31 | JavaScript | 28,680 | 2025-05-16 |
 | [`MeowSalty/LocalizeEpub_For_Windows`](https://github.com/MeowSalty/LocalizeEpub_For_Windows) | C# 重写的 EPUB 本地化客户端，借繁化姬等第三方服务做繁简转换与翻译 | 🔴 | 2022-02-25 | C# | 28 | 2025-05-16 |
-| [`oomol-lab/pdf-craft`](https://github.com/oomol-lab/pdf-craft) | PDF 转其他格式的工具包，专注扫描书籍的结构化处理 | 🟢 | 2026-10-31 | Python | 6,469 | 2025-04-19 |
+| [`oomol-lab/pdf-craft`](https://github.com/oomol-lab/pdf-craft) | PDF 转其他格式的工具包，专注扫描书籍的结构化处理 | 🟢 | 2026-10-31 | Python | 6,467 | 2025-04-19 |
 | [`readest/readest`](https://github.com/readest/readest) | 跨平台现代电子书阅读器，接Calibre 库，支持插件与书库同步 | 🟢 | 2026-10-30 | TypeScript | 25,776 | 2025-03-19 |
 | [`Anxcye/anx-reader`](https://github.com/Anxcye/anx-reader) | AI 能力突出的电子书阅读器，支持多种格式，主打更聪明的沉浸阅读 | 🟢 | 2026-10-17 | Dart | 9,102 | 2024-08-17 |
 
@@ -208,9 +219,9 @@
 
 | 项目 | 说明 | 状态 | 最后提交 | 语言 | ⭐ | 收藏于 |
 |---|---|---|---|---|---:|---|
-| [`h4ckf0r0day/obscura`](https://github.com/h4ckf0r0day/obscura) | 面向 AI Agent 的无头浏览器，带反检测能力，兼顾网页抓取 | 🟢 | 2026-10-31 | Rust | 29,814 | 2026-05-16 |
+| [`h4ckf0r0day/obscura`](https://github.com/h4ckf0r0day/obscura) | 面向 AI Agent 的无头浏览器，带反检测能力，兼顾网页抓取 | 🟢 | 2026-10-31 | Rust | 29,813 | 2026-05-16 |
 | [`unclecode/crawl4ai`](https://github.com/unclecode/crawl4ai) | 开源爬虫，把任意网站转成干净的 LLM 友好 Markdown | 🟢 | 2026-10-30 | Python | 86,619 | 2025-12-03 |
-| [`apify/crawlee`](https://github.com/apify/crawlee) | Apify 出品的 Node.js 爬虫与浏览器自动化库，专为 AI/LLM 数据管道设计 | 🟢 | 2026-10-31 | TypeScript | 26,304 | 2025-11-30 |
+| [`apify/crawlee`](https://github.com/apify/crawlee) | Apify 出品的 Node.js 爬虫与浏览器自动化库，专为 AI/LLM 数据管道设计 | 🟢 | 2026-10-31 | TypeScript | 26,303 | 2025-11-30 |
 | [`browserbase/stagehand`](https://github.com/browserbase/stagehand) | 浏览器数据提取与交互 SDK，官方推荐与 Claude Code、Codex 搭配使用 | 🟢 | 2026-10-30 | TypeScript | 25,885 | 2025-10-12 |
 
 <a id="cat-tools"></a>
@@ -234,9 +245,9 @@
 | [`ImranR98/Obtainium`](https://github.com/ImranR98/Obtainium) | 直接从项目源站拉取 APK 更新，绕开应用商店版本滞后 | 🟢 | 2026-10-25 | Dart | 21,064 | 2025-09-27 |
 | [`zhongyang219/TrafficMonitor`](https://github.com/zhongyang219/TrafficMonitor) | Windows 桌面悬浮窗，显示网速、CPU、内存，支持任务栏显示与换肤 | 🟢 | 2026-09-27 | C++ | 46,742 | 2025-09-17 |
 | [`Xinrea/JPet`](https://github.com/Xinrea/JPet) | C++ + WebView2 的 Live2D 桌面宠物 | 🟢 | 2026-10-25 | C++ | 108 | 2025-09-11 |
-| [`chen08209/FlClash`](https://github.com/chen08209/FlClash) | 基于 ClashMeta 的多平台代理客户端，Flutter 编写，简洁无广告 | 🟢 | 2026-10-24 | Dart | 59,945 | 2025-09-07 |
+| [`chen08209/FlClash`](https://github.com/chen08209/FlClash) | 基于 ClashMeta 的多平台代理客户端，Flutter 编写，简洁无广告 | 🟢 | 2026-10-24 | Dart | 59,946 | 2025-09-07 |
 | [`Cp0204/quark-auto-save`](https://github.com/Cp0204/quark-auto-save) | 夸克网盘自动化：签到、自动转存、命名整理、推送提醒、刷新媒体库 | 🔵 | 2026-07-09 | Python | 3,087 | 2025-08-11 |
-| [`Usagi-org/ai-goofish-monitor`](https://github.com/Usagi-org/ai-goofish-monitor) | 基于 Playwright + AI 的闲鱼多任务实时监控与筛选系统，带后台管理 UI | 🟢 | 2026-10-10 | Python | 15,356 | 2025-07-23 |
+| [`Usagi-org/ai-goofish-monitor`](https://github.com/Usagi-org/ai-goofish-monitor) | 基于 Playwright + AI 的闲鱼多任务实时监控与筛选系统，带后台管理 UI | 🟢 | 2026-10-10 | Python | 15,359 | 2025-07-23 |
 | [`xiaobaigroup/ClashBox`](https://github.com/xiaobaigroup/ClashBox) | HarmonyOS NEXT 上的代理客户端，ArkTS + ArkUI 实现 | 🟢 | 2026-08-15 | 未标注 | 4,700 | 2025-07-05 |
 | [`blinkospace/blinko`](https://github.com/blinkospace/blinko) | 开源自托管的个人 AI 笔记，强调隐私，数据留在本地 | 🟢 | 2026-08-27 | TypeScript | 11,144 | 2025-07-04 |
 | [`wanglin2/mind-map`](https://github.com/wanglin2/mind-map) | SimpleMindMap 思维导图，交互简洁、功能扎实的开源导图工具 | 🟢 | 2026-08-02 | JavaScript | 12,897 | 2025-03-23 |
@@ -339,7 +350,7 @@
 | [`ZuodaoTech/everyone-can-use-english`](https://github.com/ZuodaoTech/everyone-can-use-english) | 《人人都能用英语》开源教材与配套资源 | 🔵 | 2026-06-29 | TypeScript | 39,407 | 2025-09-13 |
 | [`beihaili/Get-Started-with-Web3`](https://github.com/beihaili/Get-Started-with-Web3) | 双语 AI-native Web3 课程：钱包、比特币、以太坊、DeFi、DAO、llms.txt 与 MCP | 🟢 | 2026-10-26 | JavaScript | 614 | 2025-09-02 |
 | [`ProbiusOfficial/Hello-CTF`](https://github.com/ProbiusOfficial/Hello-CTF) | 面向零基础新手的 CTF 入门开源教程，同时补信息差 | 🟢 | 2026-10-31 | HTML | 4,280 | 2025-08-13 |
-| [`sindresorhus/awesome`](https://github.com/sindresorhus/awesome) | 覆盖各行各业的 Awesome Lists 总目录 | 🟢 | 2026-09-02 | 未标注 | 527,607 | 2025-07-02 |
+| [`sindresorhus/awesome`](https://github.com/sindresorhus/awesome) | 覆盖各行各业的 Awesome Lists 总目录 | 🟢 | 2026-09-02 | 未标注 | 527,609 | 2025-07-02 |
 | [`xiaolai/bitcoin-whitepaper-chinese-translation`](https://github.com/xiaolai/bitcoin-whitepaper-chinese-translation) | 比特币白皮书中文全译（仓库暂无官方简介） | 🔴 | 2024-06-21 | HTML | 1,225 | 2025-05-28 |
 | [`justjavac/free-programming-books-zh_CN`](https://github.com/justjavac/free-programming-books-zh_CN) | 免费的中文计算机编程书籍汇总 | 🔵 | 2026-07-29 | 未标注 | 119,454 | 2022-05-13 |
 | [`ruanyf/free-books`](https://github.com/ruanyf/free-books) | 互联网上的免费书籍索引 | 🔴 | 2024-03-28 | 未标注 | 16,044 | 2022-05-13 |
@@ -351,9 +362,9 @@
 | [`DuGuQiuBai/Java`](https://github.com/DuGuQiuBai/Java) | 「27 天成为 Java 大神」系列教程 | 🔴 | 2024-07-20 | Java | 14,627 | 2020-11-27 |
 | [`HelloWorld521/Java`](https://github.com/HelloWorld521/Java) | Java 项目实战练习集 | 🔴 | 2024-08-08 | Java | 3,844 | 2020-11-27 |
 | [`CyC2018/CS-Notes`](https://github.com/CyC2018/CS-Notes) | 技术面试必备：算法、操作系统、计算机网络、系统设计笔记 | 🟢 | 2026-10-30 | Python | 186,397 | 2019-05-10 |
-| [`nndl/nndl`](https://github.com/nndl/nndl) | 邱锡鹏《神经网络与深度学习》第二版电子书与配套学习资源 | 🟢 | 2026-09-06 | 未标注 | 19,532 | 2019-05-08 |
+| [`nndl/nndl`](https://github.com/nndl/nndl) | 邱锡鹏《神经网络与深度学习》第二版电子书与配套学习资源 | 🟢 | 2026-09-06 | 未标注 | 19,531 | 2019-05-08 |
 | [`jaywcjlove/linux-command`](https://github.com/jaywcjlove/linux-command) | Linux 命令大全搜索工具：手册、详解、学习资料全收录 | 🟢 | 2026-10-31 | Markdown | 37,198 | 2019-05-04 |
-| [`jackfrued/Python-100-Days`](https://github.com/jackfrued/Python-100-Days) | Python 从新手到大师的 100 天学习路线，含 Jupyter Notebook | 🔵 | 2026-07-29 | Jupyter Notebook | 187,602 | 2019-05-03 |
+| [`jackfrued/Python-100-Days`](https://github.com/jackfrued/Python-100-Days) | Python 从新手到大师的 100 天学习路线，含 Jupyter Notebook | 🔵 | 2026-07-29 | Jupyter Notebook | 187,603 | 2019-05-03 |
 
 <a id="cat-games"></a>
 
@@ -406,14 +417,14 @@
 
 | 项目 | 说明 | 状态 | ⭐ |
 |---|---|---|---:|
-| [`sindresorhus/awesome`](https://github.com/sindresorhus/awesome) | 覆盖各行各业的 Awesome Lists 总目录 | 🟢 | 527,607 |
+| [`sindresorhus/awesome`](https://github.com/sindresorhus/awesome) | 覆盖各行各业的 Awesome Lists 总目录 | 🟢 | 527,609 |
 | [`openclaw/openclaw`](https://github.com/openclaw/openclaw) | 主打「真干活」的个人 AI 助手，跨系统跨平台的自托管 Agent | 🟢 | 393,501 |
-| [`deepseek-ai/deepseek-harness`](https://github.com/deepseek-ai/deepseek-harness) | DeepSeek 官方 Agent Harness，核心设计是「一切皆插件」 | 🟢 | 266,875 |
+| [`deepseek-ai/deepseek-harness`](https://github.com/deepseek-ai/deepseek-harness) | DeepSeek 官方 Agent Harness，核心设计是「一切皆插件」 | 🟢 | 266,876 |
 | [`n8n-io/n8n`](https://github.com/n8n-io/n8n) | 可视化搭建 AI 工作流的自托管平台，400+ 集成，可写自定义代码节点 | 🟢 | 209,163 |
 | [`microsoft/markitdown`](https://github.com/microsoft/markitdown) | 微软官方工具：把各类文件与 Office 文档统一转成 Markdown | 🟢 | 193,108 |
-| [`jackfrued/Python-100-Days`](https://github.com/jackfrued/Python-100-Days) | Python 从新手到大师的 100 天学习路线，含 Jupyter Notebook | 🔵 | 187,602 |
+| [`jackfrued/Python-100-Days`](https://github.com/jackfrued/Python-100-Days) | Python 从新手到大师的 100 天学习路线，含 Jupyter Notebook | 🔵 | 187,603 |
 | [`CyC2018/CS-Notes`](https://github.com/CyC2018/CS-Notes) | 技术面试必备：算法、操作系统、计算机网络、系统设计笔记 | 🟢 | 186,397 |
-| [`msitarzewski/agency-agents`](https://github.com/msitarzewski/agency-agents) | 一整套「AI 数字 Agency」角色库：前端专家、社区运营、创意注入、现实检验等 | 🟢 | 165,547 |
+| [`msitarzewski/agency-agents`](https://github.com/msitarzewski/agency-agents) | 一整套「AI 数字 Agency」角色库：前端专家、社区运营、创意注入、现实检验等 | 🟢 | 165,546 |
 | [`Snailclimb/JavaGuide`](https://github.com/Snailclimb/JavaGuide) | Java 面试与后端通用面试指南，已扩展到 AI 应用开发 | 🟢 | 159,357 |
 | [`farion1231/cc-switch`](https://github.com/farion1231/cc-switch) | 跨平台桌面端 AI 助手，一键切换 Claude Code、Codex、OpenCode、OpenClaw 等 | 🟢 | 150,468 |
 
