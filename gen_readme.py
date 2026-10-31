@@ -51,13 +51,30 @@ CAT_META = {
 
 groups = collections.defaultdict(list)
 pending = []
+auto_count = 0
+
+# 合并人工分类与自动分类
+ALL_NOTES = dict(M.NOTES)
+try:
+    import map_auto
+    ALL_NOTES.update(map_auto.AUTO_NOTES)
+except Exception:
+    pass
+
 for r in rows:
     if r.get('pending'):
-        # 新增但尚未在 map.py 登记的项目，单独收集，不丢数据
+        # 置信度不足，仍需人工确认
         pending.append(r)
         continue
-    cat, note = M.NOTES[r['full']]
+    if r['full'] not in ALL_NOTES:
+        # 理论上不会发生（build 已保证），兜底放进 pending
+        r['pending'] = True
+        pending.append(r)
+        continue
+    cat, note = ALL_NOTES[r['full']]
     r['cat'], r['note'] = cat, note
+    if r.get('auto'):
+        auto_count += 1
     groups[cat].append(r)
 
 # 语言分布（排除未标注）
@@ -95,7 +112,9 @@ w(f"- **主力语言**：{ '、'.join(f'{k} {v}' for k, v in langs.most_common(5
 w(f"- **分类数量**：{len([c for c in M.CATS if groups[c]])} 个主题")
 w(f"- **项目存活**：{live} 个半年内仍有提交（{live*100//len(rows)}%），{dead} 个已停更或归档")
 if pending:
-    w(f"- **🆕 待归类**：{len(pending)} 个新项目尚未补写说明（见文末）")
+    w(f"- **🆕 待归类**：{len(pending)} 个新项目置信度不足，需人工确认（见文末）")
+if auto_count:
+    w(f"- **🤖 自动分类**：{auto_count} 个项目由规则引擎自动归类（说明前带 🤖 标记）")
 w("")
 
 # 年份柱状图
@@ -169,6 +188,7 @@ w("")
 w("## 📚 项目清单")
 w("")
 w("> 排序：各分类内按 Star 时间倒序，最新的在最前面。⭐ 为该项目当前的总 Star 数。")
+w("> 说明前带 🤖 的是自动分类的（规则判定，非人工撰写），分类可信、措辞需自行核对。")
 w("")
 
 for c in M.CATS:
@@ -186,7 +206,8 @@ for c in M.CATS:
     w("|---|---|---|---|---|---:|---|")
     for r in items:
         note = r['note'].replace('|', '｜')
-        w(f"| [`{r['full']}`]({r['url']}) | {note} | {badge(r)} | {last_push(r)} | {r['lang']} | {r['stars']:,} | {r['at']} |")
+        mark = '🤖 ' if r.get('auto') else ''
+        w(f"| [`{r['full']}`]({r['url']}) | {mark}{note} | {badge(r)} | {last_push(r)} | {r['lang']} | {r['stars']:,} | {r['at']} |")
     w("")
 
 # ---- 高星项目 ----
