@@ -4,7 +4,7 @@
   "url": "https://github.com/jackfrued/Python-100-Days",
   "desc": "Python - 100天从新手到大师",
   "lang": "Jupyter Notebook",
-  "stars": 187601,
+  "stars": 187602,
   "topics": [],
   "at": "2019-05-03",
   "created": "2018-03-01",
@@ -1056,7 +1056,7 @@
   "url": "https://github.com/n8n-io/n8n",
   "desc": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",
   "lang": "TypeScript",
-  "stars": 209162,
+  "stars": 209163,
   "topics": [
    "ai",
    "apis",
@@ -1109,7 +1109,7 @@
   "url": "https://github.com/shadps4-emu/shadPS4",
   "desc": "PlayStation 4 emulator for Windows, Linux, macOS and FreeBSD written in C++",
   "lang": "C++",
-  "stars": 33985,
+  "stars": 33987,
   "topics": [
    "cpp",
    "cpp23",
@@ -1375,7 +1375,7 @@
   "url": "https://github.com/sindresorhus/awesome",
   "desc": "😎 Awesome lists about all kinds of interesting topics [NOTE: Pull requests are temporarily disabled until I have a chance to catch up with the existing ones]",
   "lang": "未标注",
-  "stars": 527603,
+  "stars": 527607,
   "topics": [
    "awesome",
    "awesome-list",
@@ -1397,7 +1397,7 @@
   "url": "https://github.com/LibreSpark/LibreTV",
   "desc": "一分钟搭建影视站，支持Docker等部署方式",
   "lang": "TypeScript",
-  "stars": 22888,
+  "stars": 22889,
   "topics": [
    "css",
    "film",
@@ -1558,7 +1558,7 @@
   "url": "https://github.com/Usagi-org/ai-goofish-monitor",
   "desc": "基于 Playwright 和AI实现的闲鱼多任务实时/定时监控与智能分析系统，配备了功能完善的后台管理UI。帮助用户从闲鱼海量商品中，找到心仪产品。",
   "lang": "Python",
-  "stars": 15354,
+  "stars": 15356,
   "topics": [
    "ai",
    "ai-assistant",
@@ -1681,7 +1681,7 @@
   "url": "https://github.com/sansan0/TrendRadar",
   "desc": "⭐AI-driven public opinion & trend monitor with multi-platform aggregation, RSS, and smart alerts.🎯 告别信息过载，你的 AI 舆情监控助手与热点筛选工具！聚合多平台热点 +  RSS 订阅，支持关键词精准筛选。AI 智能筛选新闻 + AI 翻译 +  AI 分析简报直推手机，也支持接入 MCP 架构，赋能 AI 自然语言对话分析、情感洞察与趋势预测等。支持 Docker ，数据本地/云端自持。集成微信/飞书/钉钉/Telegram/邮件/ntfy/bark/slack 等渠道智能推送。",
   "lang": "Python",
-  "stars": 63325,
+  "stars": 63326,
   "topics": [
    "ai",
    "bark",
@@ -1789,7 +1789,7 @@
   "url": "https://github.com/chen08209/FlClash",
   "desc": "A multi-platform proxy client based on ClashMeta,simple and easy to use, open-source and ad-free.",
   "lang": "Dart",
-  "stars": 59942,
+  "stars": 59944,
   "topics": [
    "clash",
    "clash-meta",
@@ -1815,7 +1815,7 @@
   "url": "https://github.com/gkd-kit/gkd",
   "desc": "基于无障碍，高级选择器，订阅规则的自定义屏幕点击安卓应用 | An Android APP with custom screen tapping based on Accessibility, Advanced Selectors, and Subscription Rules",
   "lang": "Kotlin",
-  "stars": 43749,
+  "stars": 43750,
   "topics": [
    "accessibility",
    "android",
@@ -1881,7 +1881,7 @@
   "url": "https://github.com/zhongyang219/TrafficMonitor",
   "desc": "这是一个用于显示当前网速、CPU及内存利用率的桌面悬浮窗软件，并支持任务栏显示，支持更换皮肤。",
   "lang": "C++",
-  "stars": 46741,
+  "stars": 46742,
   "topics": [],
   "at": "2025-09-17",
   "created": "2017-07-30",
@@ -2229,7 +2229,7 @@
   "url": "https://github.com/microsoft/markitdown",
   "desc": "Python tool for converting files and office documents to Markdown.",
   "lang": "Python",
-  "stars": 193107,
+  "stars": 193108,
   "topics": [
    "autogen",
    "autogen-extension",
@@ -2351,7 +2351,7 @@
   "url": "https://github.com/666ghj/MiroFish",
   "desc": "A Simple and Universal Swarm Intelligence Engine, Predicting Anything. 简洁通用的群体智能引擎，预测万物",
   "lang": "Python",
-  "stars": 82916,
+  "stars": 82917,
   "topics": [
    "agent-memory",
    "financial-forecasting",
@@ -2479,7 +2479,7 @@
   "url": "https://github.com/openclaw/openclaw",
   "desc": "The AI that really does things. Any OS. Any Platform. The lobster way. 🦞",
   "lang": "TypeScript",
-  "stars": 393499,
+  "stars": 393501,
   "topics": [
    "ai",
    "assistant",
@@ -2519,7 +2519,7 @@
   "url": "https://github.com/youhunwl/TVAPP",
   "desc": "收集全网 Android TV电视盒子应用，涵盖影视、直播、K歌、工具、游戏等类型，整理优质APK资源，支持便捷下载与自动更新。提供安全验证、分类索引与兼容性标注，助力用户打造家庭影音娱乐中心！              ✅ TVBox/影视仓等影音壳接口配置源。",
   "lang": "JavaScript",
-  "stars": 26881,
+  "stars": 26882,
   "topics": [
    "android",
    "android-tv",
@@ -2640,7 +2640,7 @@
   "url": "https://github.com/QuantumNous/new-api",
   "desc": "Open-source AI gateway. Self-hosted LLM gateway with OpenAI-, Claude- and Gemini-compatible APIs, model routing, access control, usage tracking and cost accounting.",
   "lang": "Go",
-  "stars": 51071,
+  "stars": 51073,
   "topics": [
    "ai-gateway",
    "api-management",
@@ -2789,7 +2789,7 @@
   "url": "https://github.com/hesamsheikh/awesome-openclaw-usecases",
   "desc": "A community collection of OpenClaw use cases for making life easier.",
   "lang": "未标注",
-  "stars": 31638,
+  "stars": 31639,
   "topics": [
    "awesome-list",
    "clawdbot",
@@ -3012,7 +3012,7 @@
   "url": "https://github.com/luongnv89/claude-howto",
   "desc": "A visual, example-driven guide to Claude Code — from basic concepts to advanced agents, with copy-paste templates that bring immediate value.",
   "lang": "Python",
-  "stars": 46231,
+  "stars": 46232,
   "topics": [
    "claude-code",
    "guide",
@@ -3064,7 +3064,7 @@
   "url": "https://github.com/farion1231/cc-switch",
   "desc": "A cross-platform desktop All-in-One assistant for Claude Code, Codex, OpenCode,DeepSeek Harness and more. Only official website: ccswitch.io",
   "lang": "Rust",
-  "stars": 150467,
+  "stars": 150468,
   "topics": [
    "ai-tools",
    "claude-code",
@@ -3100,7 +3100,7 @@
   "url": "https://github.com/h4ckf0r0day/obscura",
   "desc": "The headless browser for AI agents and web scraping",
   "lang": "Rust",
-  "stars": 29812,
+  "stars": 29814,
   "topics": [
    "antidetect",
    "antidetect-browser",
@@ -3126,7 +3126,7 @@
   "url": "https://github.com/msitarzewski/agency-agents",
   "desc": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
   "lang": "Shell",
-  "stars": 165546,
+  "stars": 165547,
   "topics": [],
   "at": "2026-05-16",
   "created": "2025-10-13",
@@ -3248,7 +3248,7 @@
   "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
   "desc": "An AI skill that provides design intelligence for building professional UI/UX across multiple platforms.",
   "lang": "Python",
-  "stars": 143105,
+  "stars": 143106,
   "topics": [
    "ai-skills",
    "antigravity",
@@ -3654,7 +3654,7 @@
   "url": "https://github.com/deepseek-ai/deepseek-harness",
   "desc": "DeepSeek Harness: Everything is a Plugin.",
   "lang": "TypeScript",
-  "stars": 266865,
+  "stars": 266873,
   "topics": [
    "ai-agents",
    "cordis",
@@ -3841,7 +3841,7 @@
   "url": "https://github.com/eternity4719/HowToLiveBetter",
   "desc": "高性价比人生指南: 长寿防病、急救、省钱理财、法律红线、失业与工伤、医保社保、恋爱婚育、怀孕育儿、创业与做平台合规、出国与技能。每条写明成本、收益、证据等级和原始出处，只引期刊论文与官方文件。",
   "lang": "HTML",
-  "stars": 71684,
+  "stars": 71688,
   "topics": [],
   "at": "2026-09-16",
   "created": "2026-09-07",
@@ -3897,7 +3897,7 @@
   "url": "https://github.com/chengyi-ai/native-subtitle-quote-image",
   "desc": "保留视频内嵌字幕，精确取帧并生成 3:4 社交长图的 Agent Skill",
   "lang": "Python",
-  "stars": 2752,
+  "stars": 2753,
   "topics": [
    "agent-skills",
    "codex",
@@ -3984,7 +3984,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
-  "pending": true
+  "pending": false
  },
  {
   "full": "jhaizhou-ops/d2r-mobile",
@@ -4015,7 +4015,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
-  "pending": true
+  "pending": false
  },
  {
   "full": "abcwyc/pi-agent-desktop",
@@ -4036,7 +4036,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
-  "pending": true
+  "pending": false
  },
  {
   "full": "Arekejoker/qwen21-nsfw-pose-skill",
@@ -4059,7 +4059,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
-  "pending": true
+  "pending": false
  },
  {
   "full": "SantiBros/NFSMostWanted2012-Android-Switch",
@@ -4075,7 +4075,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
-  "pending": true
+  "pending": false
  },
  {
   "full": "deusyu/harness-engineering",
@@ -4091,14 +4091,14 @@
   "level": "active",
   "archived": false,
   "fork": false,
-  "pending": true
+  "pending": false
  },
  {
   "full": "jbiaojerry/ebook-treasure-chest",
   "url": "https://github.com/jbiaojerry/ebook-treasure-chest",
   "desc": "欢迎来到电子书下载宝库，一个汇聚了各类电子书下载链接的地方。无论你是喜欢阅读经典文学、经管励志、终身学习、职场创业、技术手册还是其他类型的书籍，这里都能满足你的需求。 该库涵盖了帆书app(原樊登读书)、微信读书、京东读书、喜马拉雅等读书app的大部分电子书。",
   "lang": "Python",
-  "stars": 23447,
+  "stars": 23448,
   "topics": [],
   "at": "2026-10-23",
   "created": "2023-09-13",
@@ -4107,7 +4107,7 @@
   "level": "recent",
   "archived": false,
   "fork": false,
-  "pending": true
+  "pending": false
  },
  {
   "full": "peach-mitao/peach",
@@ -4131,7 +4131,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
-  "pending": true
+  "pending": false
  },
  {
   "full": "BeckyGlobal/PaidToStudyAbroad",
@@ -4166,7 +4166,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
-  "pending": true
+  "pending": false
  },
  {
   "full": "farouqaldori/vibe-notch",
@@ -4182,7 +4182,7 @@
   "level": "recent",
   "archived": false,
   "fork": false,
-  "pending": true
+  "pending": false
  },
  {
   "full": "MiniMax-AI/mcode-stack",
@@ -4205,14 +4205,14 @@
   "level": "active",
   "archived": false,
   "fork": false,
-  "pending": true
+  "pending": false
  },
  {
   "full": "calesthio/OpenMontage",
   "url": "https://github.com/calesthio/OpenMontage",
   "desc": "World's first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent skill and production-knowledge files. Turn your AI coding assistant into a full video production studio.",
   "lang": "Python",
-  "stars": 73558,
+  "stars": 73560,
   "topics": [
    "agent",
    "agentic-ai",
@@ -4241,7 +4241,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
-  "pending": true
+  "pending": false
  },
  {
   "full": "Oldcircle/geo-sleuth",
@@ -4276,14 +4276,14 @@
   "level": "active",
   "archived": false,
   "fork": false,
-  "pending": true
+  "pending": false
  },
  {
   "full": "HRuiCcc/RuiC-PoseAtlas",
   "url": "https://github.com/HRuiCcc/RuiC-PoseAtlas",
   "desc": "RuiC-PoseAtlas｜姿态 + 衣装双图鉴：288 组人体姿态 × 5 视角 × 1,439 张人台线稿，加 1,407 套无人物衣装 × 8 分类 × 86 个三语标签。中/英/日切换、搜索筛选、键盘浏览、原图下载，纯静态零依赖。",
   "lang": "JavaScript",
-  "stars": 714,
+  "stars": 716,
   "topics": [
    "3d-modeling",
    "ai-art",
@@ -4303,6 +4303,6 @@
   "level": "active",
   "archived": false,
   "fork": false,
-  "pending": true
+  "pending": false
  }
 ]
