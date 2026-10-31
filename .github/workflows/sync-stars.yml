@@ -75,12 +75,17 @@ jobs:
             echo "存在待归类项目，继续执行"
           fi
 
-      - name: LLM 自动分类（GitHub Models 免费额度）
+      - name: LLM 自动分类
         id: llm
         continue-on-error: true
         env:
+          # GitHub Models：零配置，免费额度。需要仓库开启 models: read 权限。
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_MODELS_MODEL: openai/gpt-4o-mini
+          # 备选：自备 key 的国内模型服务（DeepSeek / Kimi / 智谱 / 通义）
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          MOONSHOT_API_KEY: ${{ secrets.MOONSHOT_API_KEY }}
+          ZHIPU_API_KEY: ${{ secrets.ZHIPU_API_KEY }}
+          DASHSCOPE_API_KEY: ${{ secrets.DASHSCOPE_API_KEY }}
         run: |
           # 任何失败都不能让流水线断掉：脚本内部已做规则引擎兜底，
           # 这里再兜一层，LLM 不可用时流程照常完成。
