@@ -1,0 +1,69 @@
+name: 探针-模型访问通路
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  models: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出仓库
+        uses: actions/checkout@v4
+
+      - name: 探测各通路
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python <<'PY'
+          import os, json, urllib.request, urllib.error
+          tok = os.environ['GITHUB_TOKEN']
+          print('token 前缀:', tok[:4], '长度', len(tok))
+
+          def probe(tag, url, method='GET', data=None, headers=None):
+              h = {'Accept':'application/vnd.github+json',
+                   'Authorization': f'Bearer {tok}',
+                   'X-GitHub-Api-Version':'2022-11-28'}
+              if headers: h.update(headers)
+              req = urllib.request.Request(url, data=data, headers=h, method=method)
+              try:
+                  with urllib.request.urlopen(req, timeout=30) as r:
+                      raw = r.read().decode('utf-8','replace')
+                      ct = r.headers.get('Content-Type','')
+                      print(f'[{tag}] HTTP {r.status} ct={ct}')
+                      print('   ', raw[:220].replace('\n',' '))
+              except urllib.error.HTTPError as e:
+                  print(f'[{tag}] HTTP {e.code}')
+                  print('   ', e.read().decode('utf-8','replace')[:220].replace('\n',' '))
+              except Exception as e:
+                  print(f'[{tag}] {type(e).__name__}: {e}')
+
+          # A) Copilot 账户信息：GITHUB_TOKEN 有 Copilot 权限吗
+          probe('A copilot_internal/user', 'https://api.github.com/copilot_internal/user')
+
+          # B) Copilot 模型端点
+          probe('B copilot/models', 'https://api.githubcopilot.com/models')
+
+          # C) Copilot 实际推理
+          payload = json.dumps({'model':'gpt-4.1',
+              'messages':[{'role':'user','content':'reply OK'}],
+              'max_tokens':10}).encode()
+          probe('C copilot/chat', 'https://api.githubcopilot.com/chat/completions',
+                method='POST', data=payload,
+                headers={'Content-Type':'application/json',
+                         'Copilot-Integration-Id':'vscode-chat'})
+
+          # D) GitHub Models 目录（models:read 权限是否生效）
+          probe('D models.github.ai/catalog', 'https://models.github.ai/catalog/models')
+
+          # E) GitHub Models 推理
+          payload2 = json.dumps({'model':'openai/gpt-4o-mini',
+              'messages':[{'role':'user','content':'reply OK'}],
+              'max_tokens':10}).encode()
+          probe('E models.github.ai/inference', 'https://models.github.ai/inference/chat/completions',
+                method='POST', data=payload2,
+                headers={'Content-Type':'application/json'})
+          PY
