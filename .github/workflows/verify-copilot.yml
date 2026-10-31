@@ -1,0 +1,46 @@
+name: 验证-Copilot 分类链路
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  models: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 造待分类数据
+        run: |
+          cat > stars_pending.json <<'EOF'
+          [
+           {"full": "K-Dense-AI/claude-scientific-skills", "url": "https://github.com/K-Dense-AI/claude-scientific-skills",
+            "lang": "Python", "stars": 9000, "topics": ["claude", "skills", "science", "research"], "at": "2026-10-31",
+            "desc": "A collection of Claude Code scientific skills"},
+           {"full": "danielmiessler/fabric", "url": "https://github.com/danielmiessler/fabric",
+            "lang": "Python", "stars": 25000, "topics": ["ai", "patterns", "llm", "cli", "fabric"], "at": "2026-10-31",
+            "desc": "An open-source framework for applying AI to practical tasks"},
+           {"full": "eyaltoledano/claude-task-master", "url": "https://github.com/eyaltoledano/claude-task-master",
+            "lang": "Python", "stars": 12000, "topics": ["ai", "claude", "task-management", "mcp"], "at": "2026-10-31",
+            "desc": "An AI-powered task management system for Claude"},
+           {"full": "some-org/unknown-thing", "url": "u", "lang": "Rust", "stars": 5, "topics": ["weird"], "at": "2026-10-31",
+            "desc": "A project with essentially no categorical signal"}
+          ]
+          EOF
+
+      - name: 跑真实分类脚本
+        env:
+          COPILOT_TOKEN: ${{ secrets.COPILOT_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python llm_classify.py
+
+      - name: 输出结果
+        if: always()
+        run: |
+          echo "=== 分类结果 map_auto.py ==="
+          cat map_auto.py
+          echo "=== 剩余待人工 ==="
+          python -c "import json;print([x['full'] for x in json.load(open('stars_pending.json',encoding='utf-8'))])"
