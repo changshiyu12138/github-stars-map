@@ -79,7 +79,7 @@
 
 | 项目 | 说明 | 状态 | 最后提交 | 语言 | ⭐ | 收藏于 |
 |---|---|---|---|---|---:|---|
-| [`calesthio/OpenMontage`](https://github.com/calesthio/OpenMontage) | 全球首个开源智能体视频生产系统：12 条生产流水线、100+ 工具、700+ Agent Skill | 🟢 | 2026-10-28 | Python | 73,571 | 2026-10-30 |
+| [`calesthio/OpenMontage`](https://github.com/calesthio/OpenMontage) | 全球首个开源智能体视频生产系统：12 条生产流水线、100+ 工具、700+ Agent Skill | 🟢 | 2026-10-28 | Python | 73,570 | 2026-10-30 |
 | [`Oldcircle/geo-sleuth`](https://github.com/Oldcircle/geo-sleuth) | 照片定位 Skill：靠 OpenStreetMap 几何、高程天际线与卫星影像反推拍摄地 | 🟢 | 2026-10-29 | Python | 4,619 | 2026-10-30 |
 | [`MiniMax-AI/mcode-stack`](https://github.com/MiniMax-AI/mcode-stack) | MiniMax Code 团队自己用的工作流与 Skills，开源可直接安装复用 | 🟢 | 2026-10-29 | Python | 466 | 2026-10-29 |
 | [`farouqaldori/vibe-notch`](https://github.com/farouqaldori/vibe-notch) | macOS 常驻会话管理器，让 Claude Code 有通知但不抢焦点 | 🔵 | 2026-04-20 | Swift | 2,524 | 2026-10-27 |
@@ -93,12 +93,12 @@
 | [`yan-labs/serenity-aleabitoreddit`](https://github.com/yan-labs/serenity-aleabitoreddit) | 可安装的推文归档 + AI 语义供应链 Skill，一条命令 npx 装到本地 | 🟢 | 2026-10-31 | Python | 485 | 2026-05-31 |
 | [`fathah/hermes-desktop`](https://github.com/fathah/hermes-desktop) | Hermes Agent 的桌面伴侣客户端 | 🟢 | 2026-10-13 | TypeScript | 14,500 | 2026-05-25 |
 | [`msitarzewski/agency-agents`](https://github.com/msitarzewski/agency-agents) | 一整套「AI 数字 Agency」角色库：前端专家、社区运营、创意注入、现实检验等 | 🟢 | 2026-10-25 | Shell | 165,551 | 2026-05-16 |
-| [`farion1231/cc-switch`](https://github.com/farion1231/cc-switch) | 跨平台桌面端 AI 助手，一键切换 Claude Code、Codex、OpenCode、OpenClaw 等 | 🟢 | 2026-10-31 | Rust | 150,473 | 2026-05-03 |
+| [`farion1231/cc-switch`](https://github.com/farion1231/cc-switch) | 跨平台桌面端 AI 助手，一键切换 Claude Code、Codex、OpenCode、OpenClaw 等 | 🟢 | 2026-10-31 | Rust | 150,472 | 2026-05-03 |
 | [`drona23/claude-token-efficient`](https://github.com/drona23/claude-token-efficient) | 单个 CLAUDE.md 配置，让 Claude 输出更简洁，显著降低 token 消耗 | 🔵 | 2026-06-16 | Python | 6,135 | 2026-03-31 |
 | [`linuxhsj/openclaw-zero-token`](https://github.com/linuxhsj/openclaw-zero-token) | 让 OpenClaw 复用主流模型而无需自备 API Token 的方案 | 🟢 | 2026-09-24 | TypeScript | 5,214 | 2026-03-30 |
 | [`6551Team/opennews-mcp`](https://github.com/6551Team/opennews-mcp) | 新闻聚合 + AI 评分 + 交易信号 + 实时更新的 MCP 服务 | 🟢 | 2026-09-14 | Python | 2,433 | 2026-03-19 |
 | [`Lawliet-ai/openclaw-skills-Lawliet`](https://github.com/Lawliet-ai/openclaw-skills-Lawliet) | 高质量 OpenClaw Skills 合集，专门收集「高主动性」工作流 | 🔵 | 2026-03-20 | Python | 12 | 2026-03-17 |
-| [`bytedance/deer-flow`](https://github.com/bytedance/deer-flow) | 字节开源长周期 SuperAgent 框架：研究、编码、创作，沙箱 + 记忆 + 工具 + 子 Agent | 🟢 | 2026-10-31 | Python | 84,745 | 2026-03-04 |
+| [`bytedance/deer-flow`](https://github.com/bytedance/deer-flow) | 字节开源长周期 SuperAgent 框架：研究、编码、创作，沙箱 + 记忆 + 工具 + 子 Agent | 🟢 | 2026-10-31 | Python | 84,744 | 2026-03-04 |
 | [`openclaw/clawhub`](https://github.com/openclaw/clawhub) | OpenClaw 生态的 Skill 与插件注册中心 | 🟢 | 2026-10-31 | TypeScript | 9,541 | 2026-03-04 |
 | [`puzhen-ryan/xhs-toolkit`](https://github.com/puzhen-ryan/xhs-toolkit) | 面向 Agent 的小红书发帖与运营工具，同时提供配套 Skills | 🔵 | 2026-02-27 | JavaScript | 25 | 2026-02-26 |
 | [`HKUDS/ClawWork`](https://github.com/HKUDS/ClawWork) | 把 OpenClaw 当 AI 同事用的实战项目（作者称 11 小时赚到 15K 美元） | 🔵 | 2026-03-03 | Python | 8,567 | 2026-02-25 |
@@ -112,12 +112,12 @@
 | [`MoonshotAI/kimi-cli`](https://github.com/MoonshotAI/kimi-cli) | 月之暗面官方 Kimi 命令行客户端（已归档，请改用 kimi-code） | ⚫ | 2026-09-22 | Python | 11,422 | 2025-10-27 |
 | [`lobehub/lobehub`](https://github.com/lobehub/lobehub) | AI 团队的「调度台」：管理、定时、汇报你的多个 Agent | 🟢 | 2026-10-31 | TypeScript | 83,624 | 2025-10-14 |
 | [`Zie619/n8n-workflows`](https://github.com/Zie619/n8n-workflows) | n8n 全网工作流收集合集，含从官网与社区搜集的可导入 JSON | 🔵 | 2026-06-24 | Python | 57,135 | 2025-10-12 |
-| [`FlowiseAI/Flowise`](https://github.com/FlowiseAI/Flowise) | 拖拽式搭建 AI Agent 与对话机器人，可视化编排 LLM 流程 | ⚫ | 2026-08-13 | TypeScript | 55,536 | 2025-10-12 |
+| [`FlowiseAI/Flowise`](https://github.com/FlowiseAI/Flowise) | 拖拽式搭建 AI Agent 与对话机器人，可视化编排 LLM 流程 | ⚫ | 2026-08-13 | TypeScript | 55,537 | 2025-10-12 |
 | [`google-gemini/computer-use-preview`](https://github.com/google-gemini/computer-use-preview) | Google 官方 Computer Use 预览版，让模型像人一样操作电脑界面 | 🔵 | 2026-07-28 | Python | 3,250 | 2025-10-12 |
 | [`wassupjay/n8n-free-templates`](https://github.com/wassupjay/n8n-free-templates) | 200+ 开箱即用的 n8n 工作流模板，含向量库、Embedding、LLM 组合 | 🟡 | 2025-08-01 | 未标注 | 6,240 | 2025-07-26 |
 | [`firecrawl/fireplexity`](https://github.com/firecrawl/fireplexity) | 开源版 Perplexity，带实时引用与流式回答，数据由 Firecrawl 供给 | 🟡 | 2025-08-22 | TypeScript | 1,974 | 2025-06-29 |
 | [`minhalvp/android-mcp-server`](https://github.com/minhalvp/android-mcp-server) | 通过 adb 控制安卓设备的 MCP Server，让 Agent 直接操作手机 | 🟡 | 2025-05-28 | Python | 810 | 2025-04-12 |
-| [`n8n-io/n8n`](https://github.com/n8n-io/n8n) | 可视化搭建 AI 工作流的自托管平台，400+ 集成，可写自定义代码节点 | 🟢 | 2026-10-31 | TypeScript | 209,164 | 2025-04-07 |
+| [`n8n-io/n8n`](https://github.com/n8n-io/n8n) | 可视化搭建 AI 工作流的自托管平台，400+ 集成，可写自定义代码节点 | 🟢 | 2026-10-31 | TypeScript | 209,163 | 2025-04-07 |
 
 <a id="cat-ai-infra"></a>
 
@@ -128,7 +128,7 @@
 | 项目 | 说明 | 状态 | 最后提交 | 语言 | ⭐ | 收藏于 |
 |---|---|---|---|---|---:|---|
 | [`jingyaogong/minimind`](https://github.com/jingyaogong/minimind) | 2 小时从零训练一个 6400 万参数 LLM 的极简教学项目 | 🟢 | 2026-10-27 | Python | 64,667 | 2026-09-06 |
-| [`deepseek-ai/deepseek-harness`](https://github.com/deepseek-ai/deepseek-harness) | DeepSeek 官方 Agent Harness，核心设计是「一切皆插件」 | 🟢 | 2026-10-30 | TypeScript | 266,887 | 2026-08-19 |
+| [`deepseek-ai/deepseek-harness`](https://github.com/deepseek-ai/deepseek-harness) | DeepSeek 官方 Agent Harness，核心设计是「一切皆插件」 | 🟢 | 2026-10-30 | TypeScript | 266,886 | 2026-08-19 |
 | [`QuantumNous/new-api`](https://github.com/QuantumNous/new-api) | 统一大模型网关：把各家 LLM 转成 OpenAI / Claude / Gemini 兼容接口 | 🟢 | 2026-10-31 | Go | 51,075 | 2026-02-04 |
 | [`songquanpeng/one-api`](https://github.com/songquanpeng/one-api) | 老牌 LLM API 管理分发系统，支持十几家国内主流模型统一适配 | 🔵 | 2026-01-09 | JavaScript | 37,295 | 2026-02-04 |
 | [`knownsec/aipyapp`](https://github.com/knownsec/aipyapp) | Python 与 AI 双向互操作的应用合集，涵盖「AI 用 Python」与「Python 驱动 AI」 | 🔵 | 2026-02-15 | HTML | 4,031 | 2025-07-28 |
@@ -146,7 +146,7 @@
 
 | 项目 | 说明 | 状态 | 最后提交 | 语言 | ⭐ | 收藏于 |
 |---|---|---|---|---|---:|---|
-| [`sngyai/Sequoia-X`](https://github.com/sngyai/Sequoia-X) | A 股自动选股系统，多种技术形态扫描，收盘后自动跑并推送飞书 | 🔵 | 2026-07-10 | Python | 8,383 | 2026-09-01 |
+| [`sngyai/Sequoia-X`](https://github.com/sngyai/Sequoia-X) | A 股自动选股系统，多种技术形态扫描，收盘后自动跑并推送飞书 | 🔵 | 2026-07-10 | Python | 8,382 | 2026-09-01 |
 | [`jcdreamjc/wudao-ashare`](https://github.com/jcdreamjc/wudao-ashare) | 悟道 A 股数据套件：26 个实时 API，专为 AI Agent 设计 | 🔵 | 2026-03-24 | 未标注 | 6 | 2026-08-27 |
 | [`Benboerba620/Benboerba620`](https://github.com/Benboerba620/Benboerba620) | 零代码 × AI 投研 × 个人知识库的一体化投资研究工具包 | 🔵 | 2026-07-05 | 未标注 | 37 | 2026-08-25 |
 | [`ccxt/ccxt`](https://github.com/ccxt/ccxt) | 统一加密货币交易 API，100+ 交易所与预测市场，多语言支持 | 🟢 | 2026-10-30 | Python | 44,635 | 2026-08-15 |
@@ -237,7 +237,7 @@
 | [`Xinrea/JPet`](https://github.com/Xinrea/JPet) | C++ + WebView2 的 Live2D 桌面宠物 | 🟢 | 2026-10-25 | C++ | 108 | 2025-09-11 |
 | [`chen08209/FlClash`](https://github.com/chen08209/FlClash) | 基于 ClashMeta 的多平台代理客户端，Flutter 编写，简洁无广告 | 🟢 | 2026-10-24 | Dart | 59,951 | 2025-09-07 |
 | [`Cp0204/quark-auto-save`](https://github.com/Cp0204/quark-auto-save) | 夸克网盘自动化：签到、自动转存、命名整理、推送提醒、刷新媒体库 | 🔵 | 2026-07-09 | Python | 3,087 | 2025-08-11 |
-| [`Usagi-org/ai-goofish-monitor`](https://github.com/Usagi-org/ai-goofish-monitor) | 基于 Playwright + AI 的闲鱼多任务实时监控与筛选系统，带后台管理 UI | 🟢 | 2026-10-10 | Python | 15,368 | 2025-07-23 |
+| [`Usagi-org/ai-goofish-monitor`](https://github.com/Usagi-org/ai-goofish-monitor) | 基于 Playwright + AI 的闲鱼多任务实时监控与筛选系统，带后台管理 UI | 🟢 | 2026-10-10 | Python | 15,367 | 2025-07-23 |
 | [`xiaobaigroup/ClashBox`](https://github.com/xiaobaigroup/ClashBox) | HarmonyOS NEXT 上的代理客户端，ArkTS + ArkUI 实现 | 🟢 | 2026-08-15 | 未标注 | 4,700 | 2025-07-05 |
 | [`blinkospace/blinko`](https://github.com/blinkospace/blinko) | 开源自托管的个人 AI 笔记，强调隐私，数据留在本地 | 🟢 | 2026-08-27 | TypeScript | 11,144 | 2025-07-04 |
 | [`wanglin2/mind-map`](https://github.com/wanglin2/mind-map) | SimpleMindMap 思维导图，交互简洁、功能扎实的开源导图工具 | 🟢 | 2026-08-02 | JavaScript | 12,897 | 2025-03-23 |
@@ -276,7 +276,7 @@
 | [`peach-mitao/peach`](https://github.com/peach-mitao/peach) | 本地优先的视频刮削与媒体库管理器，自托管 + 自带播放器 | 🟢 | 2026-10-31 | Python | 13,431 | 2026-10-24 |
 | [`bggRGjQaUbCoE/PiliPlus`](https://github.com/bggRGjQaUbCoE/PiliPlus) | Flutter 写的第三方 B 站客户端，支持 iOS / 桌面多端 | 🟢 | 2026-10-30 | Dart | 20,031 | 2026-02-03 |
 | [`youhunwl/TVAPP`](https://github.com/youhunwl/TVAPP) | 全网安卓电视盒子应用与影视仓接口配置源合集，分类整理并支持自动更新 | 🟢 | 2026-10-28 | JavaScript | 26,882 | 2026-01-29 |
-| [`LibreSpark/LibreTV`](https://github.com/LibreSpark/LibreTV) | 一分钟搭建的影视站，支持 Docker 部署 | 🟢 | 2026-10-26 | TypeScript | 22,893 | 2025-07-04 |
+| [`LibreSpark/LibreTV`](https://github.com/LibreSpark/LibreTV) | 一分钟搭建的影视站，支持 Docker 部署 | 🟢 | 2026-10-26 | TypeScript | 22,892 | 2025-07-04 |
 | [`Richasy/Bili.Copilot`](https://github.com/Richasy/Bili.Copilot) | B 站第三方 Windows 桌面客户端，WinUI 3 + Windows App SDK 原生实现 | 🔵 | 2025-11-26 | GLSL | 5,217 | 2024-11-26 |
 | [`lizongying/my-tv`](https://github.com/lizongying/my-tv) | 开源电视直播软件，安装即用 | 🔴 | 2024-06-20 | C | 31,962 | 2024-02-16 |
 | [`Eanya-Tonic/CCTV_Viewer`](https://github.com/Eanya-Tonic/CCTV_Viewer) | 简易电视浏览器，方便在机顶盒上收看网页视频 | 🟡 | 2025-05-26 | Java | 2,962 | 2024-02-16 |
@@ -392,7 +392,7 @@
 | 项目 | 说明 | 状态 | 最后提交 | 语言 | ⭐ | 收藏于 |
 |---|---|---|---|---|---:|---|
 | [`BeckyGlobal/PaidToStudyAbroad`](https://github.com/BeckyGlobal/PaidToStudyAbroad) | 《高性价比人生指南·海外版》：奖学金、免学费、带薪读博等 71 条，只引官方来源 | 🟢 | 2026-10-25 | HTML | 1,297 | 2026-10-25 |
-| [`eternity4719/HowToLiveBetter`](https://github.com/eternity4719/HowToLiveBetter) | 高性价比人生指南：长寿防病、急救、理财、法律红线，每条标注成本与证据等级 | 🟢 | 2026-10-21 | HTML | 71,693 | 2026-09-16 |
+| [`eternity4719/HowToLiveBetter`](https://github.com/eternity4719/HowToLiveBetter) | 高性价比人生指南：长寿防病、急救、理财、法律红线，每条标注成本与证据等级 | 🟢 | 2026-10-21 | HTML | 71,692 | 2026-09-16 |
 | [`Gar-b-age/CookLikeHOC`](https://github.com/Gar-b-age/CookLikeHOC) | 像老乡鸡那样做饭：按《老乡鸡菜品溯源报告》整理的菜谱 | 🟢 | 2026-10-03 | JavaScript | 24,846 | 2026-02-03 |
 | [`easychen/opc-methodology`](https://github.com/easychen/opc-methodology) | 《一人企业方法论》第二版，非技术人群做副业的通用框架 | 🔵 | 2026-04-23 | PHP | 16,998 | 2025-11-12 |
 | [`easychen/lean-side-bussiness`](https://github.com/easychen/lean-side-bussiness) | 《精益副业》：程序员如何优雅地做副业 | 🔴 | 2024-03-28 | 未标注 | 12,173 | 2025-11-12 |
@@ -409,14 +409,14 @@
 |---|---|---|---:|
 | [`sindresorhus/awesome`](https://github.com/sindresorhus/awesome) | 覆盖各行各业的 Awesome Lists 总目录 | 🟢 | 527,618 |
 | [`openclaw/openclaw`](https://github.com/openclaw/openclaw) | 主打「真干活」的个人 AI 助手，跨系统跨平台的自托管 Agent | 🟢 | 393,501 |
-| [`deepseek-ai/deepseek-harness`](https://github.com/deepseek-ai/deepseek-harness) | DeepSeek 官方 Agent Harness，核心设计是「一切皆插件」 | 🟢 | 266,887 |
-| [`n8n-io/n8n`](https://github.com/n8n-io/n8n) | 可视化搭建 AI 工作流的自托管平台，400+ 集成，可写自定义代码节点 | 🟢 | 209,164 |
+| [`deepseek-ai/deepseek-harness`](https://github.com/deepseek-ai/deepseek-harness) | DeepSeek 官方 Agent Harness，核心设计是「一切皆插件」 | 🟢 | 266,886 |
+| [`n8n-io/n8n`](https://github.com/n8n-io/n8n) | 可视化搭建 AI 工作流的自托管平台，400+ 集成，可写自定义代码节点 | 🟢 | 209,163 |
 | [`microsoft/markitdown`](https://github.com/microsoft/markitdown) | 微软官方工具：把各类文件与 Office 文档统一转成 Markdown | 🟢 | 193,111 |
 | [`jackfrued/Python-100-Days`](https://github.com/jackfrued/Python-100-Days) | Python 从新手到大师的 100 天学习路线，含 Jupyter Notebook | 🔵 | 187,603 |
 | [`CyC2018/CS-Notes`](https://github.com/CyC2018/CS-Notes) | 技术面试必备：算法、操作系统、计算机网络、系统设计笔记 | 🟢 | 186,397 |
 | [`msitarzewski/agency-agents`](https://github.com/msitarzewski/agency-agents) | 一整套「AI 数字 Agency」角色库：前端专家、社区运营、创意注入、现实检验等 | 🟢 | 165,551 |
 | [`Snailclimb/JavaGuide`](https://github.com/Snailclimb/JavaGuide) | Java 面试与后端通用面试指南，已扩展到 AI 应用开发 | 🟢 | 159,357 |
-| [`farion1231/cc-switch`](https://github.com/farion1231/cc-switch) | 跨平台桌面端 AI 助手，一键切换 Claude Code、Codex、OpenCode、OpenClaw 等 | 🟢 | 150,473 |
+| [`farion1231/cc-switch`](https://github.com/farion1231/cc-switch) | 跨平台桌面端 AI 助手，一键切换 Claude Code、Codex、OpenCode、OpenClaw 等 | 🟢 | 150,472 |
 
 ---
 
@@ -460,7 +460,7 @@
 | [`DirtyRacer1337/Jellyfin.Plugin.PhoenixAdult`](https://github.com/DirtyRacer1337/Jellyfin.Plugin.PhoenixAdult) | Jellyfin/Emby 元数据插件，抓取多个成人站点的信息 | 2024-10-29 | 2 年 2 天 | C# | 448 |
 | [`leereilly/games`](https://github.com/leereilly/games) | GitHub 上架游戏的归档清单，覆盖各平台与引擎 | 2025-09-13 | ⚫ 已归档 | 未标注 | 24,989 |
 | [`cooderl/wewe-rss`](https://github.com/cooderl/wewe-rss) | 更优雅的公众号订阅方案：私有化部署，基于微信读书生成公众号 RSS | 2026-03-20 | ⚫ 已归档 | TypeScript | 9,634 |
-| [`FlowiseAI/Flowise`](https://github.com/FlowiseAI/Flowise) | 拖拽式搭建 AI Agent 与对话机器人，可视化编排 LLM 流程 | 2026-08-13 | ⚫ 已归档 | TypeScript | 55,536 |
+| [`FlowiseAI/Flowise`](https://github.com/FlowiseAI/Flowise) | 拖拽式搭建 AI Agent 与对话机器人，可视化编排 LLM 流程 | 2026-08-13 | ⚫ 已归档 | TypeScript | 55,537 |
 | [`MoonshotAI/kimi-cli`](https://github.com/MoonshotAI/kimi-cli) | 月之暗面官方 Kimi 命令行客户端（已归档，请改用 kimi-code） | 2026-09-22 | ⚫ 已归档 | Python | 11,422 |
 
 ---
