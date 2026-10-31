@@ -13,6 +13,7 @@
   "level": "recent",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -20,7 +21,7 @@
   "url": "https://github.com/jaywcjlove/linux-command",
   "desc": "Linux命令大全搜索工具，内容包含Linux命令手册、详解、学习、搜集。https://git.io/linux",
   "lang": "Markdown",
-  "stars": 37198,
+  "stars": 37199,
   "topics": [
    "bash",
    "chrome",
@@ -44,6 +45,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -51,7 +53,7 @@
   "url": "https://github.com/nndl/nndl",
   "desc": "邱锡鹏《神经网络与深度学习》第二版与通识版：电子书、章节目录、学习资源与勘误。",
   "lang": "未标注",
-  "stars": 19531,
+  "stars": 19532,
   "topics": [
    "attention-mechanism",
    "chinese",
@@ -68,6 +70,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -84,6 +87,7 @@
   "level": "dormant",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -104,11 +108,12 @@
   ],
   "at": "2019-05-10",
   "created": "2018-02-13",
-  "pushed": "2026-10-30",
-  "idle_days": 1,
+  "pushed": "2026-10-31",
+  "idle_days": 0,
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -136,6 +141,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -165,6 +171,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -184,6 +191,7 @@
   "level": "dormant",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -200,6 +208,7 @@
   "level": "archived",
   "archived": true,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -216,6 +225,7 @@
   "level": "dormant",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -236,6 +246,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -262,6 +273,7 @@
   "level": "recent",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -280,6 +292,7 @@
   "level": "dormant",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -296,6 +309,7 @@
   "level": "dormant",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -326,6 +340,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -342,6 +357,7 @@
   "level": "dormant",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -360,6 +376,7 @@
   "level": "recent",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -376,6 +393,7 @@
   "level": "dormant",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -392,6 +410,7 @@
   "level": "dormant",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -408,6 +427,7 @@
   "level": "dormant",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -424,6 +444,7 @@
   "level": "dormant",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -440,6 +461,7 @@
   "level": "dormant",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -456,6 +478,7 @@
   "level": "dormant",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -475,6 +498,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -501,6 +525,7 @@
   "level": "recent",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -517,6 +542,7 @@
   "level": "dormant",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -533,6 +559,7 @@
   "level": "dormant",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -549,6 +576,7 @@
   "level": "dormant",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -565,6 +593,7 @@
   "level": "dormant",
   "archived": false,
   "fork": true,
+  "auto": false,
   "pending": false
  },
  {
@@ -596,6 +625,7 @@
   "level": "recent",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -612,6 +642,7 @@
   "level": "dormant",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -634,6 +665,7 @@
   "level": "dormant",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -650,6 +682,7 @@
   "level": "recent",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -672,6 +705,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -700,6 +734,7 @@
   "level": "stale",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -720,6 +755,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -744,6 +780,7 @@
   "level": "dormant",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -764,6 +801,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -790,6 +828,7 @@
   "level": "recent",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -825,6 +864,7 @@
   "level": "dormant",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -841,6 +881,7 @@
   "level": "dormant",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -862,6 +903,7 @@
   "level": "dormant",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -878,6 +920,7 @@
   "level": "stale",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -902,6 +945,7 @@
   "level": "dormant",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -922,6 +966,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -944,6 +989,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -964,6 +1010,7 @@
   "level": "recent",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -987,6 +1034,7 @@
   "level": "recent",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -1024,6 +1072,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -1049,6 +1098,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -1086,6 +1136,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -1102,6 +1153,7 @@
   "level": "stale",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -1131,6 +1183,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -1168,6 +1221,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -1184,6 +1238,7 @@
   "level": "dormant",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -1219,6 +1274,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -1235,6 +1291,7 @@
   "level": "dormant",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -1255,6 +1312,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -1271,6 +1329,7 @@
   "level": "recent",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -1306,6 +1365,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -1322,6 +1382,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -1338,6 +1399,7 @@
   "level": "stale",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -1368,6 +1430,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -1375,7 +1438,7 @@
   "url": "https://github.com/sindresorhus/awesome",
   "desc": "😎 Awesome lists about all kinds of interesting topics [NOTE: Pull requests are temporarily disabled until I have a chance to catch up with the existing ones]",
   "lang": "未标注",
-  "stars": 527609,
+  "stars": 527617,
   "topics": [
    "awesome",
    "awesome-list",
@@ -1390,6 +1453,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -1397,7 +1461,7 @@
   "url": "https://github.com/LibreSpark/LibreTV",
   "desc": "一分钟搭建影视站，支持Docker等部署方式",
   "lang": "TypeScript",
-  "stars": 22890,
+  "stars": 22892,
   "topics": [
    "css",
    "film",
@@ -1414,6 +1478,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -1439,6 +1504,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -1466,6 +1532,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -1482,6 +1549,7 @@
   "level": "recent",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -1498,6 +1566,7 @@
   "level": "stale",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -1535,6 +1604,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -1551,6 +1621,7 @@
   "level": "dormant",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -1558,7 +1629,7 @@
   "url": "https://github.com/Usagi-org/ai-goofish-monitor",
   "desc": "基于 Playwright 和AI实现的闲鱼多任务实时/定时监控与智能分析系统，配备了功能完善的后台管理UI。帮助用户从闲鱼海量商品中，找到心仪产品。",
   "lang": "Python",
-  "stars": 15359,
+  "stars": 15365,
   "topics": [
    "ai",
    "ai-assistant",
@@ -1581,6 +1652,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -1606,6 +1678,7 @@
   "level": "stale",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -1622,6 +1695,7 @@
   "level": "recent",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -1638,6 +1712,7 @@
   "level": "stale",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -1654,6 +1729,7 @@
   "level": "recent",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -1674,6 +1750,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -1707,6 +1784,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -1741,6 +1819,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -1761,6 +1840,7 @@
   "level": "dormant",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -1782,6 +1862,7 @@
   "level": "dormant",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -1789,7 +1870,7 @@
   "url": "https://github.com/chen08209/FlClash",
   "desc": "A multi-platform proxy client based on ClashMeta,simple and easy to use, open-source and ad-free.",
   "lang": "Dart",
-  "stars": 59946,
+  "stars": 59951,
   "topics": [
    "clash",
    "clash-meta",
@@ -1808,6 +1889,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -1815,7 +1897,7 @@
   "url": "https://github.com/gkd-kit/gkd",
   "desc": "基于无障碍，高级选择器，订阅规则的自定义屏幕点击安卓应用 | An Android APP with custom screen tapping based on Accessibility, Advanced Selectors, and Subscription Rules",
   "lang": "Kotlin",
-  "stars": 43750,
+  "stars": 43752,
   "topics": [
    "accessibility",
    "android",
@@ -1836,6 +1918,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -1858,6 +1941,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -1874,6 +1958,7 @@
   "level": "recent",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -1881,7 +1966,7 @@
   "url": "https://github.com/zhongyang219/TrafficMonitor",
   "desc": "这是一个用于显示当前网速、CPU及内存利用率的桌面悬浮窗软件，并支持任务栏显示，支持更换皮肤。",
   "lang": "C++",
-  "stars": 46742,
+  "stars": 46743,
   "topics": [],
   "at": "2025-09-17",
   "created": "2017-07-30",
@@ -1890,6 +1975,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -1923,6 +2009,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -1958,6 +2045,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -1984,6 +2072,7 @@
   "level": "archived",
   "archived": true,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -2005,6 +2094,7 @@
   "level": "recent",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -2021,6 +2111,7 @@
   "level": "recent",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -2052,6 +2143,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -2068,6 +2160,7 @@
   "level": "recent",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -2102,6 +2195,7 @@
   "level": "archived",
   "archived": true,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -2109,7 +2203,7 @@
   "url": "https://github.com/lobehub/lobehub",
   "desc": "🤯 LobeHub is your Chief Agent Operator, organizing your agents into 7×24 operations by hiring, scheduling, and reporting on your entire AI team.",
   "lang": "TypeScript",
-  "stars": 83623,
+  "stars": 83624,
   "topics": [
    "agent",
    "agent-collaboration",
@@ -2137,6 +2231,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -2153,6 +2248,7 @@
   "level": "archived",
   "archived": true,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -2174,6 +2270,7 @@
   "level": "recent",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -2190,6 +2287,7 @@
   "level": "dormant",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -2206,6 +2304,7 @@
   "level": "recent",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -2222,6 +2321,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -2229,7 +2329,7 @@
   "url": "https://github.com/microsoft/markitdown",
   "desc": "Python tool for converting files and office documents to Markdown.",
   "lang": "Python",
-  "stars": 193109,
+  "stars": 193111,
   "topics": [
    "autogen",
    "autogen-extension",
@@ -2246,6 +2346,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -2262,6 +2363,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -2278,6 +2380,7 @@
   "level": "stale",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -2312,6 +2415,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -2344,6 +2448,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -2351,7 +2456,7 @@
   "url": "https://github.com/666ghj/MiroFish",
   "desc": "A Simple and Universal Swarm Intelligence Engine, Predicting Anything. 简洁通用的群体智能引擎，预测万物",
   "lang": "Python",
-  "stars": 82917,
+  "stars": 82918,
   "topics": [
    "agent-memory",
    "financial-forecasting",
@@ -2371,6 +2476,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -2393,6 +2499,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -2411,6 +2518,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -2427,6 +2535,7 @@
   "level": "recent",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -2448,6 +2557,7 @@
   "level": "recent",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -2472,6 +2582,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -2479,7 +2590,7 @@
   "url": "https://github.com/openclaw/openclaw",
   "desc": "The AI that really does things. Any OS. Any Platform. The lobster way. 🦞",
   "lang": "TypeScript",
-  "stars": 393500,
+  "stars": 393501,
   "topics": [
    "ai",
    "assistant",
@@ -2496,6 +2607,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -2512,6 +2624,7 @@
   "level": "recent",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -2535,6 +2648,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -2542,7 +2656,7 @@
   "url": "https://github.com/bggRGjQaUbCoE/PiliPlus",
   "desc": "PiliPlus",
   "lang": "Dart",
-  "stars": 20030,
+  "stars": 20031,
   "topics": [
    "android",
    "flutter",
@@ -2558,6 +2672,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -2565,7 +2680,7 @@
   "url": "https://github.com/leereilly/games",
   "desc": "Archived — A list of games, add-ons, maps, etc. hosted on GitHub. Any genre. Any platform. Any engine.",
   "lang": "未标注",
-  "stars": 24988,
+  "stars": 24989,
   "topics": [
    "game",
    "game-development",
@@ -2581,6 +2696,7 @@
   "level": "archived",
   "archived": true,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -2597,6 +2713,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -2633,6 +2750,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -2640,7 +2758,7 @@
   "url": "https://github.com/QuantumNous/new-api",
   "desc": "Open-source AI gateway. Self-hosted LLM gateway with OpenAI-, Claude- and Gemini-compatible APIs, model routing, access control, usage tracking and cost accounting.",
   "lang": "Go",
-  "stars": 51073,
+  "stars": 51075,
   "topics": [
    "ai-gateway",
    "api-management",
@@ -2661,6 +2779,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -2677,6 +2796,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -2693,6 +2813,7 @@
   "level": "recent",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -2721,6 +2842,7 @@
   "level": "recent",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -2750,6 +2872,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -2766,6 +2889,7 @@
   "level": "recent",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -2782,6 +2906,7 @@
   "level": "recent",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -2807,6 +2932,7 @@
   "level": "recent",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -2826,6 +2952,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -2845,6 +2972,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -2880,6 +3008,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -2905,6 +3034,7 @@
   "level": "dormant",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -2925,6 +3055,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -2941,6 +3072,7 @@
   "level": "recent",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -2957,6 +3089,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -2973,6 +3106,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -2989,6 +3123,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -3005,6 +3140,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -3025,6 +3161,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -3041,6 +3178,7 @@
   "level": "recent",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -3057,6 +3195,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -3064,7 +3203,7 @@
   "url": "https://github.com/farion1231/cc-switch",
   "desc": "A cross-platform desktop All-in-One assistant for Claude Code, Codex, OpenCode,DeepSeek Harness and more. Only official website: ccswitch.io",
   "lang": "Rust",
-  "stars": 150468,
+  "stars": 150472,
   "topics": [
    "ai-tools",
    "claude-code",
@@ -3093,6 +3232,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -3119,6 +3259,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -3126,7 +3267,7 @@
   "url": "https://github.com/msitarzewski/agency-agents",
   "desc": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
   "lang": "Shell",
-  "stars": 165546,
+  "stars": 165550,
   "topics": [],
   "at": "2026-05-16",
   "created": "2025-10-13",
@@ -3135,6 +3276,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -3154,6 +3296,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -3177,6 +3320,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -3193,6 +3337,7 @@
   "level": "recent",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -3209,6 +3354,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -3225,6 +3371,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -3241,6 +3388,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -3248,7 +3396,7 @@
   "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
   "desc": "An AI skill that provides design intelligence for building professional UI/UX across multiple platforms.",
   "lang": "Python",
-  "stars": 143107,
+  "stars": 143110,
   "topics": [
    "ai-skills",
    "antigravity",
@@ -3277,6 +3425,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -3284,7 +3433,7 @@
   "url": "https://github.com/xbtlin/ai-berkshire",
   "desc": "AI 时代的伯克希尔：基于 Claude Code / Codex 的价值投资研究框架。巴菲特·芒格·段永平·李录四大师方法论 + 多Agent并行研究。| AI-era Berkshire: a value investing research framework built for Claude Code / Codex. 4 masters' methodologies + multi-agent adversarial analysis.",
   "lang": "HTML",
-  "stars": 16952,
+  "stars": 16953,
   "topics": [
    "ai",
    "ai-agent",
@@ -3314,6 +3463,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -3321,7 +3471,7 @@
   "url": "https://github.com/Fincept-Corporation/FinceptTerminal",
   "desc": "FinceptTerminal is a modern finance application offering advanced market analytics, investment research, and economic data tools, designed for interactive exploration and data-driven decision-making in a user-friendly environment.",
   "lang": "C++",
-  "stars": 33298,
+  "stars": 33299,
   "topics": [
    "ai-agents",
    "algorithmic-trading",
@@ -3348,6 +3498,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -3368,6 +3519,7 @@
   "level": "active",
   "archived": false,
   "fork": true,
+  "auto": false,
   "pending": false
  },
  {
@@ -3384,6 +3536,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -3400,6 +3553,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -3416,6 +3570,7 @@
   "level": "recent",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -3432,6 +3587,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -3463,6 +3619,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -3479,6 +3636,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -3486,7 +3644,7 @@
   "url": "https://github.com/santinic/audiblez",
   "desc": "Generate audiobooks from e-books",
   "lang": "Python",
-  "stars": 8824,
+  "stars": 8825,
   "topics": [
    "audiobooks",
    "epub",
@@ -3501,6 +3659,7 @@
   "level": "recent",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -3536,6 +3695,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -3572,6 +3732,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -3597,6 +3758,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -3620,6 +3782,7 @@
   "level": "recent",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -3647,6 +3810,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -3654,7 +3818,7 @@
   "url": "https://github.com/deepseek-ai/deepseek-harness",
   "desc": "DeepSeek Harness: Everything is a Plugin.",
   "lang": "TypeScript",
-  "stars": 266875,
+  "stars": 266883,
   "topics": [
    "ai-agents",
    "cordis",
@@ -3668,6 +3832,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -3684,6 +3849,7 @@
   "level": "recent",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -3700,6 +3866,7 @@
   "level": "recent",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -3716,6 +3883,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -3723,7 +3891,7 @@
   "url": "https://github.com/sngyai/Sequoia-X",
   "desc": "A股自动选股系统 — 多种技术形态自动扫描，收盘后自动运行并推送飞书",
   "lang": "Python",
-  "stars": 8381,
+  "stars": 8382,
   "topics": [
    "a-shares",
    "akshare",
@@ -3742,6 +3910,7 @@
   "level": "recent",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -3761,6 +3930,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -3790,6 +3960,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -3809,6 +3980,7 @@
   "level": "recent",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -3834,6 +4006,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -3841,7 +4014,7 @@
   "url": "https://github.com/eternity4719/HowToLiveBetter",
   "desc": "高性价比人生指南: 长寿防病、急救、省钱理财、法律红线、失业与工伤、医保社保、恋爱婚育、怀孕育儿、创业与做平台合规、出国与技能。每条写明成本、收益、证据等级和原始出处，只引期刊论文与官方文件。",
   "lang": "HTML",
-  "stars": 71688,
+  "stars": 71690,
   "topics": [],
   "at": "2026-09-16",
   "created": "2026-09-07",
@@ -3850,6 +4023,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -3857,7 +4031,7 @@
   "url": "https://github.com/bobeff/open-source-games",
   "desc": "A list of open source games.",
   "lang": "Python",
-  "stars": 17249,
+  "stars": 17250,
   "topics": [
    "awesome-list",
    "games",
@@ -3870,6 +4044,7 @@
   "level": "recent",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -3890,6 +4065,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -3897,7 +4073,7 @@
   "url": "https://github.com/chengyi-ai/native-subtitle-quote-image",
   "desc": "保留视频内嵌字幕，精确取帧并生成 3:4 社交长图的 Agent Skill",
   "lang": "Python",
-  "stars": 2753,
+  "stars": 2754,
   "topics": [
    "agent-skills",
    "codex",
@@ -3912,6 +4088,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -3942,6 +4119,7 @@
   "level": "recent",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -3966,6 +4144,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -3984,6 +4163,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -3991,7 +4171,7 @@
   "url": "https://github.com/jhaizhou-ops/d2r-mobile",
   "desc": "Open-source compatibility layer for Diablo II: Resurrected with the Reign of the Warlock expansion. Runs your own Switch copy natively on iPhone, iPad, Mac, Android and HarmonyOS — full touch controls, 60 fps, new endgame modes. Bring your own game files. 开源的《暗黑破坏神 II：狱火重生》术士君临 iOS / macOS / 安卓 / 鸿蒙兼容层",
   "lang": "C",
-  "stars": 4914,
+  "stars": 4915,
   "topics": [
    "android",
    "compatibility-layer",
@@ -4015,6 +4195,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -4036,6 +4217,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -4059,6 +4241,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -4075,6 +4258,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -4091,6 +4275,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -4098,7 +4283,7 @@
   "url": "https://github.com/jbiaojerry/ebook-treasure-chest",
   "desc": "欢迎来到电子书下载宝库，一个汇聚了各类电子书下载链接的地方。无论你是喜欢阅读经典文学、经管励志、终身学习、职场创业、技术手册还是其他类型的书籍，这里都能满足你的需求。 该库涵盖了帆书app(原樊登读书)、微信读书、京东读书、喜马拉雅等读书app的大部分电子书。",
   "lang": "Python",
-  "stars": 23449,
+  "stars": 23451,
   "topics": [],
   "at": "2026-10-23",
   "created": "2023-09-13",
@@ -4107,6 +4292,7 @@
   "level": "recent",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -4114,7 +4300,7 @@
   "url": "https://github.com/peach-mitao/peach",
   "desc": "Peach: Local-first video metadata scraper and media manager.",
   "lang": "Python",
-  "stars": 13430,
+  "stars": 13431,
   "topics": [
    "local-first",
    "media-library",
@@ -4131,6 +4317,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -4166,6 +4353,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -4182,6 +4370,7 @@
   "level": "recent",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -4205,6 +4394,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -4212,7 +4402,7 @@
   "url": "https://github.com/calesthio/OpenMontage",
   "desc": "World's first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent skill and production-knowledge files. Turn your AI coding assistant into a full video production studio.",
   "lang": "Python",
-  "stars": 73562,
+  "stars": 73570,
   "topics": [
    "agent",
    "agentic-ai",
@@ -4241,6 +4431,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -4276,6 +4467,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
   "pending": false
  },
  {
@@ -4283,7 +4475,7 @@
   "url": "https://github.com/HRuiCcc/RuiC-PoseAtlas",
   "desc": "RuiC-PoseAtlas｜姿态 + 衣装双图鉴：288 组人体姿态 × 5 视角 × 1,439 张人台线稿，加 1,407 套无人物衣装 × 8 分类 × 86 个三语标签。中/英/日切换、搜索筛选、键盘浏览、原图下载，纯静态零依赖。",
   "lang": "JavaScript",
-  "stars": 718,
+  "stars": 724,
   "topics": [
    "3d-modeling",
    "ai-art",
@@ -4303,6 +4495,78 @@
   "level": "active",
   "archived": false,
   "fork": false,
+  "auto": false,
+  "pending": false
+ },
+ {
+  "full": "danny-avila/LibreChat",
+  "url": "https://github.com/danny-avila/LibreChat",
+  "desc": "Free, open-source AI chat platform with multi-model support.",
+  "lang": "TypeScript",
+  "stars": 32000,
+  "topics": [
+   "chatgpt",
+   "llm",
+   "openai",
+   "self-hosted",
+   "ai-chatbot",
+   "multi-model"
+  ],
+  "at": "2026-10-31",
+  "created": "2024-01-01",
+  "pushed": "2026-10-30",
+  "idle_days": 1,
+  "level": "active",
+  "archived": false,
+  "fork": false,
+  "auto": true,
+  "pending": false
+ },
+ {
+  "full": "OpenBMB/MinerU",
+  "url": "https://github.com/OpenBMB/MinerU",
+  "desc": "High-accuracy document parsing tool for PDFs, images",
+  "lang": "Python",
+  "stars": 45000,
+  "topics": [
+   "pdf",
+   "ocr",
+   "document-parsing",
+   "llm",
+   "vlm",
+   "markdown"
+  ],
+  "at": "2026-10-31",
+  "created": "2024-01-01",
+  "pushed": "2026-10-30",
+  "idle_days": 1,
+  "level": "active",
+  "archived": false,
+  "fork": false,
+  "auto": true,
+  "pending": false
+ },
+ {
+  "full": "immich-app/immich",
+  "url": "https://github.com/immich-app/immich",
+  "desc": "High performance self-hosted photo and video management",
+  "lang": "TypeScript",
+  "stars": 68000,
+  "topics": [
+   "photos",
+   "self-hosted",
+   "backup",
+   "mobile",
+   "docker"
+  ],
+  "at": "2026-10-31",
+  "created": "2024-01-01",
+  "pushed": "2026-10-30",
+  "idle_days": 1,
+  "level": "active",
+  "archived": false,
+  "fork": false,
+  "auto": true,
   "pending": false
  }
 ]
