@@ -115,17 +115,17 @@ for full in missing:
 
 json.dump(pending, open(PENDING, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 
-# 自动归类的结果写入 map_auto.py（人工作业map.py 不受影响）
-if auto_notes:
-    with open(AUTO_OUT, 'w', encoding='utf-8') as f:
-        f.write('# -*- coding: utf-8 -*-\n')
-        f.write('# 由 classifier.py 自动生成的分类，勿手工编辑。\n')
-        f.write('# 人工补充请写在 map.py。\n')
-        f.write('AUTO_NOTES = {\n')
-        for full, (cat, desc) in sorted(auto_notes.items()):
-            esc = desc.replace('\\', '\\\\').replace('"', '\\"')
-            f.write(f'    "{full}": ("{cat}", "{esc}"),\n')
-        f.write('}\n')
+# 自动归类的结果写入 map_auto.py（人工写的 map.py 不受影响）
+# 每次都重写，确保不会残留上一次运行的结果
+with open(AUTO_OUT, 'w', encoding='utf-8') as f:
+    f.write('# -*- coding: utf-8 -*-\n')
+    f.write('# 由 classifier.py 自动生成的分类，勿手工编辑。\n')
+    f.write('# 人工补充请写在 map.py。\n')
+    f.write('AUTO_NOTES = {\n')
+    for full, (cat, desc) in sorted(auto_notes.items()):
+        esc = desc.replace('\\', '\\\\').replace('"', '\\"')
+        f.write(f'    "{full}": ("{cat}", "{esc}"),\n')
+    f.write('}\n')
 
 # 标记状态：auto = 已自动归类，pending = 待人工确认
 auto_set = set(auto_notes)
