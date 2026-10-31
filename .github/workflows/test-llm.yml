@@ -1,0 +1,75 @@
+name: 测试 LLM 分类通路
+
+# 临时测试工作流：验证 GitHub Models 调用、JSON 解析、校验、缓存、降级
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  models: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出仓库
+        uses: actions/checkout@v4
+
+      - name: 准备测试数据
+        run: |
+          cat > stars_pending.json <<'EOF'
+          [
+           {"full": "K-Dense-AI/claude-scientific-skills", "url": "u", "lang": "Python",
+            "stars": 9000, "topics": ["claude", "skills", "science", "research"], "at": "2026-10-31",
+            "desc": "A collection of Claude Code scientific skills"},
+           {"full": "danielmiessler/fabric", "url": "u", "lang": "Python", "stars": 25000,
+            "topics": ["ai", "patterns", "llm", "cli", "fabric"], "at": "2026-10-31",
+            "desc": "An open-source framework for applying AI to practical tasks"},
+           {"full": "eyaltoledano/claude-task-master", "url": "u", "lang": "Python", "stars": 12000,
+            "topics": ["ai", "claude", "task-management", "mcp", "agents"], "at": "2026-10-31",
+            "desc": "An AI-powered task management system for Claude"},
+           {"full": "some-org/totally-ambiguous-thing", "url": "u", "lang": "Rust", "stars": 5,
+            "topics": ["weird", "xyz"], "at": "2026-10-31",
+            "desc": "Something with no clear category signal at all"}
+          ]
+          EOF
+
+      - name: 直接探测 GitHub Models API
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python <<'PY'
+          import os, json, urllib.request, urllib.error
+          tok = os.environ['GITHUB_TOKEN']
+          for model in ['openai/gpt-4o-mini','microsoft/Phi-4-mini-instruct']:
+              try:
+                  req = urllib.request.Request(
+                      'https://models.github.ai/inference/chat/completions',
+                      data=json.dumps({
+                          'model': model,
+                          'messages': [{'role':'user','content':'回复两个字：可用'}],
+                          'max_tokens': 20}).encode(),
+                      headers={'Authorization': f'Bearer {tok}',
+                               'Content-Type':'application/json'})
+                  with urllib.request.urlopen(req, timeout=60) as r:
+                      body = json.loads(r.read().decode())
+                  print(f'✅ {model} 可用 ->', body['choices'][0]['message']['content'][:60])
+                  break
+              except urllib.error.HTTPError as e:
+                  print(f'❌ {model} HTTP {e.code}: {e.read()[:200]}')
+              except Exception as e:
+                  print(f'❌ {model} {type(e).__name__}: {e}')
+          PY
+
+      - name: 运行 LLM 分类
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_MODELS_MODEL: openai/gpt-4o-mini
+        run: python llm_classify.py
+
+      - name: 输出结果
+        run: |
+          echo "=== map_auto.py ==="
+          cat map_auto.py
+          echo "=== 剩余 pending ==="
+          cat stars_pending.json
