@@ -55,6 +55,13 @@ NOTES = {
     "Zie619/n8n-workflows": ("ai-agent", "n8n 全网工作流收集合集，含从官网与社区搜集的可导入 JSON"),
     "bytedance/deer-flow": ("ai-agent", "字节开源长周期 SuperAgent 框架：研究、编码、创作，沙箱 + 记忆 + 工具 + 子 Agent"),
     "666ghj/MiroFish": ("ai-agent", "简洁通用的群体智能引擎，用多 Agent 模拟推演做任何预测，含金融预测应用"),
+    "Arekejoker/qwen21-nsfw-pose-skill": ("ai-agent", "Qwen-Image 2.1 出图 Skill：作者级提示词配方 + NSFW LoRA + 136 组姿势人偶控制"),
+    "MiniMax-AI/mcode-stack": ("ai-agent", "MiniMax Code 团队自己用的工作流与 Skills，开源可直接安装复用"),
+    "Oldcircle/geo-sleuth": ("ai-agent", "照片定位 Skill：靠 OpenStreetMap 几何、高程天际线与卫星影像反推拍摄地"),
+    "abcwyc/pi-agent-desktop": ("ai-agent", "Pi —— 把 Claude Code 式编码 Agent 体验搬到桌面，无需配置环境"),
+    "calesthio/OpenMontage": ("ai-agent", "全球首个开源智能体视频生产系统：12 条生产流水线、100+ 工具、700+ Agent Skill"),
+    "deusyu/harness-engineering": ("ai-agent", "Harness Engineering 学习指南：从概念理解到独立实践的深度档案"),
+    "farouqaldori/vibe-notch": ("ai-agent", "macOS 常驻会话管理器，让 Claude Code 有通知但不抢焦点"),
 
     # ---------- 大模型训练、推理与基础设施 ----------
     "yahoo/open_nsfw": ("ai-infra", "基于 Caffe 深度神经网络的 NSFW 图像分类模型，Yahoo 开源"),
@@ -230,7 +237,14 @@ NOTES = {
     "easychen/lean-side-bussiness": ("life", "《精益副业》：程序员如何优雅地做副业"),
     "easychen/opc-methodology": ("life", "《一人企业方法论》第二版，非技术人群做副业的通用框架"),
     "Gar-b-age/CookLikeHOC": ("life", "像老乡鸡那样做饭：按《老乡鸡菜品溯源报告》整理的菜谱"),
+    "peach-mitao/peach": ("media", "本地优先的视频刮削与媒体库管理器，自托管 + 自带播放器"),
+    "jbiaojerry/ebook-treasure-chest": ("reading", "电子书下载宝库：汇总帆书、微信读书、京东读书等多平台电子书资源"),
+    "HRuiCcc/RuiC-PoseAtlas": ("tools", "姿态与衣装双图鉴：288 组人体姿态 × 5 视角，加 1400+ 套无人物衣装，中英日三语"),
+    "BeckyGlobal/PaidToStudyAbroad": ("life", "《高性价比人生指南·海外版》：奖学金、免学费、带薪读博等 71 条，只引官方来源"),
     "eternity4719/HowToLiveBetter": ("life", "高性价比人生指南：长寿防病、急救、理财、法律红线，每条标注成本与证据等级"),
+    "DL-Community/DancingLine-CommunityEdition": ("games", "《 Dancing Line》社区版公开下载仓库"),
+    "SantiBros/NFSMostWanted2012-Android-Switch": ("games", "NFS Most Wanted 2012 安卓版移植到 Switch 的非官方自制软件"),
+    "jhaizhou-ops/d2r-mobile": ("games", "《暗黑破坏神 2：复活》兼容层，让你自己的存档跑在手机和平板上"),
 }
 
 #修正几个名字写错的键（保持与GitHub 一致）
