@@ -1042,7 +1042,7 @@
   "url": "https://github.com/readest/readest",
   "desc": "Readest is a modern, feature-rich ebook reader designed for avid readers offering seamless cross-platform access, powerful tools, and an intuitive interface to elevate your reading experience.",
   "lang": "TypeScript",
-  "stars": 25776,
+  "stars": 25777,
   "topics": [
    "calibre",
    "calibre-plugin",
@@ -1106,7 +1106,7 @@
   "url": "https://github.com/n8n-io/n8n",
   "desc": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",
   "lang": "TypeScript",
-  "stars": 209171,
+  "stars": 209172,
   "topics": [
    "ai",
    "apis",
@@ -1629,7 +1629,7 @@
   "url": "https://github.com/Usagi-org/ai-goofish-monitor",
   "desc": "基于 Playwright 和AI实现的闲鱼多任务实时/定时监控与智能分析系统，配备了功能完善的后台管理UI。帮助用户从闲鱼海量商品中，找到心仪产品。",
   "lang": "Python",
-  "stars": 15405,
+  "stars": 15404,
   "topics": [
    "ai",
    "ai-assistant",
@@ -2329,7 +2329,7 @@
   "url": "https://github.com/microsoft/markitdown",
   "desc": "Python tool for converting files and office documents to Markdown.",
   "lang": "Python",
-  "stars": 193128,
+  "stars": 193129,
   "topics": [
    "autogen",
    "autogen-extension",
@@ -2423,7 +2423,7 @@
   "url": "https://github.com/unclecode/crawl4ai",
   "desc": "Open-source web crawler and scraper for LLMs and AI agents: any website into clean, LLM-ready Markdown. Run it yourself, or use Crawl4AI Cloud with one key. Join our Discord https://discord.gg/VuxzM8mtf",
   "lang": "Python",
-  "stars": 86622,
+  "stars": 86623,
   "topics": [
    "ai",
    "ai-agents",
@@ -2484,7 +2484,7 @@
   "url": "https://github.com/ChaoMixian/vFlow",
   "desc": "vFlow 是一款为 Android 平台设计的、强大且高度可扩展的自动化工具。它允许你通过图形化界面，将一系列“动作模块”自由组合成强大的“工作流”，从而自动完成各种日常的、重复性的屏幕操作任务。",
   "lang": "Kotlin",
-  "stars": 1308,
+  "stars": 1309,
   "topics": [
    "android",
    "automation",
@@ -2590,7 +2590,7 @@
   "url": "https://github.com/openclaw/openclaw",
   "desc": "The AI that really does things. Any OS. Any Platform. The lobster way. 🦞",
   "lang": "TypeScript",
-  "stars": 393503,
+  "stars": 393504,
   "topics": [
    "ai",
    "assistant",
@@ -3203,7 +3203,7 @@
   "url": "https://github.com/farion1231/cc-switch",
   "desc": "A cross-platform desktop All-in-One assistant for Claude Code, Codex, OpenCode,DeepSeek Harness and more. Only official website: ccswitch.io",
   "lang": "Rust",
-  "stars": 150503,
+  "stars": 150505,
   "topics": [
    "ai-tools",
    "claude-code",
@@ -3267,7 +3267,7 @@
   "url": "https://github.com/msitarzewski/agency-agents",
   "desc": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
   "lang": "Shell",
-  "stars": 165567,
+  "stars": 165568,
   "topics": [],
   "at": "2026-05-16",
   "created": "2025-10-13",
@@ -3379,7 +3379,7 @@
   "url": "https://github.com/wbh604/UZI-Skill",
   "desc": "冰冷的钱就这样流进我温暖的口袋-游资（UZI）Skills — 让我们欢迎，股海贼王！66位投资大佬帮你看盘 · 22维数据 × 180条量化规则 × 17种机构分析方法 · A股/港股/美股",
   "lang": "Python",
-  "stars": 7471,
+  "stars": 7472,
   "topics": [],
   "at": "2026-06-12",
   "created": "2026-04-16",
@@ -3818,7 +3818,7 @@
   "url": "https://github.com/deepseek-ai/deepseek-harness",
   "desc": "DeepSeek Harness: Everything is a Plugin.",
   "lang": "TypeScript",
-  "stars": 266946,
+  "stars": 266947,
   "topics": [
    "ai-agents",
    "cordis",
@@ -3918,7 +3918,7 @@
   "url": "https://github.com/jingyaogong/minimind",
   "desc": "🧠 Train a 64M-parameter LLM from scratch in just 2h!",
   "lang": "Python",
-  "stars": 64671,
+  "stars": 64672,
   "topics": [
    "artificial-intelligence",
    "large-language-model"
@@ -4073,7 +4073,7 @@
   "url": "https://github.com/chengyi-ai/native-subtitle-quote-image",
   "desc": "保留视频内嵌字幕，精确取帧并生成 3:4 社交长图的 Agent Skill",
   "lang": "Python",
-  "stars": 2755,
+  "stars": 2756,
   "topics": [
    "agent-skills",
    "codex",
@@ -4402,7 +4402,7 @@
   "url": "https://github.com/calesthio/OpenMontage",
   "desc": "World's first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent skill and production-knowledge files. Turn your AI coding assistant into a full video production studio.",
   "lang": "Python",
-  "stars": 73632,
+  "stars": 73633,
   "topics": [
    "agent",
    "agentic-ai",
@@ -4475,7 +4475,7 @@
   "url": "https://github.com/HRuiCcc/RuiC-PoseAtlas",
   "desc": "RuiC-PoseAtlas｜姿态 + 衣装双图鉴：288 组人体姿态 × 5 视角 × 1,439 张人台线稿，加 1,407 套无人物衣装 × 8 分类 × 86 个三语标签。中/英/日切换、搜索筛选、键盘浏览、原图下载，纯静态零依赖。",
   "lang": "JavaScript",
-  "stars": 744,
+  "stars": 745,
   "topics": [
    "3d-modeling",
    "ai-art",
@@ -4503,7 +4503,7 @@
   "url": "https://github.com/pbakaus/impeccable",
   "desc": "The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, catch AI slop before it ships.",
   "lang": "Rust",
-  "stars": 97456,
+  "stars": 97459,
   "topics": [
    "agent-skills",
    "ai",
@@ -4518,7 +4518,7 @@
   "level": "active",
   "archived": false,
   "fork": false,
-  "auto": false,
-  "pending": true
+  "auto": true,
+  "pending": false
  }
 ]
