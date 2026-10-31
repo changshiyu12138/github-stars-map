@@ -1,1 +1,42 @@
-[]
+[
+ {
+  "full": "K-Dense-AI/claude-scientific-skills",
+  "url": "https://github.com/K-Dense-AI/claude-scientific-skills",
+  "lang": "Python",
+  "stars": 9000,
+  "topics": [
+   "claude",
+   "skills",
+   "science",
+   "research"
+  ],
+  "at": "2026-10-31",
+  "desc": "A collection of Claude Code scientific skills"
+ },
+ {
+  "full": "danielmiessler/fabric",
+  "url": "https://github.com/danielmiessler/fabric",
+  "lang": "Python",
+  "stars": 25000,
+  "topics": [
+   "ai",
+   "patterns",
+   "llm",
+   "cli",
+   "fabric"
+  ],
+  "at": "2026-10-31",
+  "desc": "An open-source framework for applying AI to practical tasks"
+ },
+ {
+  "full": "some-org/unknown-thing",
+  "url": "u",
+  "lang": "Rust",
+  "stars": 5,
+  "topics": [
+   "weird"
+  ],
+  "at": "2026-10-31",
+  "desc": "A project with essentially no categorical signal"
+ }
+]
