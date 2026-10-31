@@ -8,6 +8,8 @@ on:
 
 permissions:
   contents: write
+  # 允许使用 GitHub Models（免费额度），用内置 GITHUB_TOKEN 即可，无需任何 API key
+  models: read
 
 concurrency:
   group: star-sync
@@ -72,6 +74,17 @@ jobs:
           if [ "$code" -eq 2 ]; then
             echo "存在待归类项目，继续执行"
           fi
+
+      - name: LLM 自动分类（GitHub Models 免费额度）
+        id: llm
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_MODELS_MODEL: openai/gpt-4o-mini
+        run: |
+          # 任何失败都不能让流水线断掉：脚本内部已做规则引擎兜底，
+          # 这里再兜一层，LLM 不可用时流程照常完成。
+          python llm_classify.py || echo "::warning::LLM 分类失败，已回退到规则引擎"
 
       - name: 生成 README
         run: python gen_readme.py
