@@ -21,7 +21,7 @@
   "url": "https://github.com/jaywcjlove/linux-command",
   "desc": "Linux命令大全搜索工具，内容包含Linux命令手册、详解、学习、搜集。https://git.io/linux",
   "lang": "Markdown",
-  "stars": 37200,
+  "stars": 37199,
   "topics": [
    "bash",
    "chrome",
@@ -1438,7 +1438,7 @@
   "url": "https://github.com/sindresorhus/awesome",
   "desc": "😎 Awesome lists about all kinds of interesting topics [NOTE: Pull requests are temporarily disabled until I have a chance to catch up with the existing ones]",
   "lang": "未标注",
-  "stars": 527639,
+  "stars": 527640,
   "topics": [
    "awesome",
    "awesome-list",
@@ -1629,7 +1629,7 @@
   "url": "https://github.com/Usagi-org/ai-goofish-monitor",
   "desc": "基于 Playwright 和AI实现的闲鱼多任务实时/定时监控与智能分析系统，配备了功能完善的后台管理UI。帮助用户从闲鱼海量商品中，找到心仪产品。",
   "lang": "Python",
-  "stars": 15392,
+  "stars": 15390,
   "topics": [
    "ai",
    "ai-assistant",
@@ -2329,7 +2329,7 @@
   "url": "https://github.com/microsoft/markitdown",
   "desc": "Python tool for converting files and office documents to Markdown.",
   "lang": "Python",
-  "stars": 193120,
+  "stars": 193119,
   "topics": [
    "autogen",
    "autogen-extension",
@@ -2590,7 +2590,7 @@
   "url": "https://github.com/openclaw/openclaw",
   "desc": "The AI that really does things. Any OS. Any Platform. The lobster way. 🦞",
   "lang": "TypeScript",
-  "stars": 393505,
+  "stars": 393504,
   "topics": [
    "ai",
    "assistant",
@@ -2632,7 +2632,7 @@
   "url": "https://github.com/youhunwl/TVAPP",
   "desc": "收集全网 Android TV电视盒子应用，涵盖影视、直播、K歌、工具、游戏等类型，整理优质APK资源，支持便捷下载与自动更新。提供安全验证、分类索引与兼容性标注，助力用户打造家庭影音娱乐中心！              ✅ TVBox/影视仓等影音壳接口配置源。",
   "lang": "JavaScript",
-  "stars": 26887,
+  "stars": 26886,
   "topics": [
    "android",
    "android-tv",
@@ -3267,7 +3267,7 @@
   "url": "https://github.com/msitarzewski/agency-agents",
   "desc": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
   "lang": "Shell",
-  "stars": 165559,
+  "stars": 165557,
   "topics": [],
   "at": "2026-05-16",
   "created": "2025-10-13",
@@ -3578,7 +3578,7 @@
   "url": "https://github.com/DimensionDev/Flare",
   "desc": "Browse Mastodon, Bluesky, X, Misskey, Nostr, Pixiv, Fanbox and RSS all in one app. One timeline, all your accounts, cross-post everywhere.",
   "lang": "Kotlin",
-  "stars": 1673,
+  "stars": 1672,
   "topics": [],
   "at": "2026-07-25",
   "created": "2023-07-19",
@@ -4052,7 +4052,7 @@
   "url": "https://github.com/KingKongRobotics/jumper",
   "desc": "🦀 Jumper — an crab robot.",
   "lang": "Python",
-  "stars": 3011,
+  "stars": 3010,
   "topics": [
    "crab-robot",
    "robot",
@@ -4300,7 +4300,7 @@
   "url": "https://github.com/peach-mitao/peach",
   "desc": "Peach: Local-first video metadata scraper and media manager.",
   "lang": "Python",
-  "stars": 13434,
+  "stars": 13433,
   "topics": [
    "local-first",
    "media-library",
@@ -4402,7 +4402,7 @@
   "url": "https://github.com/calesthio/OpenMontage",
   "desc": "World's first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent skill and production-knowledge files. Turn your AI coding assistant into a full video production studio.",
   "lang": "Python",
-  "stars": 73605,
+  "stars": 73604,
   "topics": [
    "agent",
    "agentic-ai",
@@ -4439,7 +4439,7 @@
   "url": "https://github.com/Oldcircle/geo-sleuth",
   "desc": "An agent skill that finds where a photo was taken — OpenStreetMap geometry, elevation skylines, satellite imagery and street view — and shows its work. Works with Claude Code, Codex, Cursor, Gemini CLI, OpenCode and GitHub Copilot.",
   "lang": "Python",
-  "stars": 4622,
+  "stars": 4621,
   "topics": [
    "agent-skills",
    "ai-agents",
