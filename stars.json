@@ -1106,7 +1106,7 @@
   "url": "https://github.com/n8n-io/n8n",
   "desc": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",
   "lang": "TypeScript",
-  "stars": 209164,
+  "stars": 209163,
   "topics": [
    "ai",
    "apis",
@@ -1461,7 +1461,7 @@
   "url": "https://github.com/LibreSpark/LibreTV",
   "desc": "一分钟搭建影视站，支持Docker等部署方式",
   "lang": "TypeScript",
-  "stars": 22893,
+  "stars": 22892,
   "topics": [
    "css",
    "film",
@@ -1629,7 +1629,7 @@
   "url": "https://github.com/Usagi-org/ai-goofish-monitor",
   "desc": "基于 Playwright 和AI实现的闲鱼多任务实时/定时监控与智能分析系统，配备了功能完善的后台管理UI。帮助用户从闲鱼海量商品中，找到心仪产品。",
   "lang": "Python",
-  "stars": 15368,
+  "stars": 15367,
   "topics": [
    "ai",
    "ai-assistant",
@@ -2168,7 +2168,7 @@
   "url": "https://github.com/FlowiseAI/Flowise",
   "desc": "Build AI Agents, Visually",
   "lang": "TypeScript",
-  "stars": 55536,
+  "stars": 55537,
   "topics": [
    "agentic-ai",
    "agentic-workflow",
@@ -2980,7 +2980,7 @@
   "url": "https://github.com/bytedance/deer-flow",
   "desc": "An open-source long-horizon SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skill, subagents and message gateway, it handles different levels of tasks that could take minutes to hours.",
   "lang": "Python",
-  "stars": 84745,
+  "stars": 84744,
   "topics": [
    "agent",
    "agentic",
@@ -3203,7 +3203,7 @@
   "url": "https://github.com/farion1231/cc-switch",
   "desc": "A cross-platform desktop All-in-One assistant for Claude Code, Codex, OpenCode,DeepSeek Harness and more. Only official website: ccswitch.io",
   "lang": "Rust",
-  "stars": 150473,
+  "stars": 150472,
   "topics": [
    "ai-tools",
    "claude-code",
@@ -3818,7 +3818,7 @@
   "url": "https://github.com/deepseek-ai/deepseek-harness",
   "desc": "DeepSeek Harness: Everything is a Plugin.",
   "lang": "TypeScript",
-  "stars": 266887,
+  "stars": 266886,
   "topics": [
    "ai-agents",
    "cordis",
@@ -3891,7 +3891,7 @@
   "url": "https://github.com/sngyai/Sequoia-X",
   "desc": "A股自动选股系统 — 多种技术形态自动扫描，收盘后自动运行并推送飞书",
   "lang": "Python",
-  "stars": 8383,
+  "stars": 8382,
   "topics": [
    "a-shares",
    "akshare",
@@ -4014,7 +4014,7 @@
   "url": "https://github.com/eternity4719/HowToLiveBetter",
   "desc": "高性价比人生指南: 长寿防病、急救、省钱理财、法律红线、失业与工伤、医保社保、恋爱婚育、怀孕育儿、创业与做平台合规、出国与技能。每条写明成本、收益、证据等级和原始出处，只引期刊论文与官方文件。",
   "lang": "HTML",
-  "stars": 71693,
+  "stars": 71692,
   "topics": [],
   "at": "2026-09-16",
   "created": "2026-09-07",
@@ -4402,7 +4402,7 @@
   "url": "https://github.com/calesthio/OpenMontage",
   "desc": "World's first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent skill and production-knowledge files. Turn your AI coding assistant into a full video production studio.",
   "lang": "Python",
-  "stars": 73571,
+  "stars": 73570,
   "topics": [
    "agent",
    "agentic-ai",
@@ -4497,5 +4497,73 @@
   "fork": false,
   "auto": false,
   "pending": false
+ },
+ {
+  "full": "K-Dense-AI/claude-scientific-skills",
+  "url": "https://github.com/K-Dense-AI/claude-scientific-skills",
+  "desc": "A collection of Claude Code scientific skills",
+  "lang": "Python",
+  "stars": 9000,
+  "topics": [
+   "claude",
+   "skills",
+   "science",
+   "research"
+  ],
+  "at": "2026-10-31",
+  "created": "2024-01-01",
+  "pushed": "2026-10-30",
+  "idle_days": 1,
+  "level": "active",
+  "archived": false,
+  "fork": false,
+  "auto": false,
+  "pending": true
+ },
+ {
+  "full": "danielmiessler/fabric",
+  "url": "https://github.com/danielmiessler/fabric",
+  "desc": "An open-source framework for applying AI to practical tasks",
+  "lang": "Python",
+  "stars": 25000,
+  "topics": [
+   "ai",
+   "patterns",
+   "llm",
+   "cli",
+   "fabric"
+  ],
+  "at": "2026-10-31",
+  "created": "2024-01-01",
+  "pushed": "2026-10-30",
+  "idle_days": 1,
+  "level": "active",
+  "archived": false,
+  "fork": false,
+  "auto": false,
+  "pending": true
+ },
+ {
+  "full": "eyaltoledano/claude-task-master",
+  "url": "https://github.com/eyaltoledano/claude-task-master",
+  "desc": "An AI-powered task management system for Claude",
+  "lang": "Python",
+  "stars": 12000,
+  "topics": [
+   "ai",
+   "claude",
+   "task-management",
+   "mcp",
+   "agents"
+  ],
+  "at": "2026-10-31",
+  "created": "2024-01-01",
+  "pushed": "2026-10-30",
+  "idle_days": 1,
+  "level": "active",
+  "archived": false,
+  "fork": false,
+  "auto": false,
+  "pending": true
  }
 ]
