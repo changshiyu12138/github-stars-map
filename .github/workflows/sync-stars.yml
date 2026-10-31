@@ -79,7 +79,7 @@ jobs:
       - name: 提交变更
         id: commit
         run: |
-          git add README.md stars.json stars_pending.json 2>/dev/null || true
+          git add README.md stars.json stars_pending.json map_auto.py 2>/dev/null || true
           if git diff --cached --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "无变化，跳过提交"
@@ -107,14 +107,29 @@ jobs:
           total = len(load('stars.json', []))
           pending = load('stars_pending.json', [])
           changed = os.environ.get('CHANGED', 'false')
+          # map_auto.py 是 Python 源码，安全读取其中的 AUTO_NOTES
+          try:
+              import importlib.util
+              spec = importlib.util.spec_from_file_location('map_auto', 'map_auto.py')
+              mod = importlib.util.module_from_spec(spec)
+              spec.loader.exec_module(mod)
+              auto = list(getattr(mod, 'AUTO_NOTES', {}).items())
+          except Exception:
+              auto = []
 
           lines = ['## ⭐ Star 地图同步', '']
           lines.append(f'- 当前收藏总数：**{total}** 个')
-          lines.append(f'- 待归类：**{len(pending)}** 个')
+          lines.append(f'- 🤖 自动归类：**{len(auto)}** 个')
+          lines.append(f'- ⏳ 待人工确认：**{len(pending)}** 个')
           lines.append(f"- 是否提交：{'是' if changed == 'true' else '否'}")
 
+          if auto:
+              lines += ['', '### 🤖 自动归类的项目', '']
+              for full, (cat, desc) in auto:
+                  lines.append(f"- `{full}` → **{cat}** — {desc}")
+
           if pending:
-              lines += ['', '### 🆕 新发现的项目', '']
+              lines += ['', '### ⏳ 待人工确认的项目', '']
               for p in pending:
                   # 简介来自 GitHub，可能含引号/反引号/换行，统一压平
                   desc = (p.get('desc') or '（官方无简介）').replace('\n', ' ')[:70]
@@ -124,5 +139,5 @@ jobs:
           with open(os.environ['GITHUB_STEP_SUMMARY'], 'a', encoding='utf-8') as f:
               f.write('\n'.join(lines) + '\n')
 
-          print(f'待归类数量: {len(pending)}')
+          print(f'自动归类 {len(auto)} 个，待确认 {len(pending)} 个')
           PY
