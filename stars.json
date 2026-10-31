@@ -3203,7 +3203,7 @@
   "url": "https://github.com/farion1231/cc-switch",
   "desc": "A cross-platform desktop All-in-One assistant for Claude Code, Codex, OpenCode,DeepSeek Harness and more. Only official website: ccswitch.io",
   "lang": "Rust",
-  "stars": 150505,
+  "stars": 150506,
   "topics": [
    "ai-tools",
    "claude-code",
@@ -4402,7 +4402,7 @@
   "url": "https://github.com/calesthio/OpenMontage",
   "desc": "World's first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent skill and production-knowledge files. Turn your AI coding assistant into a full video production studio.",
   "lang": "Python",
-  "stars": 73633,
+  "stars": 73634,
   "topics": [
    "agent",
    "agentic-ai",

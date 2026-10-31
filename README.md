@@ -81,7 +81,7 @@
 | 项目 | 说明 | 状态 | 最后提交 | 语言 | ⭐ | 收藏于 |
 |---|---|---|---|---|---:|---|
 | [`pbakaus/impeccable`](https://github.com/pbakaus/impeccable) | 🤖 为编码智能体提供设计词汇和审查工具。 | 🟢 | 2026-10-31 | Rust | 97,459 | 2026-10-31 |
-| [`calesthio/OpenMontage`](https://github.com/calesthio/OpenMontage) | 全球首个开源智能体视频生产系统：12 条生产流水线、100+ 工具、700+ Agent Skill | 🟢 | 2026-10-28 | Python | 73,633 | 2026-10-30 |
+| [`calesthio/OpenMontage`](https://github.com/calesthio/OpenMontage) | 全球首个开源智能体视频生产系统：12 条生产流水线、100+ 工具、700+ Agent Skill | 🟢 | 2026-10-28 | Python | 73,634 | 2026-10-30 |
 | [`Oldcircle/geo-sleuth`](https://github.com/Oldcircle/geo-sleuth) | 照片定位 Skill：靠 OpenStreetMap 几何、高程天际线与卫星影像反推拍摄地 | 🟢 | 2026-10-29 | Python | 4,622 | 2026-10-30 |
 | [`MiniMax-AI/mcode-stack`](https://github.com/MiniMax-AI/mcode-stack) | MiniMax Code 团队自己用的工作流与 Skills，开源可直接安装复用 | 🟢 | 2026-10-29 | Python | 467 | 2026-10-29 |
 | [`farouqaldori/vibe-notch`](https://github.com/farouqaldori/vibe-notch) | macOS 常驻会话管理器，让 Claude Code 有通知但不抢焦点 | 🔵 | 2026-04-20 | Swift | 2,524 | 2026-10-27 |
@@ -95,7 +95,7 @@
 | [`yan-labs/serenity-aleabitoreddit`](https://github.com/yan-labs/serenity-aleabitoreddit) | 可安装的推文归档 + AI 语义供应链 Skill，一条命令 npx 装到本地 | 🟢 | 2026-10-31 | Python | 485 | 2026-05-31 |
 | [`fathah/hermes-desktop`](https://github.com/fathah/hermes-desktop) | Hermes Agent 的桌面伴侣客户端 | 🟢 | 2026-10-13 | TypeScript | 14,501 | 2026-05-25 |
 | [`msitarzewski/agency-agents`](https://github.com/msitarzewski/agency-agents) | 一整套「AI 数字 Agency」角色库：前端专家、社区运营、创意注入、现实检验等 | 🟢 | 2026-10-25 | Shell | 165,568 | 2026-05-16 |
-| [`farion1231/cc-switch`](https://github.com/farion1231/cc-switch) | 跨平台桌面端 AI 助手，一键切换 Claude Code、Codex、OpenCode、OpenClaw 等 | 🟢 | 2026-10-31 | Rust | 150,505 | 2026-05-03 |
+| [`farion1231/cc-switch`](https://github.com/farion1231/cc-switch) | 跨平台桌面端 AI 助手，一键切换 Claude Code、Codex、OpenCode、OpenClaw 等 | 🟢 | 2026-10-31 | Rust | 150,506 | 2026-05-03 |
 | [`drona23/claude-token-efficient`](https://github.com/drona23/claude-token-efficient) | 单个 CLAUDE.md 配置，让 Claude 输出更简洁，显著降低 token 消耗 | 🔵 | 2026-06-16 | Python | 6,135 | 2026-03-31 |
 | [`linuxhsj/openclaw-zero-token`](https://github.com/linuxhsj/openclaw-zero-token) | 让 OpenClaw 复用主流模型而无需自备 API Token 的方案 | 🟢 | 2026-09-24 | TypeScript | 5,213 | 2026-03-30 |
 | [`6551Team/opennews-mcp`](https://github.com/6551Team/opennews-mcp) | 新闻聚合 + AI 评分 + 交易信号 + 实时更新的 MCP 服务 | 🟢 | 2026-09-14 | Python | 2,433 | 2026-03-19 |
@@ -418,7 +418,7 @@
 | [`CyC2018/CS-Notes`](https://github.com/CyC2018/CS-Notes) | 技术面试必备：算法、操作系统、计算机网络、系统设计笔记 | 🟢 | 186,399 |
 | [`msitarzewski/agency-agents`](https://github.com/msitarzewski/agency-agents) | 一整套「AI 数字 Agency」角色库：前端专家、社区运营、创意注入、现实检验等 | 🟢 | 165,568 |
 | [`Snailclimb/JavaGuide`](https://github.com/Snailclimb/JavaGuide) | Java 面试与后端通用面试指南，已扩展到 AI 应用开发 | 🟢 | 159,359 |
-| [`farion1231/cc-switch`](https://github.com/farion1231/cc-switch) | 跨平台桌面端 AI 助手，一键切换 Claude Code、Codex、OpenCode、OpenClaw 等 | 🟢 | 150,505 |
+| [`farion1231/cc-switch`](https://github.com/farion1231/cc-switch) | 跨平台桌面端 AI 助手，一键切换 Claude Code、Codex、OpenCode、OpenClaw 等 | 🟢 | 150,506 |
 
 ---
 
