@@ -59,7 +59,6 @@ NOTES = {
     "MiniMax-AI/mcode-stack": ("ai-agent", "MiniMax Code 团队自己用的工作流与 Skills，开源可直接安装复用"),
     "Oldcircle/geo-sleuth": ("ai-agent", "照片定位 Skill：靠 OpenStreetMap 几何、高程天际线与卫星影像反推拍摄地"),
     "abcwyc/pi-agent-desktop": ("ai-agent", "Pi —— 把 Claude Code 式编码 Agent 体验搬到桌面，无需配置环境"),
-    "calesthio/OpenMontage": ("ai-agent", "全球首个开源智能体视频生产系统：12 条生产流水线、100+ 工具、700+ Agent Skill"),
     "deusyu/harness-engineering": ("ai-agent", "Harness Engineering 学习指南：从概念理解到独立实践的深度档案"),
     "farouqaldori/vibe-notch": ("ai-agent", "macOS 常驻会话管理器，让 Claude Code 有通知但不抢焦点"),
 
