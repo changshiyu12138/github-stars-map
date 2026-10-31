@@ -1789,7 +1789,7 @@
   "url": "https://github.com/chen08209/FlClash",
   "desc": "A multi-platform proxy client based on ClashMeta,simple and easy to use, open-source and ad-free.",
   "lang": "Dart",
-  "stars": 59944,
+  "stars": 59945,
   "topics": [
    "clash",
    "clash-meta",
@@ -2160,7 +2160,7 @@
   "url": "https://github.com/Ido-Levi/Hephaestus",
   "desc": "Semi-Structured Agentic Framework. Workflows build themselves as agents discover what needs to be done, not what you predicted upfront.",
   "lang": "Python",
-  "stars": 1184,
+  "stars": 1185,
   "topics": [
    "ai-agents",
    "autonomous-agents",
@@ -2351,7 +2351,7 @@
   "url": "https://github.com/666ghj/MiroFish",
   "desc": "A Simple and Universal Swarm Intelligence Engine, Predicting Anything. 简洁通用的群体智能引擎，预测万物",
   "lang": "Python",
-  "stars": 82917,
+  "stars": 82918,
   "topics": [
    "agent-memory",
    "financial-forecasting",
@@ -2833,7 +2833,7 @@
   "url": "https://github.com/LadybirdBrowser/ladybird",
   "desc": "Truly independent web browser",
   "lang": "C++",
-  "stars": 66769,
+  "stars": 66770,
   "topics": [
    "browser",
    "browser-engine"
@@ -3048,7 +3048,7 @@
   "url": "https://github.com/AnInsomniacy/rayburst",
   "desc": "Redefining the open-source download manager",
   "lang": "TypeScript",
-  "stars": 11302,
+  "stars": 11303,
   "topics": [],
   "at": "2026-04-16",
   "created": "2026-03-04",
@@ -3654,7 +3654,7 @@
   "url": "https://github.com/deepseek-ai/deepseek-harness",
   "desc": "DeepSeek Harness: Everything is a Plugin.",
   "lang": "TypeScript",
-  "stars": 266873,
+  "stars": 266875,
   "topics": [
    "ai-agents",
    "cordis",
@@ -4212,7 +4212,7 @@
   "url": "https://github.com/calesthio/OpenMontage",
   "desc": "World's first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent skill and production-knowledge files. Turn your AI coding assistant into a full video production studio.",
   "lang": "Python",
-  "stars": 73560,
+  "stars": 73561,
   "topics": [
    "agent",
    "agentic-ai",
@@ -4283,7 +4283,7 @@
   "url": "https://github.com/HRuiCcc/RuiC-PoseAtlas",
   "desc": "RuiC-PoseAtlas｜姿态 + 衣装双图鉴：288 组人体姿态 × 5 视角 × 1,439 张人台线稿，加 1,407 套无人物衣装 × 8 分类 × 86 个三语标签。中/英/日切换、搜索筛选、键盘浏览、原图下载，纯静态零依赖。",
   "lang": "JavaScript",
-  "stars": 716,
+  "stars": 718,
   "topics": [
    "3d-modeling",
    "ai-art",
