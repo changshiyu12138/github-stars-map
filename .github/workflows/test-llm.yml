@@ -15,6 +15,37 @@ jobs:
       - name: 检出仓库
         uses: actions/checkout@v4
 
+      - name: 测试 actions/ai-inference action
+        id: ai
+        continue-on-error: true
+        uses: actions/ai-inference@v1
+        with:
+          model: openai/gpt-4o-mini
+          prompt: |
+            只输出 JSON，不要解释。格式：{"ok": true}
+            内容：{"ok": true}
+
+      - name: 打印 action 结果
+        if: always()
+        run: |
+          echo "response 长度: ${#{{ steps.ai.outputs.response }}}"
+          echo "response: ${{ steps.ai.outputs.response }}"
+          echo "exitcode: ${{ steps.ai.outputs.exitcode }}"
+
+      - name: 测试 gh models CLI
+        continue-on-error: true
+        run: |
+          gh models --help 2>&1 | head -20 || echo "gh models 不可用"
+          echo "---"
+          gh models run --help 2>&1 | head -20 || echo "gh models run 不可用"
+
+      - name: 测试 gh models run 实际调用
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh models run openai/gpt-4o-mini --prompt "只回复两个字：可用" 2>&1 | head -20 || echo "调用失败"
+
       - name: 准备测试数据
         run: |
           cat > stars_pending.json <<'EOF'
@@ -25,68 +56,11 @@ jobs:
            {"full": "danielmiessler/fabric", "url": "u", "lang": "Python", "stars": 25000,
             "topics": ["ai", "patterns", "llm", "cli", "fabric"], "at": "2026-10-31",
             "desc": "An open-source framework for applying AI to practical tasks"},
-           {"full": "eyaltoledano/claude-task-master", "url": "u", "lang": "Python", "stars": 12000,
-            "topics": ["ai", "claude", "task-management", "mcp", "agents"], "at": "2026-10-31",
-            "desc": "An AI-powered task management system for Claude"},
            {"full": "some-org/totally-ambiguous-thing", "url": "u", "lang": "Rust", "stars": 5,
             "topics": ["weird", "xyz"], "at": "2026-10-31",
             "desc": "Something with no clear category signal at all"}
           ]
           EOF
-
-      - name: 直接探测 GitHub Models API
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          python <<'PY'
-          import os, json, urllib.request, urllib.error
-
-          tok = os.environ['GITHUB_TOKEN']
-          print('TOKEN 前缀:', tok[:4], '长度', len(tok))
-
-          # 1) catalog 端点（GET，无需 chat）
-          for ep in ['https://models.github.ai/catalog/models',
-                     'https://models.github.ai/inference/models',
-                     'https://api.github.com/models']:
-              try:
-                  req = urllib.request.Request(ep, headers={
-                      'Authorization': f'Bearer {tok}',
-                      'Accept':'application/json',
-                      'X-GitHub-Api-Version':'2022-11-28'})
-                  with urllib.request.urlopen(req, timeout=30) as r:
-                      raw = r.read().decode()
-                      print(f'[CATALOG] {ep} -> HTTP {r.status} ct={r.headers.get("Content-Type")}')
-                      print('   ', raw[:200])
-              except urllib.error.HTTPError as e:
-                  print(f'[CATALOG] {ep} -> HTTP {e.code}:', e.read().decode()[:150])
-              except Exception as e:
-                  print(f'[CATALOG] {ep} -> {type(e).__name__}: {e}')
-
-          # 2) chat 端点，带各种 header 组合
-          hdr_sets = [
-              ('bare', {'Authorization': f'Bearer {tok}', 'Content-Type':'application/json'}),
-              ('api-version', {'Authorization': f'Bearer {tok}', 'Content-Type':'application/json',
-                               'X-GitHub-Api-Version':'2022-11-28'}),
-              ('token-prefix', {'Authorization': f'token {tok}', 'Content-Type':'application/json'}),
-              ('no-auth', {'Content-Type':'application/json'}),
-          ]
-          for name, hdr in hdr_sets:
-              try:
-                  req = urllib.request.Request(
-                      'https://models.github.ai/inference/chat/completions',
-                      data=json.dumps({'model':'openai/gpt-4o-mini',
-                                       'messages':[{'role':'user','content':'hi'}],
-                                       'max_tokens':20}).encode(),
-                      headers=hdr)
-                  with urllib.request.urlopen(req, timeout=30) as r:
-                      raw = r.read().decode()
-                      print(f'[CHAT:{name}] HTTP {r.status} ct={r.headers.get("Content-Type")}')
-                      print('   ', raw[:250])
-              except urllib.error.HTTPError as e:
-                  print(f'[CHAT:{name}] HTTP {e.code}:', e.read().decode()[:200])
-              except Exception as e:
-                  print(f'[CHAT:{name}] {type(e).__name__}: {e}')
-          PY
 
       - name: 运行 LLM 分类
         env:
@@ -95,8 +69,9 @@ jobs:
         run: python llm_classify.py
 
       - name: 输出结果
+        if: always()
         run: |
           echo "=== map_auto.py ==="
-          cat map_auto.py
+          cat map_auto.py 2>/dev/null || echo "(无)"
           echo "=== 剩余 pending ==="
           cat stars_pending.json
