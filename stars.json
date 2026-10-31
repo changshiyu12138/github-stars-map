@@ -1629,7 +1629,7 @@
   "url": "https://github.com/Usagi-org/ai-goofish-monitor",
   "desc": "基于 Playwright 和AI实现的闲鱼多任务实时/定时监控与智能分析系统，配备了功能完善的后台管理UI。帮助用户从闲鱼海量商品中，找到心仪产品。",
   "lang": "Python",
-  "stars": 15366,
+  "stars": 15367,
   "topics": [
    "ai",
    "ai-assistant",
@@ -2456,7 +2456,7 @@
   "url": "https://github.com/666ghj/MiroFish",
   "desc": "A Simple and Universal Swarm Intelligence Engine, Predicting Anything. 简洁通用的群体智能引擎，预测万物",
   "lang": "Python",
-  "stars": 82918,
+  "stars": 82919,
   "topics": [
    "agent-memory",
    "financial-forecasting",
@@ -3267,7 +3267,7 @@
   "url": "https://github.com/msitarzewski/agency-agents",
   "desc": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
   "lang": "Shell",
-  "stars": 165550,
+  "stars": 165551,
   "topics": [],
   "at": "2026-05-16",
   "created": "2025-10-13",
@@ -3471,7 +3471,7 @@
   "url": "https://github.com/Fincept-Corporation/FinceptTerminal",
   "desc": "FinceptTerminal is a modern finance application offering advanced market analytics, investment research, and economic data tools, designed for interactive exploration and data-driven decision-making in a user-friendly environment.",
   "lang": "C++",
-  "stars": 33299,
+  "stars": 33300,
   "topics": [
    "ai-agents",
    "algorithmic-trading",
@@ -4014,7 +4014,7 @@
   "url": "https://github.com/eternity4719/HowToLiveBetter",
   "desc": "高性价比人生指南: 长寿防病、急救、省钱理财、法律红线、失业与工伤、医保社保、恋爱婚育、怀孕育儿、创业与做平台合规、出国与技能。每条写明成本、收益、证据等级和原始出处，只引期刊论文与官方文件。",
   "lang": "HTML",
-  "stars": 71690,
+  "stars": 71692,
   "topics": [],
   "at": "2026-09-16",
   "created": "2026-09-07",
@@ -4475,7 +4475,7 @@
   "url": "https://github.com/HRuiCcc/RuiC-PoseAtlas",
   "desc": "RuiC-PoseAtlas｜姿态 + 衣装双图鉴：288 组人体姿态 × 5 视角 × 1,439 张人台线稿，加 1,407 套无人物衣装 × 8 分类 × 86 个三语标签。中/英/日切换、搜索筛选、键盘浏览、原图下载，纯静态零依赖。",
   "lang": "JavaScript",
-  "stars": 724,
+  "stars": 725,
   "topics": [
    "3d-modeling",
    "ai-art",
