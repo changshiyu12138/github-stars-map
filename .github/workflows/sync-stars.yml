@@ -61,7 +61,7 @@ jobs:
 
       - name: 构建 stars.json 并检测新增
         run: |
-          # build_stars.py 在存在待归类项目时退出码为 2，属于正常情况；
+          # build_stars.py 在有新项目时退出码为 2，属于正常情况；
           # 其他非零退出码说明脚本真的坏了，需要暴露出来。
           set +e
           python build_stars.py
@@ -72,7 +72,7 @@ jobs:
             exit "$code"
           fi
           if [ "$code" -eq 2 ]; then
-            echo "存在待归类项目，继续执行"
+            echo "存在新项目，继续执行分类"
           fi
 
       - name: LLM 自动分类
