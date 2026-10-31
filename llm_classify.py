@@ -1,27 +1,32 @@
 # -*- coding: utf-8 -*-
-"""用 GitHub Models（免费额度）给新 Star 项目自动分类并写中文说明。
+"""用在线大模型给新 Star 项目自动分类并写中文说明。
 
-为什么需要它：
+背景：
   规则引擎（classifier.py）精确率 100%，但覆盖率约 81%——剩下 19%
   是它"判定不了"的边界项目，以前只能丢进待归类等人工。
-  LLM 可以读懂描述语义，处理这些边界情况，并且写出比
-  「概念重组」自然得多的中文说明。
+  LLM 能读懂描述语义，处理这些边界情况，并写出比「概念重组」自然得多的中文说明。
+
+架构：多provider 通用（都走 OpenAI 兼容协议）
+  1. GitHub Models   —— 零配置，用 Actions 内置 GITHUB_TOKEN + models: read 权限，不花钱
+  2. DeepSeek / Kimi / 智谱 / 通义 —— 需要自备 API key，但便宜甚至有免费额度
+  按顺序尝试，第一个可用的就用；也可用 LLM_PROVIDER 环境变量指定。
 
 关键设计（都是踩过的坑换来的）：
-  1. **零配置**：Actions 里用内置 GITHUB_TOKEN + `models: read` 权限，
-     不需要任何外部 API key，不花钱。
-  2. **输出必须受约束**：只允许模型从 15 个固定分类里选，
-     并要求 JSON 输出。分类错了比不分类更糟，所以要校验。
-  3. **必须缓存**：结果写进 map_auto.py，同一项目永不重复调用。
+  1. **输出必须受约束**：只允许模型从 15 个固定分类里选，并要求 JSON 输出。
+     分类错了比不分类更糟，所以要校验；校验不过直接丢弃。
+  2. **必须缓存**：结果写进 map_auto.py，同一项目永不重复调用。
      这解决了 LLM 非确定性导致的 git diff 抖动，也省额度。
-  4. **必须优雅降级**：限流/网络故障/输出不合法时，自动退回规则引擎，
+  3. **必须优雅降级**：限流/网络故障/输出不合法时，自动退回规则引擎，
      再不行才进待归类。任何情况下都不让流水线断掉。
+  4. **不能信任端点**：曾遇到 models.github.ai 对任何请求都返回 text/plain 的 "OK"，
+     所以必须校验响应确实是 JSON 且含 choices，否则视为该provider 不可用。
 
-用法（在 Actions 里）：
+用法：
     python llm_classify.py
 环境变量：
-    GITHUB_TOKEN   Actions 内置令牌（需 models: read 权限）
-    GITHUB_MODELS_MODEL  可选，指定模型，默认 openai/gpt-4o-mini
+    LLM_PROVIDER        可选，强制指定 provider 名
+    GITHUB_TOKEN        GitHub Models 用（Actions 内置令牌）
+    DEEPSEEK_API_KEY / MOONSHOT_API_KEY / ZHIPU_API_KEY / DASHSCOPE_API_KEY
 """
 
 import json, os, re, sys, time, urllib.request, urllib.error
@@ -34,11 +39,24 @@ import classifier as C
 PENDING = os.path.join(BASE, 'stars_pending.json')
 AUTO_OUT = os.path.join(BASE, 'map_auto.py')
 
-ENDPOINT = 'https://models.github.ai/inference/chat/completions'
-MODEL = os.environ.get('GITHUB_MODELS_MODEL', 'openai/gpt-4o-mini')
+# (名称, base_url, 模型, api_key 环境变量)
+PROVIDERS = [
+    ('github-models', 'https://models.github.ai/inference', 'openai/gpt-4o-mini', 'GITHUB_TOKEN'),
+    ('deepseek',      'https://api.deepseek.com/v1',              'deepseek-chat',     'DEEPSEEK_API_KEY'),
+    ('kimi',          'https://api.moonshot.cn/v1',                'moonshot-v1-8k',   'MOONSHOT_API_KEY'),
+    ('zhipu',         'https://open.bigmodel.cn/api/paas/v4',      'glm-4-flash',      'ZHIPU_API_KEY'),
+    ('qwen',          'https://dashscope.aliyuncs.com/compatible-mode/v1', 'qwen-plus', 'DASHSCOPE_API_KEY'),
+]
+
 # 备用模型：主模型不可用时依次尝试
-FALLBACK_MODELS = ['openai/gpt-4o-mini', 'microsoft/Phi-4-mini-instruct',
-                   'meta/Llama-3.3-70B-Instruct']
+FALLBACK_MODELS = {
+    'github-models': ['openai/gpt-4o-mini', 'microsoft/Phi-4-mini-instruct',
+                      'meta/Llama-3.3-70B-Instruct'],
+    'deepseek':      ['deepseek-chat'],
+    'kimi':          ['moonshot-v1-8k', 'moonshot-v1-32k'],
+    'zhipu':         ['glm-4-flash', 'glm-4-plus'],
+    'qwen':          ['qwen-plus', 'qwen-turbo'],
+}
 
 CATEGORY_HINTS = {
     'ai-agent': 'AI 智能体、Agent 工作流、Skills、MCP、编码助手',
@@ -84,8 +102,12 @@ def build_user_prompt(repo):
     return f"仓库：{name}\n官方简介：{desc}\nTopics：{topics}"
 
 
-def call_model(repo, token, model):
-    """调用一次 GitHub Models，返回解析后的 dict，失败抛异常。"""
+def call_model(repo, base_url, model, key):
+    """调用一次 OpenAI 兼容接口，返回解析后的 dict。
+
+    失败抛异常。注意：必须确认响应真的是 JSON 且含 choices——
+    曾遇到端点对任何请求都返回 text/plain 的 "OK"，那种要当失败处理。
+    """
     cats = '\n'.join(f'  - {k}: {v}' for k, v in CATEGORY_HINTS.items())
     payload = {
         'model': model,
@@ -97,28 +119,33 @@ def call_model(repo, token, model):
         'max_tokens': 300,
     }
     req = urllib.request.Request(
-        ENDPOINT,
+        base_url.rstrip('/') + '/chat/completions',
         data=json.dumps(payload).encode('utf-8'),
         headers={
-            'Authorization': f'Bearer {token}',
+            'Authorization': f'Bearer {key}',
             'Content-Type': 'application/json',
             'Accept': 'application/json',
         },
     )
     with urllib.request.urlopen(req, timeout=90) as resp:
-        body = json.loads(resp.read().decode('utf-8'))
-    content = body['choices'][0]['message']['content']
-    return parse_json(content)
+        ctype = resp.headers.get('Content-Type', '')
+        raw = resp.read().decode('utf-8', errors='replace')
+    # 端点占位符检测：返回的不是 JSON JSON 会直接抛错
+    try:
+        body = json.loads(raw)
+    except json.JSONDecodeError:
+        raise ValueError(f'响应不是 JSON（Content-Type={ctype}）：{raw[:80]}')
+    if 'choices' not in body:
+        raise ValueError(f'响应缺少 choices 字段：{str(body)[:120]}')
+    return parse_json(body['choices'][0]['message']['content'])
 
 
 def parse_json(text):
     """从模型输出里抠出 JSON。模型有时会包 markdown 代码块或加前后缀。"""
     text = text.strip()
-    # 去掉 ```json ... ``` 包裹
     m = re.search(r'```(?:json)?\s*(.+?)\s*```', text, re.S)
     if m:
         text = m.group(1).strip()
-    # 直接找最外层 {...}
     start = text.find('{')
     end = text.rfind('}')
     if start == -1 or end == -1:
@@ -141,9 +168,8 @@ def validate(result):
         summary = summary[:58] + '…'
     if conf not in ('high', 'medium', 'low'):
         conf = 'medium'
-    # low 置信度不采用，交给规则引擎
     if conf == 'low':
-        return None
+        return None          # low 置信度不采用，交给规则引擎
     return cat, summary
 
 
@@ -173,68 +199,128 @@ def write_cache(cache):
         f.write('}\n')
 
 
+def pick_providers():
+    """选出可用 provider：有 key 才算可用，按优先级排序。
+
+    LLM_BASE_URL 指定时视为「自定义端点」，只用这一个，
+    配合 LLM_API_KEY / LLM_MODEL 使用（测试或自建代理场景）。
+    否则按内置优先级列表，取第一个有 key 的 provider。
+    """
+    base_override = os.environ.get('LLM_BASE_URL', '').strip()
+    if base_override:
+        key = os.environ.get('LLM_API_KEY', '').strip()
+        if not key:
+            return []
+        model = os.environ.get('LLM_MODEL', 'gpt-4o-mini').strip()
+        return [('custom', base_override, model, 'LLM_API_KEY', key)]
+
+    forced = os.environ.get('LLM_PROVIDER')
+    out = []
+    for name, base, model, env in PROVIDERS:
+        if forced and name != forced:
+            continue
+        key = os.environ.get(env, '').strip()
+        if not key:
+            continue
+        out.append((name, base, os.environ.get('LLM_MODEL', '').strip() or model, env, key))
+    return out
+
+
+def prune_cache(cache, keep):
+    """移除已不在 Star 列表里的缓存项。
+
+    keep: 本次解决的项目名集合（即使不在 star 列表里也要保留）
+    """
+    try:
+        stars = json.load(open(os.path.join(BASE, 'stars.json'), encoding='utf-8'))
+        alive = {r['full'] for r in stars}
+        return {k: v for k, v in cache.items() if k in alive or k in keep}
+    except Exception:
+        return cache
+
+
 def main():
     if not os.path.exists(PENDING):
         print('没有待处理项目')
         return 0
     pending = json.load(open(PENDING, encoding='utf-8'))
-    if not pending:
-        print('没有待处理项目')
-        write_cache({})
-        return 0
-
-    token = os.environ.get('GITHUB_TOKEN', '')
     cache = load_cache()
 
-    # 只处理还没缓存过的
     todo = [p for p in pending if p['full'] not in cache]
-    cached_hit = len(pending) - len(todo)
-    if cached_hit:
-        print(f'命中缓存 {cached_hit} 个，跳过 LLM 调用')
+    hit = len(pending) - len(todo)
+    if hit:
+        print(f'命中缓存 {hit} 个，跳过调用')
 
     if not todo:
+        # 即使没有新项目也要清理缓存：用户可能取消了 Star，
+        # 不清理的话 map_auto.py 会残留已不在列表里的项目。
+        cache = prune_cache(cache, set())
         write_cache(cache)
+        json.dump([], open(PENDING, 'w', encoding='utf-8'), ensure_ascii=False)
+        print('没有需要处理的新项目')
         return 0
 
-    if not token:
-        print('⚠️ 无 GITHUB_TOKEN，跳过 LLM，仅用规则引擎')
+    providers = pick_providers()
+    if not providers:
+        print('⚠️ 没有可用的 provider（缺 API key 或端点不可用），仅用规则引擎')
     else:
-        print(f'🤖 调用 {MODEL} 处理 {len(todo)} 个项目...')
+        print(f'🤖 可用 provider: {", ".join(p[0] for p in providers)}，待处理 {len(todo)} 个')
 
-    llm_ok = 0
-    llm_fail = 0
-    used_model = None
+    llm_ok = llm_fail = 0
+    used_provider = None
+    dead_providers = set()
+    fail_streak = {}      # provider -> 连续「传输故障」次数
 
     for p in todo:
         got = None
-        if token:
-            for model in ([MODEL] if used_model else FALLBACK_MODELS):
+        for name, base, model, env, key in providers:
+            if name in dead_providers:
+                continue
+            if used_provider and name != used_provider:
+                break
+            transport_err = False
+            for mdl in FALLBACK_MODELS.get(name, [model]):
                 try:
-                    res = call_model(p, token, model)
-                    v = validate(res)
-                    if v:
-                        got = v
-                        used_model = used_model or model
-                        llm_ok += 1
-                        break
-                    # 输出不合法：换下一个模型
-                    llm_fail += 1
+                    raw = call_model(p, base, mdl, key)
                 except urllib.error.HTTPError as e:
                     if e.code == 429:
-                        print(f'  ⚠️ 触发限流 (429)，停止 LLM 调用，剩余转规则引擎')
+                        print('  ⚠️ 触发限流 (429)，停止调用，剩余转规则引擎')
+                        dead_providers.add(name)
+                        transport_err = True
                         break
                     llm_fail += 1
+                    transport_err = True
+                    continue
                 except Exception as e:
                     llm_fail += 1
-                    last_err = e
-            else:
-                pass
+                    transport_err = True
+                    if llm_fail <= 2:
+                        print(f'  · {name}/{mdl} 调用失败: {type(e).__name__}: {str(e)[:90]}')
+                    continue
+
+                # 拿到响应后做校验——校验不通过说明「这个项目本身有歧义」，
+                # 不是 provider 的问题，不该触发熔断
+                v = validate(raw)
+                if v:
+                    got = v
+                    used_provider = used_provider or name
+                    llm_ok += 1
+                    fail_streak[name] = 0
+                    break
+                llm_fail += 1
+
+            if got:
+                break
+            # 只有连续传输故障才判定 provider 不可用（避免单次抖动误杀）
+            if transport_err:
+                fail_streak[name] = fail_streak.get(name, 0) + 1
+                if fail_streak[name] >= 2:
+                    dead_providers.add(name)
 
         if got:
             cache[p['full']] = got
             print(f'  ✓ {p["full"]}  → {got[0]}  | {got[1][:36]}')
         else:
-            # LLM 失败/限流 → 退回规则引擎
             cat, score, second, s2 = C.classify(p, p['full'])
             if cat and score >= C.STRONG:
                 desc = C.auto_description(p, cat)
@@ -243,19 +329,12 @@ def main():
             else:
                 print(f'  ? {p["full"]}  仍需人工确认')
 
-    # 清理缓存：移除已不在 Star 列表里的项目（取消 Star 或改名）
-    # 注意不要在这里动 pending 的判定依据——刚解决的项目要先记账
+    # 清理缓存：移除已不在 Star 列表里的项目，但保留本次解决的
     resolved = set(cache) & {p['full'] for p in pending}
-    try:
-        stars = json.load(open(os.path.join(BASE, 'stars.json'), encoding='utf-8'))
-        alive = {r['full'] for r in stars}
-        cache = {k: v for k, v in cache.items() if k in alive or k in resolved}
-    except Exception:
-        pass
+    cache = prune_cache(cache, resolved)
 
     write_cache(cache)
 
-    # 重写 pending：只剩真正解决不了的
     still = [p for p in pending if p['full'] not in resolved]
     json.dump(still, open(PENDING, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 
