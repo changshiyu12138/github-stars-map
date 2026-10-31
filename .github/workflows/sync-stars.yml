@@ -1,6 +1,6 @@
 name: Sync Star 地图
 
-# 每 6 小时整点执行一次；也支持手动触发
+# 每 6 小时执行一次；也支持手动触发
 on:
   schedule:
     - cron: '17 */6 * * *'
@@ -30,7 +30,7 @@ jobs:
           python <<'PY'
           import json, time, urllib.request
 
-          # Star 列表是公开数据，走/users/{user}/starred 无需任何认证，
+          # Star 列表是公开数据，走 /users/{user}/starred 无需任何认证，
           # 因此本工作流不需要配置任何 PAT secret。
           USER = 'changshiyu12138'
           headers = {
@@ -58,36 +58,23 @@ jobs:
           PY
 
       - name: 构建 stars.json 并检测新增
-        id: build
-        continue-on-error: true
-        run: python build_stars.py
+        run: |
+          # build_stars.py 在存在待归类项目时退出码为 2，属于正常情况；
+          # 其他非零退出码说明脚本真的坏了，需要暴露出来。
+          set +e
+          python build_stars.py
+          code=$?
+          set -e
+          if [ "$code" -ne 0 ] && [ "$code" -ne 2 ]; then
+            echo "::error::build_stars.py 异常退出 (code=$code)"
+            exit "$code"
+          fi
+          if [ "$code" -eq 2 ]; then
+            echo "存在待归类项目，继续执行"
+          fi
 
       - name: 生成 README
         run: python gen_readme.py
-
-      - name: 汇总变更摘要
-        id: summary
-        run: |
-          if [ -f stars_pending.json ]; then
-            COUNT=$(python -c "import json;print(len(json.load(open('stars_pending.json',encoding='utf-8'))))")
-          else
-            COUNT=0
-          fi
-          NAMES=$(python -c "
-          import json
-          try:
-              p=json.load(open('stars_pending.json',encoding='utf-8'))
-              print('\n'.join('- \`'+x['full']+'\` — '+ (x['desc'][:60] or '（官方无简介）') for x in p))
-          except Exception:
-              print('')
-          ")
-          {
-            echo "count=$COUNT"
-            echo "names<<EOF"
-            echo "$NAMES"
-            echo "EOF"
-          } >> "$GITHUB_OUTPUT"
-          echo "待归类数量: $COUNT"
 
       - name: 提交变更
         id: commit
@@ -102,22 +89,40 @@ jobs:
           git commit -m "chore: 自动同步 Star 地图（${CNT} 个项目）"
           git push
           echo "changed=true" >> "$GITHUB_OUTPUT"
+          echo "CHANGED=true" >> "$GITHUB_ENV"
 
       - name: 写入运行摘要
         if: always()
         run: |
-          {
-            echo "## ⭐ Star 地图同步"
-            echo ""
-            echo "- 当前收藏总数：**$(python -c "import json;print(len(json.load(open('stars.json',encoding='utf-8'))))")** 个"
-            echo "- 待归类：**${{ steps.summary.outputs.count }}** 个"
-            echo "- 是否提交：${{ steps.commit.outputs.changed == 'true' && '是' || '否' }}"
-            if [ "${{ steps.summary.outputs.count }}" != "0" ]; then
-              echo ""
-              echo "### 🆕 新发现的项目"
-              echo ""
-              echo '${{ steps.summary.outputs.names }}'
-              echo ""
-              echo "> 补写说明：编辑 \`map.py\` 加入 \`\"owner/repo\": (\"分类\", \"说明\"),\` 后重跑即可。"
-            fi
-          } >> "$GITHUB_STEP_SUMMARY"
+          python <<'PY'
+          import json, os
+
+          def load(path, default):
+              try:
+                  with open(path, encoding='utf-8') as f:
+                      return json.load(f)
+              except Exception:
+                  return default
+
+          total = len(load('stars.json', []))
+          pending = load('stars_pending.json', [])
+          changed = os.environ.get('CHANGED', 'false')
+
+          lines = ['## ⭐ Star 地图同步', '']
+          lines.append(f'- 当前收藏总数：**{total}** 个')
+          lines.append(f'- 待归类：**{len(pending)}** 个')
+          lines.append(f"- 是否提交：{'是' if changed == 'true' else '否'}")
+
+          if pending:
+              lines += ['', '### 🆕 新发现的项目', '']
+              for p in pending:
+                  # 简介来自 GitHub，可能含引号/反引号/换行，统一压平
+                  desc = (p.get('desc') or '（官方无简介）').replace('\n', ' ')[:70]
+                  lines.append(f"- `{p['full']}` — {desc}")
+              lines += ['', '> 补写说明：编辑 `map.py` 加入 `"owner/repo": ("分类", "说明"),` 后重跑即可。']
+
+          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a', encoding='utf-8') as f:
+              f.write('\n'.join(lines) + '\n')
+
+          print(f'待归类数量: {len(pending)}')
+          PY
