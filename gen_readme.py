@@ -130,7 +130,7 @@ w(f"- **项目存活**：{live} 个半年内仍有提交（{live*100//len(rows)}
 if pending:
     w(f"- **🆕 待归类**：{len(pending)} 个新项目置信度不足，需人工确认（见文末）")
 if auto_count:
-    w(f"- **🤖 自动分类**：{auto_count} 个项目由规则引擎自动归类（说明前带 🤖 标记）")
+    w(f"- **🤖 自动分类**：{auto_count} 个项目由 Copilot 自动归类（说明前带 🤖 标记）")
 w("")
 
 # 年份柱状图
@@ -188,7 +188,7 @@ if pending:
     w("")
     w(f"## 🆕 待归类 · {len(pending)}")
     w("")
-    w("> 这些新项目**规则引擎判定不了**（信号不足或多个分类打平），所以没有硬猜。")
+    w("> 这些新项目**大模型和规则引擎都判定不了**（信号不足或多个分类打平），所以没有硬猜。")
     w("> 补写方式：编辑 `map.py`，加一行 `\"owner/repo\": (\"分类\", \"中文说明\"),` 后重跑 `gen_readme.py`。")
     w("")
     w("| 项目 | 官方简介 | 状态 | 最后提交 | 语言 | ⭐ | 收藏于 |")
@@ -204,7 +204,7 @@ w("")
 w("## 📚 项目清单")
 w("")
 w("> 排序：各分类内按 Star 时间倒序，最新的在最前面。⭐ 为该项目当前的总 Star 数。")
-w("> 说明前带 🤖 的是自动分类的（规则判定，非人工撰写），分类可信、措辞需自行核对。")
+w("> 说明前带 🤖 的是自动分类的（由 Copilot 判定并撰写，非人工撰写），分类可信、措辞需自行核对。")
 w("")
 
 for c in M.CATS:
@@ -222,7 +222,9 @@ for c in M.CATS:
     w("|---|---|---|---|---|---:|---|")
     for r in items:
         note = r['note'].replace('|', '｜')
-        mark = '🤖 ' if r.get('auto') else ''
+        # 注意：不能用 stars.json 里的 r['auto'] 标记——那是 build 阶段写的，
+        # 早于 llm_classify.py 生成 map_auto.py，是过期数据。必须用 auto_set。
+        mark = '🤖 ' if r['full'] in auto_set else ''
         w(f"| [`{r['full']}`]({r['url']}) | {mark}{note} | {badge(r)} | {last_push(r)} | {r['lang']} | {r['stars']:,} | {r['at']} |")
     w("")
 
@@ -300,13 +302,13 @@ w("- **状态判定**基于仓库的 `pushed_at`（最后一次代码推送）�
 w("  注意 `updated_at` 含义不同——它包含改描述、改设置等任何改动，会让已停更项目看起来还活着。")
 w("- 说明分三种：")
 w("  - **人工撰写**（无标记）：最初 193 个项目由人工逐个判定并撰写。")
-w("  - **🤖 自动生成**：新项目由 `classifier.py` 规则引擎自动归类，")
-w("    说明用官方 topics 重组而成；规则判定不了的项目会交给 `llm_classify.py`，")
-w("    用 GitHub Copilot 判定并撰写（Copilot Free 免费额度，不消耗 chat 配额）。")
+w("  - **🤖 自动生成**：新项目交给 `llm_classify.py`，由 **GitHub Copilot** 判定分类并撰写中文说明")
+w("    （用 Copilot Free 自带额度，实测不消耗 chat 配额）；")
+w("    Copilot 不可用时由 `classifier.py` 规则引擎兜底，说明改用官方 topics 重组。")
 w("    分类可信，但措辞是机器写的，不如人工自然。")
 w("- 分类依据项目实际功能而非仓库作者，个别归类带主观判断。")
 w("- **每 6 小时自动刷新**：GitHub Actions 定时拉取 Star 列表，重新生成 README 并提交。")
-w("  新项目由规则引擎自动归类，判不了的用 Copilot；两者都失败才进「🆕 待归类」等人工确认。")
+w("  新项目由 Copilot 自动归类，它不可用时用规则引擎；两者都判不了才进「🆕 待归类」等人工确认。")
 w("")
 w("### 状态图例")
 w("")
@@ -322,7 +324,7 @@ w("```bash")
 w("# 1. 拉取全部 Star（需要 gh 已登录）")
 w("gh api -H \"Accept: application/vnd.github.star+json\" --paginate \"user/starred?per_page=100\" > stars_raw.json")
 w("")
-w("# 2. 生成 stars.json（退出码 2 表示有新项目待归类）")
+w("# 2. 生成 stars.json（退出码 2 表示有新项目，交由后续步骤自动分类）")
 w("python build_stars.py")
 w("")
 w("# 3. 重新渲染 README（分类与说明维护在 map.py）")
