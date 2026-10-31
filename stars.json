@@ -53,7 +53,7 @@
   "url": "https://github.com/nndl/nndl",
   "desc": "邱锡鹏《神经网络与深度学习》第二版与通识版：电子书、章节目录、学习资源与勘误。",
   "lang": "未标注",
-  "stars": 19532,
+  "stars": 19533,
   "topics": [
    "attention-mechanism",
    "chinese",
@@ -1438,7 +1438,7 @@
   "url": "https://github.com/sindresorhus/awesome",
   "desc": "😎 Awesome lists about all kinds of interesting topics [NOTE: Pull requests are temporarily disabled until I have a chance to catch up with the existing ones]",
   "lang": "未标注",
-  "stars": 527617,
+  "stars": 527618,
   "topics": [
    "awesome",
    "awesome-list",
@@ -1629,7 +1629,7 @@
   "url": "https://github.com/Usagi-org/ai-goofish-monitor",
   "desc": "基于 Playwright 和AI实现的闲鱼多任务实时/定时监控与智能分析系统，配备了功能完善的后台管理UI。帮助用户从闲鱼海量商品中，找到心仪产品。",
   "lang": "Python",
-  "stars": 15365,
+  "stars": 15366,
   "topics": [
    "ai",
    "ai-assistant",
@@ -1983,7 +1983,7 @@
   "url": "https://github.com/ImranR98/Obtainium",
   "desc": "Get Android app updates straight from the source.",
   "lang": "Dart",
-  "stars": 21064,
+  "stars": 21065,
   "topics": [
    "android",
    "apk",
@@ -2151,7 +2151,7 @@
   "url": "https://github.com/google-gemini/computer-use-preview",
   "desc": "",
   "lang": "Python",
-  "stars": 3251,
+  "stars": 3250,
   "topics": [],
   "at": "2025-10-12",
   "created": "2025-05-06",
@@ -2423,7 +2423,7 @@
   "url": "https://github.com/unclecode/crawl4ai",
   "desc": "Open-source web crawler and scraper for LLMs and AI agents: any website into clean, LLM-ready Markdown. Run it yourself, or use Crawl4AI Cloud with one key. Join our Discord https://discord.gg/VuxzM8mtf",
   "lang": "Python",
-  "stars": 86619,
+  "stars": 86620,
   "topics": [
    "ai",
    "ai-agents",
@@ -3240,7 +3240,7 @@
   "url": "https://github.com/h4ckf0r0day/obscura",
   "desc": "The headless browser for AI agents and web scraping",
   "lang": "Rust",
-  "stars": 29813,
+  "stars": 29814,
   "topics": [
    "antidetect",
    "antidetect-browser",
@@ -3818,7 +3818,7 @@
   "url": "https://github.com/deepseek-ai/deepseek-harness",
   "desc": "DeepSeek Harness: Everything is a Plugin.",
   "lang": "TypeScript",
-  "stars": 266883,
+  "stars": 266886,
   "topics": [
    "ai-agents",
    "cordis",
@@ -4496,77 +4496,6 @@
   "archived": false,
   "fork": false,
   "auto": false,
-  "pending": false
- },
- {
-  "full": "danny-avila/LibreChat",
-  "url": "https://github.com/danny-avila/LibreChat",
-  "desc": "Free, open-source AI chat platform with multi-model support.",
-  "lang": "TypeScript",
-  "stars": 32000,
-  "topics": [
-   "chatgpt",
-   "llm",
-   "openai",
-   "self-hosted",
-   "ai-chatbot",
-   "multi-model"
-  ],
-  "at": "2026-10-31",
-  "created": "2024-01-01",
-  "pushed": "2026-10-30",
-  "idle_days": 1,
-  "level": "active",
-  "archived": false,
-  "fork": false,
-  "auto": true,
-  "pending": false
- },
- {
-  "full": "OpenBMB/MinerU",
-  "url": "https://github.com/OpenBMB/MinerU",
-  "desc": "High-accuracy document parsing tool for PDFs, images",
-  "lang": "Python",
-  "stars": 45000,
-  "topics": [
-   "pdf",
-   "ocr",
-   "document-parsing",
-   "llm",
-   "vlm",
-   "markdown"
-  ],
-  "at": "2026-10-31",
-  "created": "2024-01-01",
-  "pushed": "2026-10-30",
-  "idle_days": 1,
-  "level": "active",
-  "archived": false,
-  "fork": false,
-  "auto": true,
-  "pending": false
- },
- {
-  "full": "immich-app/immich",
-  "url": "https://github.com/immich-app/immich",
-  "desc": "High performance self-hosted photo and video management",
-  "lang": "TypeScript",
-  "stars": 68000,
-  "topics": [
-   "photos",
-   "self-hosted",
-   "backup",
-   "mobile",
-   "docker"
-  ],
-  "at": "2026-10-31",
-  "created": "2024-01-01",
-  "pushed": "2026-10-30",
-  "idle_days": 1,
-  "level": "active",
-  "archived": false,
-  "fork": false,
-  "auto": true,
   "pending": false
  }
 ]
