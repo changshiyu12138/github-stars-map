@@ -1,1 +1,13 @@
-[]
+[
+ {
+  "full": "test-org/quote-test",
+  "url": "https://github.com/test-org/quote-test",
+  "lang": "Python",
+  "stars": 99,
+  "topics": [
+   "test"
+  ],
+  "at": "2026-10-31",
+  "desc": "It's a test with `backticks` and $VARS and \"double\" quotes"
+ }
+]
