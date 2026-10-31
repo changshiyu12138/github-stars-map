@@ -23,6 +23,7 @@ import map as M
 RAW = os.path.join(BASE, 'stars_raw.json')
 OUT = os.path.join(BASE, 'stars.json')
 PENDING = os.path.join(BASE, 'stars_pending.json')
+AUTO_OUT = os.path.join(BASE, 'map_auto.py')
 
 TODAY = datetime.date.today()
 
@@ -92,20 +93,46 @@ real = {r['full'] for r in rows}
 missing = sorted(real - set(M.NOTES))       # 新 Star 但没写说明
 extra = sorted(set(M.NOTES) - real)          # 取消 Star 或改名了
 
-# 待补充清单：保留足够信息，便于人工补写说明
-pending = []
+# ---- 自动分类：把能确定分类的新项目直接归位 ----
+# 规则见 classifier.py。置信度不足的项目仍进 pending，绝不硬猜。
+import classifier as C
+
+auto_notes = {}      # 自动归类的项目 -> (分类, 说明)
+pending = []         # 仍需人工确认的
 for full in missing:
     r = next(x for x in rows if x['full'] == full)
-    pending.append({
-        'full': r['full'], 'url': r['url'], 'lang': r['lang'],
-        'stars': r['stars'], 'topics': r['topics'], 'at': r['at'],
-        'desc': r['desc'],
-    })
+    cat, score, second, s2 = C.classify(r, full)
+    if cat and score >= C.STRONG:
+        desc = C.auto_description(r, cat)
+        auto_notes[full] = (cat, desc)
+    else:
+        pending.append({
+            'full': r['full'], 'url': r['url'], 'lang': r['lang'],
+            'stars': r['stars'], 'topics': r['topics'], 'at': r['at'],
+            'desc': r['desc'],
+            'suggest': cat, 'suggest_score': score,
+        })
+
 json.dump(pending, open(PENDING, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 
-# 把待补充项目也写入 stars.json，标注为待归类，保证 README 不会漏掉它们
+# 自动归类的结果写入 map_auto.py（人工作业map.py 不受影响）
+if auto_notes:
+    with open(AUTO_OUT, 'w', encoding='utf-8') as f:
+        f.write('# -*- coding: utf-8 -*-\n')
+        f.write('# 由 classifier.py 自动生成的分类，勿手工编辑。\n')
+        f.write('# 人工补充请写在 map.py。\n')
+        f.write('AUTO_NOTES = {\n')
+        for full, (cat, desc) in sorted(auto_notes.items()):
+            esc = desc.replace('\\', '\\\\').replace('"', '\\"')
+            f.write(f'    "{full}": ("{cat}", "{esc}"),\n')
+        f.write('}\n')
+
+# 标记状态：auto = 已自动归类，pending = 待人工确认
+auto_set = set(auto_notes)
+pend_set = {p['full'] for p in pending}
 for r in rows:
-    r['pending'] = r['full'] in missing
+    r['auto'] = r['full'] in auto_set
+    r['pending'] = r['full'] in pend_set
 
 json.dump(rows, open(OUT, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 
@@ -113,16 +140,23 @@ print(f'stars.json 已生成：{len(rows)} 个项目')
 if newly_starred:
     print(f'\n🆕 本次新增 {len(newly_starred)} 个 Star：')
     for f in newly_starred:
-        print(f'   + {f}')
+        mark = '✓自动归类' if f in auto_set else '⏳ 待人工确认'
+        print(f'   + {f}  [{mark}]')
 else:
     print('\n本次无新增 Star')
 
-if missing:
-    print(f'\n⚠️  map.py 缺少 {len(missing)} 个项目的分类与说明（已记入 stars_pending.json）：')
+if auto_notes:
+    print(f'\n🤖 自动归类 {len(auto_notes)} 个：')
+    for full, (cat, desc) in sorted(auto_notes.items()):
+        print(f'  ✓ {full}  → {cat}  | {desc[:40]}')
+
+if pending:
+    print(f'\n⚠️  {len(pending)} 个置信度不足，需人工确认（已记入 stars_pending.json）：')
     for p in pending:
-        print(f'  - {p["full"]}  [{p["lang"]}]  {p["desc"][:50]}')
+        s = f"建议:{p['suggest']}({p['suggest_score']})" if p['suggest'] else '无建议'
+        print(f'  ? {p["full"]}  [{p["lang"]}]  {s}')
 else:
-    print('\n✅ 分类映射完整，覆盖 100%')
+    print('\n✅ 全部新项目已自动归类，无需人工干预')
 
 if extra:
     print(f'\nℹ️  map.py 中有 {len(extra)} 个键不在 Star 列表里（可能已改名或取消 Star）：')
