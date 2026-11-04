@@ -6,4 +6,5 @@ AUTO_NOTES = {
     "JiaFeiMiao-K-Cat/DiscImageStudio": ("tools", "用于处理和管理光盘镜像文件的软件"),
     "ZJU-LLMs/Foundations-of-LLMs": ("learning", "介绍大语言模型基础知识的学习书籍"),
     "pbakaus/impeccable": ("ai-agent", "为编码智能体提供设计词汇和审查工具。"),
+    "xiaoyang111222/cn-math-taxonomy": ("learning", "包含中小学数学等学科知识图谱及题库。"),
 }
