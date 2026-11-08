@@ -2,7 +2,7 @@
 # 由 llm_classify.py / classifier.py 自动生成，勿手工编辑。
 # 人工补充请写在 map.py。
 AUTO_NOTES = {
-    "Djihads80/Eglantine": ("games", "实验性的 Nintendo Switch 2 模拟器项目"),
+    "Eglantine-Community/Eglantine": ("games", "实验性的任天堂 Switch 2 模拟器"),
     "JiaFeiMiao-K-Cat/DiscImageStudio": ("tools", "用于处理和管理光盘镜像文件的软件"),
     "OpenMontageInc/OpenMontage": ("ai-agent", "AI 智能体驱动的视频制作系统，集成多种生产工具。"),
     "ZJU-LLMs/Foundations-of-LLMs": ("learning", "介绍大语言模型基础知识的学习书籍"),
