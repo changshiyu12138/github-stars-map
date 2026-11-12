@@ -9,6 +9,7 @@ AUTO_NOTES = {
     "OpenMontageInc/OpenMontage": ("ai-agent", "AI 智能体驱动的视频制作系统，集成多种生产工具。"),
     "ZJU-LLMs/Foundations-of-LLMs": ("learning", "介绍大语言模型基础知识的学习书籍"),
     "bilawalsidhu/gods-eye-view": ("tools", "在浏览器中实时模拟间谍卫星并展示空间情报。"),
+    "ccch1mneyyy/dsh-Go": ("ai-agent", "在手机上运行和遥控 DeepSeek AI 智能体的应用"),
     "du-du-wang/silicon-canvas": ("ai-infra", "用于生成芯片架构和数据流等可视化图像的AI工具"),
     "flaresocialapp/Flare": ("rss-news", "多平台社交和RSS聚合阅读应用"),
     "pbakaus/impeccable": ("ai-agent", "为编码智能体提供设计词汇和审查工具。"),
