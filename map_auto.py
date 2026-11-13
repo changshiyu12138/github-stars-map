@@ -13,6 +13,7 @@ AUTO_NOTES = {
     "ccch1mneyyy/dsh-Go": ("ai-agent", "在手机上运行和遥控 DeepSeek AI 智能体的应用"),
     "du-du-wang/silicon-canvas": ("ai-infra", "用于生成芯片架构和数据流等可视化图像的AI工具"),
     "flaresocialapp/Flare": ("rss-news", "多平台社交和RSS聚合阅读应用"),
+    "makepad/relax": ("system", "用 Rust 实现的 JIT 编译器"),
     "pbakaus/impeccable": ("ai-agent", "为编码智能体提供设计词汇和审查工具。"),
     "sherlock-project/sherlock": ("security", "根据用户名查找社交媒体账号的 OSINT 工具"),
     "xiaoyang111222/cn-math-taxonomy": ("learning", "包含中小学数学等学科知识图谱及题库。"),
