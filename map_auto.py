@@ -6,6 +6,7 @@ AUTO_NOTES = {
     "Eglantine-Community/Eglantine": ("games", "实验性的任天堂 Switch 2 模拟器"),
     "Hithink-Tech-Org/Financial-API": ("finance", "提供A股实时及历史行情等金融数据API服务"),
     "JiaFeiMiao-K-Cat/DiscImageStudio": ("tools", "用于处理和管理光盘镜像文件的软件"),
+    "LuYanFCP/dsh-kicad": ("ai-agent", "利用 AI 智能体在 KiCad 中自动设计 PCB 电路板。"),
     "OpenMontageInc/OpenMontage": ("ai-agent", "AI 智能体驱动的视频制作系统，集成多种生产工具。"),
     "Ryder191/haloflux": ("tools", "节拍驱动的科幻光环可视化动态壁纸。"),
     "ZJU-LLMs/Foundations-of-LLMs": ("learning", "介绍大语言模型基础知识的学习书籍"),
