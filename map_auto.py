@@ -22,5 +22,6 @@ AUTO_NOTES = {
     "obra/superpowers": ("ai-agent", "用于智能体技能和开发流程的框架。"),
     "pbakaus/impeccable": ("ai-agent", "为编码智能体提供设计词汇和审查工具。"),
     "sherlock-project/sherlock": ("security", "根据用户名查找社交媒体账号的 OSINT 工具"),
+    "songloft-org/songloft": ("media", "插件化的免费音乐服务器，支持无广告播放。"),
     "xiaoyang111222/cn-math-taxonomy": ("learning", "包含中小学数学等学科知识图谱及题库。"),
 }
