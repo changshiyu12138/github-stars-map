@@ -11,6 +11,7 @@ AUTO_NOTES = {
     "Ryder191/haloflux": ("tools", "节拍驱动的科幻光环可视化动态壁纸。"),
     "Ssbullock/pcb-layout-llm": ("ai-agent", "用于 KiCad PCB 布局规划的微调大模型智能体"),
     "TelegramMessenger/Telegram-Android": ("mobile", "Telegram 安卓客户端的开源代码"),
+    "Vialibrex/FlClash": ("security", "基于ClashMeta的多平台代理客户端"),
     "ZJU-LLMs/Foundations-of-LLMs": ("learning", "介绍大语言模型基础知识的学习书籍"),
     "bilawalsidhu/gods-eye-view": ("tools", "在浏览器中实时模拟间谍卫星并展示空间情报。"),
     "ccch1mneyyy/dsh-Go": ("ai-agent", "在手机上运行和遥控 DeepSeek AI 智能体的应用"),
