@@ -2,7 +2,7 @@
 # 由 llm_classify.py / classifier.py 自动生成，勿手工编辑。
 # 人工补充请写在 map.py。
 AUTO_NOTES = {
-    "Ebony-Vinyl/dsh-our-free-model": ("ai-agent", "为 dsh 提供免费大模型接入插件"),
+    "D4Vinci/Scrapling": ("crawl-browser", "支持全流程的网页爬取与数据抓取框架。"),
     "Eglantine-Community/Eglantine": ("games", "实验性的任天堂 Switch 2 模拟器"),
     "Hithink-Tech-Org/Financial-API": ("finance", "提供A股实时及历史行情等金融数据API服务"),
     "JiaFeiMiao-K-Cat/DiscImageStudio": ("tools", "用于处理和管理光盘镜像文件的软件"),
@@ -24,5 +24,7 @@ AUTO_NOTES = {
     "pbakaus/impeccable": ("ai-agent", "为编码智能体提供设计词汇和审查工具。"),
     "sherlock-project/sherlock": ("security", "根据用户名查找社交媒体账号的 OSINT 工具"),
     "songloft-org/songloft": ("media", "插件化的免费音乐服务器，支持无广告播放。"),
+    "suoha888/Trader-Archives": ("finance", "收录顶级交易员推特内容与交易数据湖。"),
+    "togg53192-cmd/jailbreaks": ("security", "收集各种越狱方法和脚本的仓库"),
     "xiaoyang111222/cn-math-taxonomy": ("learning", "包含中小学数学等学科知识图谱及题库。"),
 }
